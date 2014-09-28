@@ -9,6 +9,20 @@
 ?>
 
 	</div><!-- #content -->
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<?php
+		wp_nav_menu( array(
+			'menu'              => 'footer',
+			'theme_location'    => 'footer',
+			'depth'             => 4,
+			'container'         => '',
+			'menu_class'        => 'nav navbar-nav',
+			'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+			'walker'            => new wp_bootstrap_navwalker())
+		);
+		?>
+	</div>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container">
 		<div class="row">

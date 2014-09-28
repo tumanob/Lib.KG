@@ -52,6 +52,7 @@ function ipt_kb_setup() {
 	 */
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'ipt_kb' ),
+		'footer' => __( 'Footer Menu', 'ipt_kb' )
 	) );
 
 	/**
