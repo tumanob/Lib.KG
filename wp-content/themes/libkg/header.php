@@ -56,17 +56,22 @@
 					);
 					?>
 				</div>
+				
+				
 			</div>
 		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content container">
-		
+	
+	<div id="langswitch"> 
 		<?php if ( is_active_sidebar( 'sidebar-10' ) ) : ?>
 			<div id="sidebar-10" class="primary-sidebar-10 widget-area" role="complementary">
 		<?php dynamic_sidebar( 'sidebar-10' ); ?>
 		</div><!-- #primary-sidebar -->
 	<?php endif; ?>
 	
+	
+	</div>
 	
 	<?php ipt_kb_breadcrumb(); ?>

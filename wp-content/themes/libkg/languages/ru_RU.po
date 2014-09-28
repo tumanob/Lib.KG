@@ -1,0 +1,1839 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: lib.kg\n"
+"POT-Creation-Date: 2013-11-05 21:39+0530\n"
+"PO-Revision-Date: 2014-09-28 20:01+0600\n"
+"Last-Translator: \n"
+"Language-Team:  <tumanob@gmail.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:26
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:30
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: ../404.php:38
+msgid "Recently Published Articles"
+msgstr ""
+
+#: ../404.php:58
+#, fuzzy
+msgid "Knowledge Base"
+msgstr "Базовый URL"
+
+#: ../archive.php:31
+#, fuzzy, php-format
+msgid "Author: %s"
+msgstr "Автор: %s"
+
+#: ../archive.php:39
+#, fuzzy, php-format
+msgid "Day: %s"
+msgstr "%s день"
+
+#: ../archive.php:42
+#, fuzzy, php-format
+msgid "Month: %s"
+msgstr "%s месяц"
+
+#: ../archive.php:45
+#, fuzzy, php-format
+msgid "Year: %s"
+msgstr "%s год"
+
+#: ../archive.php:48
+msgid "Asides"
+msgstr ""
+
+#: ../archive.php:51
+#, fuzzy
+msgid "Images"
+msgstr "Изображения"
+
+#: ../archive.php:54
+msgid "Videos"
+msgstr ""
+
+#: ../archive.php:57
+msgid "Quotes"
+msgstr ""
+
+#: ../archive.php:60
+#, fuzzy
+msgid "Links"
+msgstr "Ссылки"
+
+#: ../archive.php:63
+#, fuzzy
+msgid "Archives"
+msgstr "Архивы"
+
+#: ../archive.php:68 ../category-templates/category-child.php:48
+#, fuzzy, php-format
+msgid "Page %1$d / %2$d"
+msgstr "Страница"
+
+#: ../comments.php:29
+#, fuzzy, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Один комментарий по &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$ комментариев на &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:36 ../comments.php:60
+#, fuzzy
+msgid "Comment navigation"
+msgstr "Текст ссылки"
+
+#: ../comments.php:37 ../comments.php:61
+#, fuzzy
+msgid "&larr; Older Comments"
+msgstr "&laquo; Старые комментарии"
+
+#: ../comments.php:38 ../comments.php:62
+#, fuzzy
+msgid "Newer Comments &rarr;"
+msgstr "Свежие комментарии &raquo;"
+
+#: ../comments.php:73
+#, fuzzy
+msgid "Comments are closed."
+msgstr "Обсуждение закрыто."
+
+#: ../content-page.php:18 ../content-single.php:20
+#: ../template-knowledgebase.php:214
+msgid "<p class=\"pagination-p\">Pages:</p>"
+msgstr ""
+
+#: ../content-page.php:23 ../content-single.php:60 ../content.php:71
+#: ../image.php:32 ../image.php:64 ../bbpress/user-details.php:54
+#: ../inc/class-ipt-kb-bbp-login-widget.php:124 ../inc/template-tags.php:119
+#: ../inc/template-tags.php:160
+msgid "Edit"
+msgstr "Редактировать"
+
+#: ../content-single.php:29 ../content-single.php:32 ../content.php:49
+#: ../content.php:59
+#, fuzzy
+msgid ", "
+msgstr ", "
+
+#: ../content-single.php:37
+#, php-format
+msgid ""
+"This entry was tagged <i class=\"glyphicon glyphicon-tags\"></i>&nbsp;&nbsp;"
+"%2$s. <br />Bookmark the <i class=\"glyphicon glyphicon-bookmark\"></i>&nbsp;"
+"&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: ../content-single.php:39
+#, php-format
+msgid ""
+"Bookmark the <i class=\"glyphicon glyphicon-bookmark\"></i>&nbsp;&nbsp;<a "
+"href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: ../content-single.php:45
+#, php-format
+msgid ""
+"This entry was posted in <i class=\"glyphicon glyphicon-folder-open\"></"
+"i>&nbsp;&nbsp;%1$s and tagged <i class=\"glyphicon glyphicon-tags\"></"
+"i>&nbsp;&nbsp;%2$s. <br />Bookmark the <i class=\"glyphicon glyphicon-"
+"bookmark\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: ../content-single.php:47
+#, php-format
+msgid ""
+"This entry was posted in <i class=\"glyphicon glyphicon-folder-open\"></"
+"i>&nbsp;&nbsp;%1$s. <br />Bookmark the <i class=\"glyphicon glyphicon-"
+"bookmark\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: ../content.php:40 ../content.php:43
+msgid "Read more"
+msgstr "Далее"
+
+#: ../content.php:53
+#, fuzzy, php-format
+msgid "Posted in %1$s"
+msgstr "Опубликовано в %s"
+
+#: ../content.php:63
+#, fuzzy, php-format
+msgid "Tagged %1$s"
+msgstr "С метками %1$s"
+
+#: ../content.php:69
+#, fuzzy
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+#: ../content.php:69
+msgid "1 Comment"
+msgstr "1 комментарий"
+
+#: ../content.php:69
+msgid "% Comments"
+msgstr "% комментариев"
+
+#: ../footer.php:25
+#, fuzzy, php-format
+msgid "Proudly powered by %s"
+msgstr "Сайт &laquo;%1$s&raquo; работает на %2$s"
+
+#: ../footer.php:27
+#, fuzzy, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Написал %s"
+
+#: ../functions.php:54
+#, fuzzy
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+#: ../functions.php:85
+msgid "Knowledge Base Sidebar"
+msgstr "Основной сайдбар"
+
+#: ../functions.php:87
+msgid "Shows up only on category archive pages and single posts."
+msgstr ""
+
+#: ../functions.php:94
+msgid "General Sidebar"
+msgstr "Общий сайдбар"
+
+#: ../functions.php:96
+msgid "Shows up everywhere except the category archive pages and single posts."
+msgstr ""
+
+#: ../functions.php:103
+msgid "bbPress Sidebar"
+msgstr "bbPress Сайдбар"
+
+#: ../functions.php:105
+msgid "Shows up on bbPress forums and topics."
+msgstr ""
+
+#: ../functions.php:112
+msgid "Footer Large"
+msgstr "Большой сайдбар в подвале"
+
+#: ../functions.php:120
+msgid "Footer Small"
+msgstr "Маленкий сайдбар в подвале"
+
+#: ../functions.php:183
+msgid "Oops, some problem to connect. Try again?"
+msgstr ""
+
+#: ../header-bbpress.php:30 ../header.php:30
+#, fuzzy
+msgid "Toggle navigation"
+msgstr "Текст ссылки"
+
+#: ../image.php:22
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+
+#: ../image.php:37
+msgid ""
+"<span class=\"meta-nav\"><span class=\"glyphicon glyphicon-arrow-left\"></"
+"span></span> Previous"
+msgstr ""
+
+#: ../image.php:38
+msgid ""
+"Next <span class=\"meta-nav\"><span class=\"glyphicon glyphicon-arrow-right"
+"\"></span></span>"
+msgstr ""
+
+#: ../image.php:58
+#, fuzzy
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: ../no-results.php:13
+#, fuzzy
+msgid "Nothing Found"
+msgstr "Ссылка не найдена."
+
+#: ../no-results.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../search.php:16
+#, fuzzy, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты по запросу: %s"
+
+#: ../searchform.php:7
+msgctxt "placeholder"
+msgid "Search Knowledgebase&hellip;"
+msgstr ""
+
+#: ../searchform.php:13
+#, php-format
+msgid "Search Knowledgebase for %s&hellip;"
+msgstr ""
+
+#: ../template-knowledgebase.php:42 ../template-knowledgebase.php:54
+#: ../template-knowledgebase.php:73
+#: ../category-templates/category-parent.php:82
+#: ../inc/class-ipt-kb-affix-widget.php:126
+#, fuzzy
+msgid "Get support"
+msgstr "Форумы поддержки"
+
+#: ../template-knowledgebase.php:58
+#: ../category-templates/category-parent.php:86
+#, fuzzy
+msgid "Browse all"
+msgstr "Все авторы"
+
+#: ../template-knowledgebase.php:116
+#: ../category-templates/category-parent.php:113
+#, fuzzy, php-format
+msgid "Browse %d article"
+msgid_plural "Browse all %d articles"
+msgstr[0] "Настройки «по умолчанию» для статей"
+msgstr[1] ""
+
+#: ../template-knowledgebase.php:144
+#, fuzzy
+msgid "Recent articles"
+msgstr "Последние комментарии"
+
+#: ../template-knowledgebase.php:181
+#, fuzzy
+msgid "Popular articles"
+msgstr "Самые популярные"
+
+#: ../bbpress/content-single-topic-lead.php:18
+#: ../bbpress/content-single-topic-lead.php:90
+msgid "Creator"
+msgstr ""
+
+#: ../bbpress/content-single-topic-lead.php:22
+#: ../bbpress/content-single-topic-lead.php:94 ../bbpress/loop-topics.php:17
+#: ../bbpress/loop-topics.php:31
+#, fuzzy
+msgid "Topic"
+msgstr "%s запись"
+
+#: ../bbpress/content-statistics.php:15
+#, fuzzy
+msgid "Registered Users"
+msgstr "Удалить пользователей"
+
+#: ../bbpress/content-statistics.php:16
+#, fuzzy
+msgid "Forums"
+msgstr "Форумы поддержки"
+
+#: ../bbpress/content-statistics.php:17 ../bbpress/loop-forums.php:17
+msgid "Topics"
+msgstr ""
+
+#: ../bbpress/content-statistics.php:18 ../bbpress/loop-forums.php:18
+#: ../bbpress/loop-replies.php:25 ../bbpress/loop-replies.php:48
+#: ../bbpress/loop-topics.php:19 ../bbpress/loop-topics.php:33
+msgid "Replies"
+msgstr ""
+
+#: ../bbpress/content-statistics.php:19
+#, fuzzy
+msgid "Topic Tags"
+msgstr "Импортировать метки"
+
+#: ../bbpress/content-statistics.php:21
+msgid "Empty Topic Tags"
+msgstr ""
+
+#: ../bbpress/content-statistics.php:24
+#, fuzzy
+msgid "Hidden Topics"
+msgstr "Скрытый GUI"
+
+#: ../bbpress/content-statistics.php:27
+#, fuzzy
+msgid "Hidden Replies"
+msgstr "Скрытый GUI"
+
+#: ../bbpress/feedback-logged-in.php:13
+msgid "You are already logged in."
+msgstr ""
+
+#: ../bbpress/feedback-no-access.php:13
+#, fuzzy
+msgid "Private"
+msgstr "личная"
+
+#: ../bbpress/feedback-no-access.php:16
+msgid "You do not have permission to view this forum."
+msgstr ""
+
+#: ../bbpress/feedback-no-forums.php:13
+msgid "Oh bother! No forums were found here!"
+msgstr ""
+
+#: ../bbpress/feedback-no-replies.php:13
+msgid "Oh bother! No replies were found here!"
+msgstr ""
+
+#: ../bbpress/feedback-no-search.php:13
+msgid "Oh bother! No search results were found here!"
+msgstr ""
+
+#: ../bbpress/feedback-no-topics.php:13
+msgid "Oh bother! No topics were found here!"
+msgstr ""
+
+#: ../bbpress/form-anonymous.php:15
+#, fuzzy
+msgid "Author Information"
+msgstr "Информация для подключения"
+
+#: ../bbpress/form-anonymous.php:15
+#, fuzzy
+msgid "Your information:"
+msgstr "Информация для подключения"
+
+#: ../bbpress/form-anonymous.php:20 ../bbpress/form-anonymous.php:21
+#, fuzzy
+msgid "Name (required):"
+msgstr "(дважды, обязательно)"
+
+#: ../bbpress/form-anonymous.php:25 ../bbpress/form-anonymous.php:26
+msgid "Mail (will not be published) (required):"
+msgstr ""
+
+#: ../bbpress/form-anonymous.php:30 ../bbpress/form-anonymous.php:31
+#, fuzzy
+msgid "Website:"
+msgstr "Сайт"
+
+#: ../bbpress/form-forum.php:35 ../bbpress/form-topic.php:29
+#, php-format
+msgid "Now Editing &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../bbpress/form-forum.php:37
+#, php-format
+msgid "Create New Forum in &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../bbpress/form-forum.php:37
+#, fuzzy
+msgid "Create New Forum"
+msgstr "Создать новый сайт"
+
+#: ../bbpress/form-forum.php:47
+msgid ""
+"This forum is closed to new content, however your account still allows you "
+"to do so."
+msgstr ""
+
+#: ../bbpress/form-forum.php:55 ../bbpress/form-reply.php:34
+#: ../bbpress/form-topic.php:44
+msgid "Your account has the ability to post unrestricted HTML content."
+msgstr ""
+
+#: ../bbpress/form-forum.php:67
+#, php-format
+msgid "Forum Name (Maximum Length: %d):"
+msgstr ""
+
+#: ../bbpress/form-forum.php:82 ../bbpress/form-reply.php:50
+#: ../bbpress/form-topic.php:76
+#, fuzzy
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes:"
+msgstr ""
+"Можно использовать следующие <abbr title=\"HyperText Markup Language\">HTML</"
+"abbr>-теги и атрибуты: %s"
+
+#: ../bbpress/form-forum.php:91
+#, fuzzy
+msgid "Forum Type:"
+msgstr "Тип подключения"
+
+#: ../bbpress/form-forum.php:100
+#, fuzzy
+msgid "Status:"
+msgstr "Статус:"
+
+#: ../bbpress/form-forum.php:109
+#, fuzzy
+msgid "Visibility:"
+msgstr "Видимость:"
+
+#: ../bbpress/form-forum.php:118
+#, fuzzy
+msgid "Parent Forum:"
+msgstr "Родительская рубрика"
+
+#: ../bbpress/form-forum.php:123
+#, fuzzy
+msgid "(No Parent)"
+msgstr "(нет родительской)"
+
+#: ../bbpress/form-forum.php:138 ../bbpress/form-reply-move.php:62
+#: ../bbpress/form-reply.php:110 ../bbpress/form-topic-merge.php:71
+#: ../bbpress/form-topic-split.php:83 ../bbpress/form-topic.php:172
+#: ../inc/template-tags.php:698
+#, fuzzy
+msgid "Submit"
+msgstr "Подтвердить"
+
+#: ../bbpress/form-forum.php:161
+#, php-format
+msgid "The forum &#8216;%s&#8217; is closed to new content."
+msgstr ""
+
+#: ../bbpress/form-forum.php:169
+msgid "You cannot create new forums."
+msgstr ""
+
+#: ../bbpress/form-forum.php:169
+msgid "You must be logged in to create new forums."
+msgstr ""
+
+#: ../bbpress/form-protected.php:14
+#, fuzzy
+msgid "Protected"
+msgstr "Защищено: %s"
+
+#: ../bbpress/form-reply-move.php:18
+#, fuzzy, php-format
+msgid "Move reply \"%s\""
+msgstr "Оставить комментарий"
+
+#: ../bbpress/form-reply-move.php:21
+msgid ""
+"You can either make this reply a new topic with a new title, or merge it "
+"into an existing topic."
+msgstr ""
+
+#: ../bbpress/form-reply-move.php:25
+msgid ""
+"If you choose an existing topic, replies will be ordered by the time and "
+"date they were created."
+msgstr ""
+
+#: ../bbpress/form-reply-move.php:28
+#, fuzzy
+msgid "Move Method"
+msgstr "Переместить назад"
+
+#: ../bbpress/form-reply-move.php:32 ../bbpress/form-topic-split.php:33
+#, php-format
+msgid "New topic in <strong>%s</strong> titled:"
+msgstr ""
+
+#: ../bbpress/form-reply-move.php:35
+#, php-format
+msgid "Moved: %s"
+msgstr ""
+
+#: ../bbpress/form-reply-move.php:41 ../bbpress/form-topic-split.php:42
+msgid "Use an existing topic in this forum:"
+msgstr ""
+
+#: ../bbpress/form-reply-move.php:51 ../bbpress/form-topic-split.php:52
+msgid "No other topics found!"
+msgstr ""
+
+#: ../bbpress/form-reply-move.php:58 ../bbpress/form-topic-merge.php:67
+#: ../bbpress/form-topic-split.php:79
+msgid "<strong>WARNING:</strong> This process cannot be undone."
+msgstr ""
+
+#: ../bbpress/form-reply-move.php:74
+msgid "You do not have the permissions to edit this reply!"
+msgstr ""
+
+#: ../bbpress/form-reply-move.php:74
+#, fuzzy
+msgid "You cannot edit this reply."
+msgstr "Извините, вы не можете редактировать эту страницу."
+
+#: ../bbpress/form-reply.php:23
+#, fuzzy, php-format
+msgid "Reply To: %s"
+msgstr "Оставить комментарий на %s"
+
+#: ../bbpress/form-reply.php:28
+msgid ""
+"This topic is marked as closed to new replies, however your posting "
+"capabilities still allow you to do so."
+msgstr ""
+
+#: ../bbpress/form-reply.php:59
+#, fuzzy
+msgid "Tags:"
+msgstr "Метки:"
+
+#: ../bbpress/form-reply.php:77 ../bbpress/form-topic.php:142
+msgid "Notify the author of follow-up replies via email"
+msgstr ""
+
+#: ../bbpress/form-reply.php:79 ../bbpress/form-topic.php:144
+msgid "Notify me of follow-up replies via email"
+msgstr ""
+
+#: ../bbpress/form-reply.php:93 ../bbpress/form-topic.php:155
+msgid "Keep a log of this edit:"
+msgstr ""
+
+#: ../bbpress/form-reply.php:97 ../bbpress/form-reply.php:98
+#: ../bbpress/form-topic.php:159
+msgid "Optional reason for editing:"
+msgstr ""
+
+#: ../bbpress/form-reply.php:127
+#, php-format
+msgid "The topic &#8216;%s&#8217; is closed to new replies."
+msgstr ""
+
+#: ../bbpress/form-reply.php:133 ../bbpress/form-topic.php:193
+#, php-format
+msgid "The forum &#8216;%s&#8217; is closed to new topics and replies."
+msgstr ""
+
+#: ../bbpress/form-reply.php:139
+msgid "You cannot reply to this topic."
+msgstr ""
+
+#: ../bbpress/form-reply.php:139
+msgid "You must be logged in to reply to this topic."
+msgstr ""
+
+#: ../bbpress/form-search.php:13
+#, fuzzy
+msgid "Search for:"
+msgstr "Найти:"
+
+#: ../bbpress/form-search.php:17
+#, fuzzy, php-format
+msgid "Search %s&hellip;"
+msgstr "Поиск&hellip;"
+
+#: ../bbpress/form-topic-merge.php:20
+#, fuzzy, php-format
+msgid "Merge topic \"%s\""
+msgstr "Объединить ячейки таблицы"
+
+#: ../bbpress/form-topic-merge.php:23
+msgid ""
+"Select the topic to merge this one into. The destination topic will remain "
+"the lead topic, and this one will change into a reply."
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:24
+msgid ""
+"To keep this topic as the lead, go to the other topic and use the merge tool "
+"from there instead."
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:28
+msgid ""
+"All replies within both topics will be merged chronologically. The order of "
+"the merged replies is based on the time and date they were posted. If the "
+"destination topic was created after this one, it's post date will be updated "
+"to second earlier than this one."
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:30
+msgid "Destination"
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:32
+msgid "Merge with this topic:"
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:40
+msgid "No topics were found to which the topic could be merged to!"
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:44
+msgid "There are no other topics in this forum to merge with."
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:47 ../bbpress/form-topic-split.php:59
+msgid "Topic Extras"
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:52
+msgid "Merge topic subscribers"
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:57
+msgid "Merge topic favoriters"
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:62
+msgid "Merge topic tags"
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:82 ../bbpress/form-topic-split.php:95
+msgid "You do not have the permissions to edit this topic!"
+msgstr ""
+
+#: ../bbpress/form-topic-merge.php:82 ../bbpress/form-topic-split.php:95
+#, fuzzy
+msgid "You cannot edit this topic."
+msgstr "Извините, вы не можете редактировать эту страницу."
+
+#: ../bbpress/form-topic-split.php:19
+#, php-format
+msgid "Split topic \"%s\""
+msgstr ""
+
+#: ../bbpress/form-topic-split.php:22
+msgid ""
+"When you split a topic, you are slicing it in half starting with the reply "
+"you just selected. Choose to use that reply as a new topic with a new title, "
+"or merge those replies into an existing topic."
+msgstr ""
+
+#: ../bbpress/form-topic-split.php:26
+msgid ""
+"If you use the existing topic option, replies within both topics will be "
+"merged chronologically. The order of the merged replies is based on the time "
+"and date they were posted."
+msgstr ""
+
+#: ../bbpress/form-topic-split.php:29
+msgid "Split Method"
+msgstr ""
+
+#: ../bbpress/form-topic-split.php:36
+#, php-format
+msgid "Split: %s"
+msgstr ""
+
+#: ../bbpress/form-topic-split.php:64
+msgid "Copy subscribers to the new topic"
+msgstr ""
+
+#: ../bbpress/form-topic-split.php:69
+msgid "Copy favoriters to the new topic"
+msgstr ""
+
+#: ../bbpress/form-topic-split.php:74
+msgid "Copy topic tags to the new topic"
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:18
+#, fuzzy, php-format
+msgid "Manage Tag: \"%s\""
+msgstr "Лента метки %1$s %2$s %3$s"
+
+#: ../bbpress/form-topic-tag.php:22
+msgid "Rename"
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:25
+msgid "Leave the slug empty to have one automatically generated."
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:29
+msgid ""
+"Changing the slug affects its permalink. Any links to the old slug will stop "
+"working."
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:35
+#, fuzzy
+msgid "Name:"
+msgstr "Имя:"
+
+#: ../bbpress/form-topic-tag.php:40
+#, fuzzy
+msgid "Slug:"
+msgstr "Ярлык"
+
+#: ../bbpress/form-topic-tag.php:45
+#, fuzzy
+msgid "Update"
+msgstr "Обновление"
+
+#: ../bbpress/form-topic-tag.php:59 ../bbpress/form-topic-tag.php:73
+msgid "Merge"
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:62
+msgid "Merging tags together cannot be undone."
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:68
+#, fuzzy
+msgid "Existing tag:"
+msgstr "Лента метки %1$s %2$s %3$s"
+
+#: ../bbpress/form-topic-tag.php:73
+#, php-format
+msgid ""
+"Are you sure you want to merge the \"%s\" tag into the tag you specified?"
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:88 ../bbpress/form-topic-tag.php:101
+#, fuzzy
+msgid "Delete"
+msgstr "Удалить"
+
+#: ../bbpress/form-topic-tag.php:91
+msgid "This does not delete your topics. Only the tag itself is deleted."
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:94
+msgid "Deleting a tag cannot be undone."
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:95
+msgid "Any links to this tag will no longer function."
+msgstr ""
+
+#: ../bbpress/form-topic-tag.php:101
+#, php-format
+msgid ""
+"Are you sure you want to delete the \"%s\" tag? This is permanent and cannot "
+"be undone."
+msgstr ""
+
+#: ../bbpress/form-topic.php:31
+#, php-format
+msgid "Create New Topic in &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../bbpress/form-topic.php:31
+#, fuzzy
+msgid "Create New Topic"
+msgstr "Создать новый сайт"
+
+#: ../bbpress/form-topic.php:38
+msgid ""
+"This forum is marked as closed to new topics, however your posting "
+"capabilities still allow you to do so."
+msgstr ""
+
+#: ../bbpress/form-topic.php:57
+#, php-format
+msgid "Topic Title (Maximum Length: %d):"
+msgstr ""
+
+#: ../bbpress/form-topic.php:84
+#, fuzzy
+msgid "Topic Tags:"
+msgstr "Импортировать метки"
+
+#: ../bbpress/form-topic.php:99
+msgid "Forum:"
+msgstr ""
+
+#: ../bbpress/form-topic.php:102
+#, fuzzy
+msgid "(No Forum)"
+msgstr "(без заголовка)"
+
+#: ../bbpress/form-topic.php:116
+#, fuzzy
+msgid "Topic Type:"
+msgstr "Тип подключения"
+
+#: ../bbpress/form-topic.php:127
+#, fuzzy
+msgid "Topic Status:"
+msgstr "Статус Gears"
+
+#: ../bbpress/form-topic.php:201
+msgid "You cannot create new topics."
+msgstr ""
+
+#: ../bbpress/form-topic.php:201
+msgid "You must be logged in to create new topics."
+msgstr ""
+
+#: ../bbpress/form-user-edit.php:14 ../inc/template-tags.php:489
+#: ../inc/template-tags.php:490
+#, fuzzy
+msgid "Name"
+msgstr "Имя"
+
+#: ../bbpress/form-user-edit.php:23
+#, fuzzy
+msgid "First Name"
+msgstr "Имя"
+
+#: ../bbpress/form-user-edit.php:28
+#, fuzzy
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: ../bbpress/form-user-edit.php:33
+#, fuzzy
+msgid "Nickname"
+msgstr "Ник"
+
+#: ../bbpress/form-user-edit.php:38
+#, fuzzy
+msgid "Display Name"
+msgstr "Имя якоря"
+
+#: ../bbpress/form-user-edit.php:51
+#, fuzzy
+msgid "Contact Info"
+msgstr "Контактная информация"
+
+#: ../bbpress/form-user-edit.php:57 ../inc/template-tags.php:493
+#: ../inc/template-tags.php:494 ../inc/template-tags.php:633
+#, fuzzy
+msgid "Website"
+msgstr "Сайт"
+
+#: ../bbpress/form-user-edit.php:72
+#, fuzzy
+msgid "About Yourself"
+msgstr "О себе"
+
+#: ../bbpress/form-user-edit.php:72
+#, fuzzy
+msgid "About the user"
+msgstr "О пользователе"
+
+#: ../bbpress/form-user-edit.php:78
+#, fuzzy
+msgid "Biographical Info"
+msgstr "Немного информации о себе"
+
+#: ../bbpress/form-user-edit.php:85
+#, fuzzy
+msgid "Account"
+msgstr "Моя учётная запись"
+
+#: ../bbpress/form-user-edit.php:91 ../bbpress/form-user-login.php:17
+#: ../bbpress/form-user-register.php:23
+#: ../inc/class-ipt-kb-bbp-login-widget.php:79
+#: ../inc/class-ipt-kb-bbp-login-widget.php:84
+#, fuzzy
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: ../bbpress/form-user-edit.php:96 ../bbpress/form-user-register.php:28
+#: ../inc/template-tags.php:491 ../inc/template-tags.php:492
+#, fuzzy
+msgid "Email"
+msgstr "E-mail"
+
+#: ../bbpress/form-user-edit.php:104
+#, php-format
+msgid ""
+"There is a pending email address change to <code>%1$s</code>. <a class=\"btn "
+"btn-sm btn-danger\" href=\"%2$s\">Cancel</a>"
+msgstr ""
+
+#: ../bbpress/form-user-edit.php:109
+#, fuzzy
+msgid "New Password"
+msgstr "Новый пароль"
+
+#: ../bbpress/form-user-edit.php:112
+#, fuzzy
+msgid ""
+"If you would like to change the password type a new one. Otherwise leave "
+"this blank."
+msgstr ""
+"Если вы хотите поменять пароль, дважды введите новый. Или оставьте поля "
+"пустыми."
+
+#: ../bbpress/form-user-edit.php:115
+#, fuzzy
+msgid "Type your new password again."
+msgstr "Повторите ввод вашего нового пароля."
+
+#: ../bbpress/form-user-edit.php:117
+#, fuzzy
+msgid "Strength indicator"
+msgstr "Индикатор надежности"
+
+#: ../bbpress/form-user-edit.php:118
+msgid ""
+"Your password should be at least ten characters long. Use upper and lower "
+"case letters, numbers, and symbols to make it even stronger."
+msgstr ""
+
+#: ../bbpress/form-user-edit.php:127
+#, fuzzy
+msgid "User Role"
+msgstr "%s пользователь удален"
+
+#: ../bbpress/form-user-edit.php:134
+#, fuzzy
+msgid "Network Role"
+msgstr "Состояние сети"
+
+#: ../bbpress/form-user-edit.php:137
+#, fuzzy
+msgid "Grant this user super admin privileges for the Network."
+msgstr "Дать этому пользователю права суперадминистратора сети."
+
+#: ../bbpress/form-user-edit.php:152
+#, fuzzy
+msgid "Update Profile"
+msgstr "Обновить профиль"
+
+#: ../bbpress/form-user-edit.php:152
+#, fuzzy
+msgid "Update User"
+msgstr "Обновить пользователя"
+
+#: ../bbpress/form-user-login.php:14 ../bbpress/form-user-login.php:34
+#: ../inc/class-ipt-kb-bbp-login-widget.php:76
+#: ../inc/class-ipt-kb-bbp-login-widget.php:112
+#, fuzzy
+msgid "Log In"
+msgstr "Войти"
+
+#: ../bbpress/form-user-login.php:22
+#: ../inc/class-ipt-kb-bbp-login-widget.php:89
+#: ../inc/class-ipt-kb-bbp-login-widget.php:94
+#, fuzzy
+msgid "Password"
+msgstr "Пароль"
+
+#: ../bbpress/form-user-login.php:30
+msgid "Keep me signed in"
+msgstr ""
+
+#: ../bbpress/form-user-lost-pass.php:14
+#: ../inc/class-ipt-kb-bbp-login-widget.php:107
+#, fuzzy
+msgid "Lost Password"
+msgstr "Забыли пароль?"
+
+#: ../bbpress/form-user-lost-pass.php:17
+#, fuzzy
+msgid "Username or Email"
+msgstr "Имя пользователя или адрес электронной почты:"
+
+#: ../bbpress/form-user-lost-pass.php:24
+msgid "Reset My Password"
+msgstr ""
+
+#: ../bbpress/form-user-register.php:14
+#, fuzzy
+msgid "Create an Account"
+msgstr "Моя учётная запись"
+
+#: ../bbpress/form-user-register.php:17
+msgid "Your username must be unique, and cannot be changed later."
+msgstr ""
+
+#: ../bbpress/form-user-register.php:18
+msgid ""
+"We use your email address to email you a secure password and verify your "
+"account."
+msgstr ""
+
+#: ../bbpress/form-user-register.php:35
+#: ../inc/class-ipt-kb-bbp-login-widget.php:110
+#, fuzzy
+msgid "Register"
+msgstr "Регистрация"
+
+#: ../bbpress/form-user-roles.php:13
+#, fuzzy
+msgid "Blog Role"
+msgstr "Название блога"
+
+#: ../bbpress/form-user-roles.php:23
+msgid "Forum Role"
+msgstr ""
+
+#: ../bbpress/loop-forums.php:16
+msgid "Forum"
+msgstr ""
+
+#: ../bbpress/loop-forums.php:18 ../bbpress/loop-replies.php:19
+#: ../bbpress/loop-replies.php:46 ../bbpress/loop-topics.php:19
+#: ../bbpress/loop-topics.php:33
+#, fuzzy
+msgid "Posts"
+msgstr "Записи"
+
+#: ../bbpress/loop-forums.php:19 ../bbpress/loop-topics.php:20
+#: ../bbpress/loop-topics.php:34
+msgid "Freshness"
+msgstr ""
+
+#: ../bbpress/loop-replies.php:16 ../bbpress/loop-replies.php:43
+#: ../bbpress/loop-search.php:16 ../bbpress/loop-search.php:29
+#, fuzzy
+msgid "Author"
+msgstr "Автор"
+
+#: ../bbpress/loop-search-forum.php:16
+#, fuzzy, php-format
+msgid "Last updated %s"
+msgstr "Последнее обновление:"
+
+#: ../bbpress/loop-search-forum.php:26
+msgid "Forum: "
+msgstr ""
+
+#: ../bbpress/loop-search-reply.php:24
+#, fuzzy
+msgid "In reply to: "
+msgstr "Авторизуйтесь чтобы оставить ответ"
+
+#: ../bbpress/loop-search-topic.php:26
+#, fuzzy
+msgid "Topic: "
+msgstr "%s запись"
+
+#: ../bbpress/loop-search-topic.php:33
+msgid "in group forum "
+msgstr ""
+
+#: ../bbpress/loop-search-topic.php:37
+#, fuzzy
+msgid "in forum "
+msgstr "Продолжить с %d"
+
+#: ../bbpress/loop-search.php:18 ../bbpress/loop-search.php:31
+#, fuzzy
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: ../bbpress/loop-single-reply.php:17
+#, fuzzy
+msgid "Actions"
+msgstr "Действия"
+
+#: ../bbpress/loop-single-reply.php:27
+#, fuzzy
+msgid "in reply to: "
+msgstr "Авторизуйтесь чтобы оставить ответ"
+
+#: ../bbpress/loop-single-topic.php:58
+#, fuzzy, php-format
+msgid "Started by: %1$s"
+msgstr "Написал %s"
+
+#: ../bbpress/loop-single-topic.php:62
+#, fuzzy, php-format
+msgid "in: <a href=\"%1$s\">%2$s</a>"
+msgstr "Продолжить с %d"
+
+#: ../bbpress/loop-single-topic.php:94 ../inc/bbpress.php:116
+#, fuzzy, php-format
+msgid "by %s"
+msgstr "от %s"
+
+#: ../bbpress/loop-topics.php:18 ../bbpress/loop-topics.php:32
+msgid "Voices"
+msgstr ""
+
+#: ../bbpress/pagination-topics.php:26
+#, fuzzy
+msgid "New Topic"
+msgstr "Добавить"
+
+#: ../bbpress/user-details.php:28
+#, fuzzy, php-format
+msgid "%s's Profile"
+msgstr "Профиль"
+
+#: ../bbpress/user-details.php:28 ../bbpress/user-profile.php:15
+#, fuzzy
+msgid "Profile"
+msgstr "Профиль"
+
+#: ../bbpress/user-details.php:32
+#, php-format
+msgid "%s's Topics Started"
+msgstr ""
+
+#: ../bbpress/user-details.php:32
+msgid "Topics Started"
+msgstr ""
+
+#: ../bbpress/user-details.php:36
+#, fuzzy, php-format
+msgid "%s's Replies Created"
+msgstr "Дата создания"
+
+#: ../bbpress/user-details.php:36
+#, fuzzy
+msgid "Replies Created"
+msgstr "Дата создания"
+
+#: ../bbpress/user-details.php:41
+#, php-format
+msgid "%s's Favorites"
+msgstr ""
+
+#: ../bbpress/user-details.php:41
+msgid "Favorites"
+msgstr ""
+
+#: ../bbpress/user-details.php:49
+#, php-format
+msgid "%s's Subscriptions"
+msgstr ""
+
+#: ../bbpress/user-details.php:49
+msgid "Subscriptions"
+msgstr ""
+
+#: ../bbpress/user-details.php:54
+#, fuzzy, php-format
+msgid "Edit %s's Profile"
+msgstr "Изменить профиль"
+
+#: ../bbpress/user-favorites.php:15
+msgid "Favorite Forum Topics"
+msgstr ""
+
+#: ../bbpress/user-favorites.php:28
+msgid "You currently have no favorite topics."
+msgstr ""
+
+#: ../bbpress/user-favorites.php:28
+msgid "This user has no favorite topics."
+msgstr ""
+
+#: ../bbpress/user-profile.php:24 ../inc/class-ipt-kb-bbp-login-widget.php:132
+#, php-format
+msgid "%s Forum Role"
+msgstr ""
+
+#: ../bbpress/user-profile.php:25
+#, php-format
+msgid "%s Topics Started:"
+msgstr ""
+
+#: ../bbpress/user-profile.php:26 ../inc/class-ipt-kb-bbp-login-widget.php:138
+#, fuzzy, php-format
+msgid "%s Replies Created"
+msgstr "Дата создания"
+
+#: ../bbpress/user-profile.php:28 ../inc/class-ipt-kb-bbp-login-widget.php:142
+#, php-format
+msgid "%s Favorites"
+msgstr ""
+
+#: ../bbpress/user-replies-created.php:15
+msgid "Forum Replies Created"
+msgstr ""
+
+#: ../bbpress/user-replies-created.php:28
+msgid "You have not replied to any topics."
+msgstr ""
+
+#: ../bbpress/user-replies-created.php:28
+msgid "This user has not replied to any topics."
+msgstr ""
+
+#: ../bbpress/user-subscriptions.php:19
+msgid "Subscribed Forum Topics"
+msgstr ""
+
+#: ../bbpress/user-subscriptions.php:32
+msgid "You are not currently subscribed to any topics."
+msgstr ""
+
+#: ../bbpress/user-subscriptions.php:32
+msgid "This user is not currently subscribed to any topics."
+msgstr ""
+
+#: ../bbpress/user-topics-created.php:15
+msgid "Forum Topics Started"
+msgstr ""
+
+#: ../bbpress/user-topics-created.php:28
+msgid "You have not created any topics."
+msgstr ""
+
+#: ../bbpress/user-topics-created.php:28
+msgid "This user has not created any topics."
+msgstr ""
+
+#: ../bbtemp/page-forum-statistics.php:23
+msgid "<p>Here are the statistics and popular topics of our forums.</p>"
+msgstr ""
+
+#: ../bbtemp/page-forum-statistics.php:29
+#, fuzzy
+msgid "Popular Topics"
+msgstr "Самые популярные"
+
+#: ../category-templates/category-child.php:38
+#: ../category-templates/category-child.php:64
+#, fuzzy
+msgid "Support"
+msgstr "Форумы поддержки"
+
+#: ../category-templates/category-child.php:45
+#: ../category-templates/category-parent.php:25
+#, php-format
+msgid "%d article"
+msgid_plural "%d articles"
+msgstr[0] "%d статья"
+msgstr[1] "%d статьи"
+
+#: ../category-templates/category-parent.php:18
+#: ../category-templates/category-parent.php:37
+#, fuzzy
+msgid "Get Support"
+msgstr "Форумы поддержки"
+
+#: ../category-templates/category-parent.php:76
+#, php-format
+msgid "%1$s / %2$s"
+msgstr ""
+
+#: ../category-templates/no-result.php:7
+msgid "No articles published. Check back later?"
+msgstr ""
+
+#: ../inc/bbpress.php:243
+#, fuzzy
+msgid "New Request"
+msgstr "Неудачный запрос."
+
+#: ../inc/bbpress.php:245
+msgid ""
+"<span class=\"glyphicon ipt-icon-info2 bstooltip\" title=\"New Request\"></"
+"span><span class=\"sr-only\"> [New Request] </span>"
+msgstr ""
+
+#: ../inc/bbpress.php:249
+msgid "Resolved"
+msgstr ""
+
+#: ../inc/bbpress.php:251
+msgid ""
+"<span class=\"glyphicon ipt-icon-checkmark-circle bstooltip\" title="
+"\"Resolved\"></span><span class=\"sr-only\"> [Resolved] </span>"
+msgstr ""
+
+#: ../inc/bbpress.php:255
+msgid "Processing"
+msgstr ""
+
+#: ../inc/bbpress.php:257
+msgid ""
+"<span class=\"glyphicon ipt-icon-history bstooltip\" title=\"Processing\"></"
+"span><span class=\"sr-only\"> [Processing] </span>"
+msgstr ""
+
+#: ../inc/bbpress.php:261
+#, fuzzy
+msgid "No Solution"
+msgstr "(без заголовка)"
+
+#: ../inc/bbpress.php:263
+msgid ""
+"<span class=\"glyphicon ipt-icon-cancel-circle bstooltip\" title=\"No "
+"Solution\"></span><span class=\"sr-only\"> [No Solution] </span>"
+msgstr ""
+
+#: ../inc/bbpress.php:267
+msgid "Announcement"
+msgstr ""
+
+#: ../inc/bbpress.php:269
+msgid ""
+"<span class=\"glyphicon ipt-icon-bullhorn bstooltip\" title=\"Announcement"
+"\"></span><span class=\"sr-only\"> [Announcement] </span>"
+msgstr ""
+
+#: ../inc/bbpress.php:273
+msgid "Management Topic"
+msgstr ""
+
+#: ../inc/bbpress.php:275
+msgid ""
+"<span class=\"glyphicon ipt-icon-user4 bstooltip\" title=\"Announcement\"></"
+"span><span class=\"sr-only\"> [Management] </span>"
+msgstr ""
+
+#: ../inc/bbpress.php:297
+#, fuzzy
+msgid "Tagged:"
+msgstr "С метками %1$s"
+
+#: ../inc/category-fields.php:41 ../inc/category-fields.php:62
+#, fuzzy
+msgid "Support Forum"
+msgstr "Форумы поддержки"
+
+#: ../inc/category-fields.php:43 ../inc/category-fields.php:65
+msgid "Link to support forum. For parent category only."
+msgstr ""
+
+#: ../inc/category-fields.php:46 ../inc/category-fields.php:69
+#, fuzzy
+msgid "Icon Class"
+msgstr "Класс CSS"
+
+#: ../inc/category-fields.php:48 ../inc/category-fields.php:72
+msgid ""
+"Add icon class to this category. This is for subcategories, not the parent "
+"category."
+msgstr ""
+
+#: ../inc/category-fields.php:51 ../inc/category-fields.php:76
+#, fuzzy
+msgid "Image URL"
+msgstr "URL картинки"
+
+#: ../inc/category-fields.php:53 ../inc/category-fields.php:79
+msgid ""
+"Add a 128X128 image for this category. Will only be used for parent "
+"categories."
+msgstr ""
+
+#: ../inc/class-ipt-kb-affix-widget.php:32
+msgid "An affix widget for displaying on the sidebar of the single articles."
+msgstr ""
+
+#: ../inc/class-ipt-kb-affix-widget.php:33
+#, fuzzy
+msgid "Affix Widget"
+msgstr "Сохранить виджет"
+
+#: ../inc/class-ipt-kb-affix-widget.php:111
+#, fuzzy
+msgid "Search&hellip;"
+msgstr "Поиск&hellip;"
+
+#: ../inc/class-ipt-kb-affix-widget.php:167
+msgid "Click to show/hide table of contents."
+msgstr ""
+
+#: ../inc/class-ipt-kb-affix-widget.php:169
+#, fuzzy
+msgid "Table of Contents"
+msgstr "Удалить таблицу"
+
+#: ../inc/class-ipt-kb-affix-widget.php:198
+msgid "Click to show/hide articles under this category."
+msgstr ""
+
+#: ../inc/class-ipt-kb-affix-widget.php:257
+#, fuzzy
+msgid "No articles found."
+msgstr "Метки не найдены!"
+
+#: ../inc/class-ipt-kb-affix-widget.php:304
+msgid "Do not make the widget sticky"
+msgstr ""
+
+#: ../inc/class-ipt-kb-affix-widget.php:307
+msgid "No other configuration necessary. Just activate and enjoy. Neat?"
+msgstr ""
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:27
+msgid ""
+"A simple login form with optional links to sign-up and lost password pages."
+msgstr ""
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:30
+msgid "(bbPress) Login Widget"
+msgstr ""
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:102
+#, fuzzy
+msgid "Remember Me"
+msgstr "Запомнить меня"
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:124
+#, fuzzy
+msgid "Edit Your Profile"
+msgstr "Изменить профиль"
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:135
+#, php-format
+msgid "%s Topics Started"
+msgstr ""
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:141
+#, fuzzy
+msgid "Your Favorites"
+msgstr "Ваш комментарий"
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:146
+#, fuzzy
+msgid "Your Subscriptions"
+msgstr "Ваш комментарий"
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:147
+#, php-format
+msgid "%s Subscriptions"
+msgstr ""
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:190
+#, fuzzy
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:195
+#, fuzzy
+msgid "Register URI:"
+msgstr "Любой может зарегистрироваться"
+
+#: ../inc/class-ipt-kb-bbp-login-widget.php:200
+#, fuzzy
+msgid "Lost Password URI:"
+msgstr "Забыли свой пароль?"
+
+#: ../inc/class-ipt-kb-knowledgebase-widget.php:26
+msgid "Lists all your categories or knowledge bases with the right appearance."
+msgstr ""
+
+#: ../inc/class-ipt-kb-knowledgebase-widget.php:27
+msgid "Knowledge Base Widget"
+msgstr ""
+
+#: ../inc/class-ipt-kb-knowledgebase-widget.php:130
+msgid "Knowledge Bases"
+msgstr ""
+
+#: ../inc/class-ipt-kb-knowledgebase-widget.php:133
+#: ../inc/class-ipt-kb-popular-widget.php:117
+#: ../inc/class-ipt-kb-social-widget.php:130
+#, fuzzy
+msgid "Title"
+msgstr "Заголовок"
+
+#: ../inc/class-ipt-kb-knowledgebase-widget.php:138
+msgid "Show sub categories below the parent category (main knowledge bases)"
+msgstr ""
+
+#: ../inc/class-ipt-kb-knowledgebase-widget.php:141
+msgid ""
+"No other settings necessary. The icon classes you have put on categories and "
+"sub categories will be thoroughly used."
+msgstr ""
+
+#: ../inc/class-ipt-kb-popular-widget.php:26
+msgid "Shows articles or posts based on the user likes."
+msgstr ""
+
+#: ../inc/class-ipt-kb-popular-widget.php:27
+msgid "Popular Knowledge Base Articles"
+msgstr ""
+
+#: ../inc/class-ipt-kb-popular-widget.php:112
+#, fuzzy
+msgid "Popular Articles"
+msgstr "Самые популярные"
+
+#: ../inc/class-ipt-kb-popular-widget.php:121
+#, fuzzy
+msgid "Number of articles"
+msgstr "Количество колонок:"
+
+#: ../inc/class-ipt-kb-social-widget.php:30
+msgid "Stay <span>Connected</span>"
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:43
+msgid "Like us on Facebook"
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:44
+msgid "Follow us on Twitter"
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:45
+msgid "Circle us on Google Plus"
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:46
+msgid "Subscribe to our Youtube Channel"
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:47
+msgid "Subscribe to our Vimeo Channel"
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:48
+msgid "Follow us on Pinterest"
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:49
+msgid "Follow us on envato marketplaces"
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:63
+msgid "A nice looking social widget for the footer small area."
+msgstr ""
+
+#: ../inc/class-ipt-kb-social-widget.php:64
+#, fuzzy
+msgid "Social Widget"
+msgstr "Сохранить виджет"
+
+#: ../inc/extras.php:66
+#, fuzzy, php-format
+msgid "Page %s"
+msgstr "Страница"
+
+#: ../inc/ipt-kb-like-article.php:13 ../inc/ipt-kb-like-article.php:18
+#, fuzzy
+msgid "Cheatin&#8217; uh?"
+msgstr "Играешься, что ли?"
+
+#: ../inc/ipt-kb-like-article.php:22 ../inc/template-tags.php:297
+msgid "You like it already"
+msgstr ""
+
+#: ../inc/ipt-kb-like-article.php:28
+#, fuzzy
+msgid "Thank you."
+msgstr "У вас %1$s и %2$s."
+
+#: ../inc/template-tags.php:33
+#, fuzzy
+msgid "&laquo; First"
+msgstr "Имя"
+
+#: ../inc/template-tags.php:35
+#, fuzzy
+msgid "Last &raquo;"
+msgstr "Следующие &raquo;"
+
+#: ../inc/template-tags.php:77
+#, fuzzy
+msgid "Post navigation"
+msgstr "Текст ссылки"
+
+#: ../inc/template-tags.php:80
+msgctxt "Previous post link"
+msgid "<span class=\"glyphicon glyphicon-arrow-left\"></span>"
+msgstr ""
+
+#: ../inc/template-tags.php:81
+msgctxt "Next post link"
+msgid "<span class=\"glyphicon glyphicon-arrow-right\"></span>"
+msgstr ""
+
+#: ../inc/template-tags.php:86
+msgid ""
+"<span class=\"meta-nav\"><span class=\"glyphicon glyphicon-arrow-left\"></"
+"span></span> Older posts"
+msgstr ""
+
+#: ../inc/template-tags.php:90
+msgid ""
+"Newer posts <span class=\"meta-nav\"><span class=\"glyphicon glyphicon-arrow-"
+"right\"></span></span>"
+msgstr ""
+
+#: ../inc/template-tags.php:119
+#, fuzzy
+msgid "Pingback:"
+msgstr "Уведомление:"
+
+#: ../inc/template-tags.php:129
+#, fuzzy, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s<span class=\"says\">:</span>"
+
+#: ../inc/template-tags.php:132
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает одобрения."
+
+#: ../inc/template-tags.php:150
+msgid "<i class=\"glyphicon ipt-icon-reply\"></i>&nbsp;&nbsp;Reply"
+msgstr ""
+
+#: ../inc/template-tags.php:157
+#, fuzzy, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#: ../inc/template-tags.php:238
+#, php-format
+msgid ""
+"<span class=\"posted-on\"><i class=\"glyphicon glyphicon-calendar\"></i> "
+"Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:294
+msgid "This article was helpful"
+msgstr "Сказать спасибо"
+
+#: ../inc/template-tags.php:301 ../inc/template-tags.php:311
+#, php-format
+msgid "%d person found this article useful"
+msgid_plural "%d people found this article useful"
+msgstr[0] "%d сказал спасибо"
+msgstr[1] "%d сказали спасибо"
+
+#: ../inc/template-tags.php:302 ../inc/template-tags.php:307
+#, fuzzy
+msgid "Please wait"
+msgstr "Пожалуйста, подождите..."
+
+#: ../inc/template-tags.php:325 ../inc/template-tags.php:329
+#, fuzzy
+msgid "Home"
+msgstr "Главная"
+
+#: ../inc/template-tags.php:445
+#, fuzzy
+msgid "Search result"
+msgstr "Результаты по запросу:"
+
+#: ../inc/template-tags.php:449
+#, fuzzy
+msgid "Error 404 - Not found"
+msgstr "Ошибка! Страница настроек не найдена."
+
+#: ../inc/template-tags.php:453
+#, fuzzy
+msgid "Archive"
+msgstr "Пустой архив"
+
+#: ../inc/template-tags.php:457
+#, fuzzy
+msgid "Blog"
+msgstr "Название блога"
+
+#: ../inc/template-tags.php:497
+#, fuzzy, php-format
+msgid "Required fields are marked %s"
+msgstr "Обязательные поля помечены %s"
+
+#: ../inc/template-tags.php:500
+msgctxt "noun"
+msgid "Comment"
+msgstr "Комментарий"
+
+#: ../inc/template-tags.php:501
+#, fuzzy, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Вы должны <a href=\"%s\">войти</a> чтобы оставить комментарий."
+
+#: ../inc/template-tags.php:502
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Вы вошли как <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Выйти из "
+"этой учётной записи\">Выйти?</a>"
+
+#: ../inc/template-tags.php:503
+#, fuzzy
+msgid "Your email address will not be published."
+msgstr "Ваш e-mail не будет опубликован."
+
+#: ../inc/template-tags.php:504
+#, fuzzy, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Можно использовать следующие <abbr title=\"HyperText Markup Language\">HTML</"
+"abbr>-теги и атрибуты: %s"
+
+#: ../inc/template-tags.php:507
+msgid "Leave a Reply"
+msgstr "Написать комментарий"
+
+#: ../inc/template-tags.php:508
+#, fuzzy, php-format
+msgid "Leave a Reply to %s"
+msgstr "Оставить комментарий на %s"
+
+#: ../inc/template-tags.php:509
+#, fuzzy
+msgid "Cancel reply"
+msgstr "Отменить ответ"
+
+#: ../inc/template-tags.php:510
+msgid "Post Comment"
+msgstr "Оставить комментарий"
+
+#: ../inc/template-tags.php:638
+#, fuzzy
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../inc/template-tags.php:642
+#, fuzzy
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../inc/template-tags.php:646
+msgid "Google+"
+msgstr ""
+
+#: ../inc/template-tags.php:663
+#, php-format
+msgid "%1$s has written <a href=\"%2$s\">%3$s</a> %4$s"
+msgstr "%1$s написал <a href=\"%2$s\">%3$s</a> %4$s"
+
+#: ../inc/template-tags.php:663
+msgid "article"
+msgid_plural "articles"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/template-tags.php:696
+#, fuzzy
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+"Это содержимое защищено паролем. Для его просмотра введите, пожалуйста, "
+"пароль:"
+
+#: ../inc/template-tags.php:698
+#, fuzzy
+msgid "Password:"
+msgstr "Пароль:"
