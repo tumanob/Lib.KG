@@ -1169,3 +1169,28 @@ body .syntaxhighlighter table div {
 	margin: 0 auto 10px;
 }
 
+
+/*  styles for OER and plugins
+-------------------------------------*/
+
+.widget_mqtranslate{
+	height:15px;
+}
+
+.widget_mqtranslate li{
+	float:left;
+	list-style: none;
+	margin-right:10px;
+}
+
+
+
+.widget_mqtranslate li.active a{
+	color:#ccc;
+}
+
+
+.navbar{
+	
+	margin-bottom: 0px;
+}

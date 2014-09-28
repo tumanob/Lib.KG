@@ -61,5 +61,12 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content container">
-
+		
+		<?php if ( is_active_sidebar( 'sidebar-10' ) ) : ?>
+			<div id="sidebar-10" class="primary-sidebar-10 widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-10' ); ?>
+		</div><!-- #primary-sidebar -->
+	<?php endif; ?>
+	
+	
 	<?php ipt_kb_breadcrumb(); ?>
