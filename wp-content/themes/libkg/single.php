@@ -7,18 +7,30 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-md-8">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php
+				// check the category of the post to load template that we need
+				if ( in_category( 5 ) || post_is_in_descendant_category( 5 ) ) {
+				// in books category
+							 get_template_part( 'content', 'book' );
+						}
+						else
+						{
+							get_template_part( 'content', 'single' );
+						}
+
+			?>
+			<?php //get_template_part( 'content', 'single' ); ?>
 
 			<?php ipt_kb_like_article(); ?>
 
-			<?php ipt_kb_content_nav( 'nav-below' ); ?>
+			<?php ipt_kb_content_nav( 'nav-below' ); // replace this with similar post from the same category as on tramp?>
 
-			<?php ipt_kb_author_meta(); ?>
+			<?php //ipt_kb_author_meta(); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
@@ -31,5 +43,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

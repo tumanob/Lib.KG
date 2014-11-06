@@ -1,6 +1,6 @@
 <?php
 /**
- * @package iPanelThemes Knowledgebase
+ * @package iPanelThemes Knowledgebase - content single
  */
 ?>
 

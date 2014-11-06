@@ -154,7 +154,7 @@ function ipt_kb_comment( $comment, $args, $depth ) {
 				<div class="comment-metadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
-							<i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'ipt_kb' ), get_comment_date(), get_comment_time() ); ?>
+							<i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;<?php printf( _x( '%1$s', '1: date', 'ipt_kb' ), get_comment_date()); ?>
 						</time>
 					</a>
 					<?php edit_comment_link( __( 'Edit', 'ipt_kb' ), '<span class="edit-link">', '</span>' ); ?>
@@ -490,8 +490,9 @@ function ipt_kb_comment_form( $args = array(), $post_id = null ) {
 		            '<div class="input-group"><span class="input-group-addon"><span class="glyphicon ipt-icon-user"></span></span><input placeholder="' . __( 'Name', 'ipt_kb' ) . ( $req ? ' *' : '' ) . '" class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>',
 		'email'  => '<div class="form-group comment-form-email"><label class="sr-only control-label" for="email">' . __( 'Email', 'ipt_kb' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 		            '<div class="input-group"><span class="input-group-addon"><span class="glyphicon ipt-icon-mail"></span></span><input placeholder="' . __( 'Email', 'ipt_kb' ) . ( $req ? ' *' : '' ) . '" class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>',
-		'url'    => '<div class="form-group comment-form-url"><label class="sr-only control-label" for="url">' . __( 'Website', 'ipt_kb' ) . '</label> ' .
+	/*	'url'    => '<div class="form-group comment-form-url"><label class="sr-only control-label" for="url">' . __( 'Website', 'ipt_kb' ) . '</label> ' .
 		            '<div class="input-group"><span class="input-group-addon"><span class="glyphicon ipt-icon-link"></span></span><input placeholder="' . __( 'Website', 'ipt_kb' ) . '" class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>',
+	*/
 	);
 
 	$required_text = sprintf( ' ' . __( 'Required fields are marked %s', 'ipt_kb' ), '<span class="required">*</span>' );
@@ -500,9 +501,9 @@ function ipt_kb_comment_form( $args = array(), $post_id = null ) {
 		'comment_field'        => '<div class="comment-form-comment form-group"><label class="sr-only control-label" for="comment">' . _x( 'Comment', 'noun', 'ipt_kb' ) . '</label><textarea placeholder="' . _x( 'Comment', 'noun', 'ipt_kb' ) . '" class="form-control" id="comment" name="comment" rows="6" aria-required="true"></textarea></div>',
 		'must_log_in'          => '<p class="must-log-in alert alert-danger">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'ipt_kb' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
 		'logged_in_as'         => '<p class="logged-in-as alert alert-success">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'ipt_kb' ), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
-		'comment_notes_before' => '<p class="comment-notes alert alert-info">' . __( 'Your email address will not be published.', 'ipt_kb' ) . ( $req ? $required_text : '' ) . '</p>',
-		'comment_notes_after'  => '<p class="form-allowed-tags well well-sm">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
-		'id_form'              => 'commentform',
+		'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.', 'ipt_kb' ) . ( $req ? $required_text : '' ) . '</p>',
+	/*	'comment_notes_after'  => '<p class="form-allowed-tags well well-sm">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
+	*/	'id_form'              => 'commentform',
 		'id_submit'            => 'submit',
 		'title_reply'          => __( 'Leave a Reply', 'ipt_kb' ),
 		'title_reply_to'       => __( 'Leave a Reply to %s', 'ipt_kb' ),

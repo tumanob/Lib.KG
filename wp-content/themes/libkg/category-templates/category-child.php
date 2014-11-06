@@ -86,4 +86,3 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 			<?php get_template_part( 'no-results', 'archive' ); ?>
 
 		<?php endif; ?>
-
