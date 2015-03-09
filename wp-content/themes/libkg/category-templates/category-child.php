@@ -66,6 +66,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 						<?php endif; ?>
 						</div>
 					</div>
+
 					<?php
 						// Show an optional term description.
 						$term_description = term_description();
@@ -73,6 +74,35 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 							printf( '<div class="taxonomy-description well well-sm">%s</div>', $term_description );
 						endif;
 					?>
+
+					<div id='child_subcat'>
+
+						<?php
+							$categories = get_categories(array('hide_empty' => true, 'child_of' => $cat_id));
+						// todo  - get list just of upper sub-categories
+						?>
+							child subcat -  <?php echo $cat_id;?>
+							<div class="list-group">
+								<?php
+								foreach ( $categories as $category ) {
+								//	print_r($category);
+									?>
+								<link><?php get_category_link( $category->cat_ID ); ?>
+									<a rel="bookmark" class="list-group-item kb-list-date kb-post-list" href="<?php echo get_category_link( $category->term_id ); ?>">
+										<span class="badge"><?php echo wp_get_cat_postcount($category->term_id);?></span>
+										<h3><span class="glyphicon ipt-icon-file"></span>  <?php echo $category->name.$scat->term_id; ?></h3>
+										<span class="clearfix"></span>
+									</a>
+									<?php
+									//echo $scat->term_id;;
+									//echo '123'.'<a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br/>';
+								}
+								// todo тут нужно сделать 2 шаблона дл ятсниац и категорий чтобы выводило то что нам нужно для каждой категории и темблейт
+								?>
+						</div>
+
+					</div>
+
 				</div>
 				<div class="clearfix"></div>
 			</header><!-- .page-header -->

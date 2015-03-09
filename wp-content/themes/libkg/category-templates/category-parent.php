@@ -6,6 +6,7 @@ global $term_meta, $cat, $cat_id, $sub_categories;
 $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 ?>
 	<header class="kb-parent-category-header row">
+
 		<div class="col-sm-4 col-md-3 col-lg-2 kb-pcat-icon hidden-xs">
 			<?php if ( isset( $term_meta['image_url'] ) && '' != $term_meta['image_url'] ) : ?>
 			<p class="text-center">
@@ -137,7 +138,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 					// todo тут нужно сделать 2 шаблона дл ятсниац и категорий чтобы выводило то что нам нужно для каждой категории и темблейт
 					?>
 				</div>
-
+				<!--
 				<div class="list-group">
 					<?php 		if ( $scat_posts->have_posts() ) : ?>
 						<?php 		while ( $scat_posts->have_posts() ) : $scat_posts->the_post(); ?>
@@ -147,7 +148,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 						<?php 		get_template_part( 'category-templates/no-result' ); ?>
 					<?php 		endif; ?>
 				</div>
-
+				-->
 
 				<p class="text-right">
 					<a class="btn btn-default" href="<?php echo $sterm_link; ?>"><i class="glyphicon ipt-icon-link"></i> <?php printf( _n( 'Browse %d article', 'Browse all %d articles', $scat_totals, 'ipt_kb' ), $scat_totals ); ?></a>

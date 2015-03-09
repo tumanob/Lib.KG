@@ -33,13 +33,6 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<?php if ( get_header_image() ) : ?>
-					<a class="site-anchor" href="<?php echo home_url( '/' ); ?>">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-					<?php else : ?>
-					<h1 class="site-title"><a class="site-anchor" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php endif; // End header image check. ?>
 
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,22 +49,41 @@
 					);
 					?>
 				</div>
-				
-				
+
+
 			</div>
 		</nav>
 	</header><!-- #masthead -->
 
+
 	<div id="content" class="site-content container">
-	
-	<div id="langswitch"> 
-		<?php if ( is_active_sidebar( 'sidebar-10' ) ) : ?>
-			<div id="sidebar-10" class="primary-sidebar-10 widget-area" role="complementary">
-		<?php dynamic_sidebar( 'sidebar-10' ); ?>
-		</div><!-- #primary-sidebar -->
-	<?php endif; ?>
-	
-	
-	</div>
-	
+
+
+		<div id="sub_header">
+		<?php if ( get_header_image() ) : ?>
+			<div class="row">
+				<div id="logoblock" class="col-md-2">
+					<a class="site-anchor" href="<?php echo home_url( '/' ); ?>">
+						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+					</a>
+				</div>
+				<?php else : ?>
+				<h1 class="site-title"><a class="site-anchor" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php endif; // End header image check. ?>
+
+				<div id="langswitch" class="col-md-8">
+					<?php if ( is_active_sidebar( 'sidebar-10' ) ) : ?>
+						<div id="sidebar-10" class="primary-sidebar-10 widget-area" role="complementary">
+					<?php dynamic_sidebar( 'sidebar-10' ); ?>
+					</div><!-- #primary-sidebar -->
+				<?php endif; ?>
+				</div>
+				<div class="col-md-2">
+					<div class="btn btn-success addbutton btn-lg">
+						добавить материал
+					</div>
+				</div>
+			</div>
+		</div>
+
 	<?php ipt_kb_breadcrumb(); ?>

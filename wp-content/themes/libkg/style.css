@@ -1,6 +1,6 @@
 /*
-Theme Name: Lib.kg - OER repository 
-Theme URI: 
+Theme Name: Lib.kg - OER repository
+Theme URI:
 Author: Alexander Tumanov
 Author URI: http://www.swashata.com/
 Description: theme based on knowlege theme
@@ -1135,7 +1135,7 @@ body .syntaxhighlighter table div {
 }
 #commentform .cptch_block label {
 	width: 41.6667%;
-	
+
 }
 .cptch_block #cptch_input {
 	width: 60px !important;
@@ -1191,9 +1191,80 @@ body .syntaxhighlighter table div {
 
 
 .navbar{
-	
+
 	margin-bottom: 0px;
-	
-	
-	
+}
+
+#langswitch
+{
+	float:left;
+
+}
+#sub_header
+{
+	min-height: 65px;
+
+}
+
+#logoblock
+{
+
+	float: left;
+}
+
+/*  TODO
+for menu when on tablet and cellphone
+
+navbar
+{
+position: absolute;
+top: 0;
+}
+
+
+for lang block when menu for mobile
+
+используя разметку бутсрап разбить на 3 колонки равные по назмеру.
+после они сложутся в номальный ивд а там уже размеры можно будет менять отдельно в стилях для
+элементов
+
+lang-ky {
+clear: left;
+}
+
+*/
+
+
+/*  we will replace this with bootstrap
+functionality  to make it look much
+better hen we need it
+*/
+
+#add_material{
+	float:right;
+}
+
+.navbar-default .navbar-nav>.current-category-ancestor>a{
+background-image: -webkit-gradient(linear,left 0,left 100%,from(#ebebeb),to(#f3f3f3));
+background-image: -webkit-linear-gradient(top,#ebebeb 0,#f3f3f3 100%);
+background-image: -moz-linear-gradient(top,#ebebeb 0,#f3f3f3 100%);
+background-image: linear-gradient(to bottom,#ebebeb 0,#f3f3f3 100%);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb',endColorstr='#fff3f3f3',GradientType=0);
+-webkit-box-shadow: inset 0 3px 9px rgba(0,0,0,0.075);
+box-shadow: inset 0 3px 9px rgba(0,0,0,0.075);
+
+color: #555;
+background-color: #e7e7e7;
+
+}
+
+
+
+.addbutton
+{
+float: right !important;
+}
+.navbar-nav{
+	width:100%;
 }
