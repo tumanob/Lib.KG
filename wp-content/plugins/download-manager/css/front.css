@@ -778,11 +778,10 @@ div.tooltip.in{
 
 
 /** button styles **/
-.link-btn {
+.w3eden .link-btn {
     border: 1px solid #cccccc;
     padding: 6px;
-    display: block;
-    float: left;
+    display: block;     
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -790,22 +789,30 @@ div.tooltip.in{
 
 }
 
-.link-btn .wpdm_icon{
-    width: 32px;
+.w3eden .link-btn .wpdm_icon{
+    width: 40px;
 }
 
-.link-btn * {
+.w3eden .link-btn .label-default {
+    background-color: rgba(0, 0, 0, 0.35) !important;
+    border-radius: 2px !important;
+    line-height: 20px !important;
+    padding: 4px 6px !important;
+}
+
+.w3eden .link-btn * {
     text-decoration: none !important;
     line-height: normal !important;
 }
 
-.link-btn:active {
-    margin-top: 1px;
-    margin-left: 1px;
+
+.w3eden .ptitle{
+    font-size: 12pt;
+    margin-bottom: 3px;
+    display: block;
 }
 
-
-.light {
+.w3eden .light {
     -moz-box-shadow: 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow: 0px 1px 0px 0px #ffffff;
     box-shadow: 0px 1px 0px 0px #ffffff;
@@ -818,14 +825,13 @@ div.tooltip.in{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
     background-color: #ffffff;
     border: 1px solid #dcdcdc;
-    display: inline-block;
-    cursor: pointer;
+    display: inline-block;    
     color: #666666;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
 }
 
-.light:hover {
+.w3eden .light:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
     background: -moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
     background: -webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
@@ -836,7 +842,7 @@ div.tooltip.in{
     background-color: #f6f6f6;
 }
 
-.light:active {
+.w3eden .light:active {
     position: relative;
     top: 1px;
 }
@@ -848,7 +854,7 @@ div.tooltip.in{
     color: #ffffff !important;
 }
 
-.green {
+.w3eden  .green {
     -moz-box-shadow: inset 0px 1px 0px 0px #9acc85;
     -webkit-box-shadow: inset 0px 1px 0px 0px #9acc85;
     box-shadow: inset 0px 1px 0px 0px #9acc85;
@@ -862,7 +868,7 @@ div.tooltip.in{
     background-color: #74ad5a;
     border: 1px solid #3b6e22;
     display: inline-block;
-    cursor: pointer;
+     
     color: #ffffff;
     text-decoration: none;
 }
@@ -895,7 +901,7 @@ div.tooltip.in{
 
     border: 1px solid #124d77;
     display: inline-block;
-    cursor: pointer;
+     
     color: #ffffff;
 
     font-size: 13px;
@@ -928,4 +934,15 @@ div.tooltip.in{
 }
 .panel-body{
     color: #222222 !important;
+}
+
+.wpdm-category .link-btn{
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+}
+
+.w3eden .panel form,
+.w3eden .link-btn form{
+    margin-top: 10px;
 }

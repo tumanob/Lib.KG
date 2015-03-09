@@ -7,6 +7,7 @@ Tested up to: 4.0
 Stable tag: 4.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Donate link: http://oscitasthemes.com/support-our-free-plugins/
 
 Easy Bootstrap Shortcode enable you to add bootstrap 3.0.3 styles in your pages, post and custom post in simplest manner.
 
@@ -146,6 +147,15 @@ It's that simple ... just what the name suggests
 == Changelog ==
 
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
+
+= 4.3.7 =
+
+* [Update] New option to select the target and alternate text in Responsive Image shortcode.
+* [Update] New option to select the target in tooltip shortcode.
+
+= 4.3.6 =
+
+* [Update] Button icon issue resolved.
 
 = 4.3.5 =
 

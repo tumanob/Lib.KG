@@ -2,14 +2,15 @@
 Contributors: chsxf, michel.weimerskirch
 Tags: multilingual, language, admin, tinymce, bilingual, widget, switcher, i18n, l10n, multilanguage, professional, translation, service, human
 Requires at least: 3.9
-Tested up to: 4.0
-Stable tag: 2.8
-Donate Link: http://www.xhaleera.com/
+Tested up to: 4.1
+Stable tag: 2.10.1
 License: GPLv2
 
-Based on qTranslate, adds userfriendly multilingual content management and translation support, with collaborative and team-oriented extensions.
+DEPRECATED in favor of qTranslate X. Based on qTranslate, adds userfriendly multilingual content management and translation support, with collaborative and team-oriented extensions.
 
 == Description ==
+
+**As of February 19th, 2015, this plugin has been deprecated in favor of [qTranslate X](http://wordpress.org/plugins/qtranslate-x/).**
 
 Writing multilingual content is already hard enough, why make using a plugin even more complicated? qTranslate has been created to let Wordpress have an easy to use interface for managing a fully multilingual web site.
 
@@ -43,18 +44,29 @@ Flags in flags directory are made by Luc Balemans and downloaded from FOTW Flags
 
 == Installation ==
 
-**IMPORTANT NOTE:** Please disable qTranslate if it is installed and active before activating mqTranslate.
+**As of February 19th, 2015, this plugin has been deprecated in favor of [qTranslate X](http://wordpress.org/plugins/qtranslate-x/).**
 
 Installation of this plugin is fairly easy:
 
-1. Download the plugin from [here](http://wordpress.org/plugins/mqtranslate/ "the WordPress Plugin Repository").
-1. Extract all the files.
-1. Upload everything (keeping the directory structure) to the `/wp-content/plugins/` directory.
-1. There should be a `/wp-content/plugins/mqtranslate` directory now with `mqtranslate.php` in it.
-1. Activate the plugin through the 'Plugins' menu in WordPress.
-1. Add the mqTranslate Widget to let your visitors switch the language.
+* As with any plugin update / installation, save your database.
+* Install mqTranslate through the plugins administration panel, **but don't activate it yet**.
+
+If your install already includes qTranslate, follow these steps:
+
+* Disable qTranslate but keep it installed for the moment
+* Activate mqTranslate
+* Go to mqTranslate Languages settings page and use our settings migration to copy qTranslate original settings automatically
+* Enable mqTranslate and check everything works fine. If not, disable the plugin and enable qTranslate again. If yes, you can remove mqTranslate installation (but I suggest you keep it as it is harmless once disabled and it can help you if you discover later bugs with mqTranslate).
+* Add the mqTranslate Widget to let your visitors switch the language.
+
+If your install does not include qTranslate, you can go with it:
+
+* Activate mqTranslate
+* Add the mqTranslate Widget to let your visitors switch the language.
 
 == Frequently Asked Questions ==
+
+**As of February 19th, 2015, this plugin has been deprecated in favor of [qTranslate X](http://wordpress.org/plugins/qtranslate-x/).**
 
 The original qTranslate FAQ is available at the [Original qTranslate Homepage](http://www.qianqin.de/qtranslate/).
 
@@ -70,11 +82,41 @@ For Problems with mqTranslate-specific features, visits [our Support Page](http:
 
 == Changelog ==
 
+2.10.1:
+
+- Improved deprecation message
+- Added a dismiss button the deprecation message
+
+2.10:
+
+- Deprecation of the plugin in favor of [qTranslate X](http://wordpress.org/plugins/qtranslate-x/)
+
+2.9.1.2:
+
+- [PARTIALLY REVERTED] Improved activation process in case qTranslate or another fork is already active (missing functions for plugin dependencies)
+
+2.9.1.1:
+
+- [REVERTED] Added client-side cookie to memorize language selection (this feature created a bug in qtranslate slug)
+
+2.9.1:
+
+- Improved activation process in case qTranslate or another fork is already active
+- Added client-side cookie to memorize language selection
+- Added optimization settings section (first setting allows disabling the filtering of all WordPress options)
+- Fixed potential bug with ACF additional wysiwyg fields (thanks to Fabien MOTTA from com1fruit.com)
+
+2.9:
+
+- Support for WordPress 4.1
+- Fixed mislocation of inserted media in the wrong languages when using the text editor
+- Added option for secure cookies
+
 2.8:
 
 - Fixed potential bug with HTTPS (thanks to twisterss)
 - Fixed bug affecting quicktags initialization on editor instances other than "content" (thanks to Marco Chiesi)
-- Updated Portuguese (Portugal pt_PT) language files
+- Updated Portuguese (Portugal pt_PT) language files (thanks to Pedro Mendonça)
 
 2.7.1.1:
 

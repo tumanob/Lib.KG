@@ -70,6 +70,7 @@
 			);
 
 
+			/*
 			$edu_level_arr=get_field('edu-level');
 
 			if(sizeof($edu_level_arr)>0)
@@ -83,7 +84,9 @@
 			}
 
 			echo $custom_fields;
+			*/
 
+			
 		?>
 		<br/>
 		<?php edit_post_link( __( 'Edit', 'ipt_kb' ), '<span class="edit-link"><i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;', '</span>' ); ?>

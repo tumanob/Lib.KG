@@ -2,12 +2,11 @@
 Theme Name: Lib.kg - OER repository
 Theme URI:
 Author: Alexander Tumanov
-Author URI: http://www.swashata.com/
+Author URI:
 Description: theme based on knowlege theme
 Version: 2.6.0
 License: GNU General Public License
 
-222
 */
 
 
@@ -1198,6 +1197,8 @@ body .syntaxhighlighter table div {
 #langswitch
 {
 	float:left;
+	margin-top: 20px;
+
 
 }
 #sub_header
@@ -1210,6 +1211,7 @@ body .syntaxhighlighter table div {
 {
 
 	float: left;
+	margin-bottom: 10px;
 }
 
 /*  TODO
@@ -1263,8 +1265,71 @@ background-color: #e7e7e7;
 
 .addbutton
 {
-float: right !important;
+float: right;
+margin-top: 6px;
+
 }
 .navbar-nav{
 	width:100%;
+}
+
+
+/* ICONS  */
+
+.thumbnail .glyphicon:empty
+{
+	width:100%;
+}
+
+.school
+{
+	background: #ccc url("img/school120.jpg");
+	height: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	background-repeat:no-repeat;
+}
+
+
+
+.books
+{
+	background: #ccc url("img/books120.jpg");
+	height: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	background-repeat:no-repeat;
+}
+
+
+.diploma
+{
+	background: #ccc url("img/diploma120.jpg");
+	height: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	background-repeat:no-repeat;
+}
+
+
+@media (max-width: 767px)
+{
+
+	.thumbnail .glyphicon:empty
+	{
+		width:2em;
+	}
+
 }

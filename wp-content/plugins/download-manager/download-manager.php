@@ -3,24 +3,26 @@
 /*
 Plugin Name: Download Manager
 Plugin URI: http://www.wpdownloadmanager.com/
-Description: Manage, Protect and Track File Downloads from your wordpress site
+Description: Manage, Protect and Track File Downloads from your WordPress site
 Author: Shaon
-Version: 2.7.0
+Version: 2.7.88
 Author URI: http://www.wpdownloadmanager.com/
 */
 
-
+//error_reporting(E_ALL);
        
 if(!isset($_SESSION))
-session_start();    
+session_start();
+
+define('WPDM_Version','2.7.88');
         
 include(dirname(__FILE__)."/functions.php");        
 include(dirname(__FILE__)."/class.pack.php");
 include(dirname(__FILE__)."/class.logs.php");
 include(dirname(__FILE__)."/class.pagination.php");
 include(dirname(__FILE__)."/server-file-browser.php");
+include(dirname(__FILE__)."/wpdm-widgets.php");
 
-define('WPDM_Version','2.7.0');
     
 $d = str_replace('\\','/',WP_CONTENT_DIR);
 
@@ -35,11 +37,15 @@ define('_DEL_DIR',$d.'/uploads/download-manager-files');
 
 define('UPLOAD_BASE',$d.'/uploads/');  
 
-ini_set('upload_tmp_dir',UPLOAD_DIR.'/cache/');    
+if(function_exists('ini_set'))
+@ini_set('upload_tmp_dir',UPLOAD_DIR.'/cache/');
 
-load_plugin_textdomain('wpdmpro', WP_PLUGIN_URL."/download-manager/languages/",'download-manager/languages/');
 
 if(!$_POST)    $_SESSION['download'] = 0;
+
+function wpdm_load_textdomain() {     
+    load_plugin_textdomain( 'wpdmpro', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
 
 function wpdm_pro_Install(){
     global $wpdb;
@@ -60,24 +66,6 @@ function wpdm_pro_Install(){
             ) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
             
       
-     /* $sqls[] = "CREATE TABLE  IF NOT EXISTS `{$wpdb->prefix}ahm_categories` (
-            `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-            `title` VARCHAR( 255 ) NOT NULL ,
-            `desc` TEXT NOT NULL ,
-            `url_key` VARCHAR( 255 ) NOT NULL ,
-            `pcount` INT NOT NULL ,
-            `image` VARCHAR( 255 ) NOT NULL ,
-            `parent` INT NOT NULL ,
-            UNIQUE (
-            `url_key`
-            )
-            )";*/
-      //$sqls[] = "ALTER TABLE `{$wpdb->prefix}ahm_files` ADD `uid` INT NOT NULL";      
-      //$sqls[] = "ALTER TABLE `{$wpdb->prefix}ahm_files` ADD `create_date` INT NOT NULL";
-      //$sqls[] = "ALTER TABLE `{$wpdb->prefix}ahm_files` ADD `update_date` INT NOT NULL";
-      //$sqls[] = "ALTER TABLE `{$wpdb->prefix}ahm_files` ADD `url_key` varchar(255) NOT NULL";
-      //$sqls[] = "ALTER TABLE `{$wpdb->prefix}ahm_emails` ADD `custom_data` TEXT NOT NULL ";
-      //$sqls[] = "ALTER TABLE `wp_ahm_files` ADD `version` VARCHAR( 100 ) NOT NULL";      
       
       require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
       foreach($sqls as $sql){
@@ -113,50 +101,23 @@ function wpdm_pro_Install(){
 
 include("wpdm-core.php");
 
-function wdm_tinymce()
-{
-/*  wp_enqueue_script('common');
-  wp_enqueue_script('jquery-color');
-  wp_admin_css('thickbox');
-  wp_print_scripts('post');
-  wp_print_scripts('media-upload');
-  wp_print_scripts('jquery');
-  //wp_print_scripts('jquery-ui-core');
-  //wp_print_scripts('jquery-ui-tabs');
-  wp_print_scripts('tiny_mce');
-  wp_print_scripts('editor');
-  wp_print_scripts('editor-functions');
-  add_thickbox();
-  wp_tiny_mce();
-  wp_admin_css();
-  wp_enqueue_script('utils');
-  do_action("admin_print_styles-post-php");
-  do_action('admin_print_styles');
-  remove_all_filters('mce_external_plugins'); */
-}
-
-//if($_GET['page']=='file-manager/add-new-package'||$_GET['page']=='file-manager'||$_GET['page']=='file-manager/templates')
-//add_action('admin_head','wdm_tinymce');
 
 
 register_activation_hook(__FILE__,'wpdm_pro_Install');
  
-//if(!is_admin()){
-
-
-
-
 /** native upload code **/
 function plu_admin_enqueue() {     
     wp_enqueue_script('plupload-all');    
     wp_enqueue_style('plupload-all');    
 }
 
-
-
-
+ 
 // handle uploaded file here
 function wpdm_check_upload(){
+
+
+  if(!current_user_can("edit_posts")) return;
+
   check_ajax_referer('photo-upload');
   if(file_exists(UPLOAD_DIR.$_FILES['async-upload']['name']))
   $filename = time().'wpdm_'.$_FILES['async-upload']['name'];  
@@ -170,11 +131,18 @@ function wpdm_check_upload(){
 
 
 function wpdm_upload_icon(){
+  if(!current_user_can('manage_options')) return;
   check_ajax_referer('icon-upload');
   if(file_exists(dirname(__FILE__).'/file-type-icons/'.$_FILES['icon-async-upload']['name']))
   $filename = time().'wpdm_'.$_FILES['icon-async-upload']['name'];  
   else
-  $filename = $_FILES['icon-async-upload']['name'];  
+  $filename = $_FILES['icon-async-upload']['name'];
+
+  $ext = explode(".", $filename);
+  $ext = end($ext);
+  $ext = strtolower($ext);
+  if(!in_array($ext, array('png','jpg','jpeg'))) return; //Only Images!
+
   move_uploaded_file($_FILES['icon-async-upload']['tmp_name'],dirname(__FILE__).'/file-type-icons/'.$filename);
   $data = array('rpath'=>"download-manager/file-type-icons/$filename",'fid'=>md5("download-manager/file-type-icons/$filename"),'url'=>plugins_url("download-manager/file-type-icons/$filename"));
   header('HTTP/1.0 200 OK');
@@ -191,6 +159,7 @@ function wpdm_welcome(){
 
 function fmmenu(){
     $access_level = 'manage_options';
+    add_submenu_page( 'edit.php?post_type=wpdmpro', __('Add-Ons &lsaquo; Download Manager',"wpdmpro"), __('Add-Ons',"wpdmpro"), $access_level, 'wpdm-addons', 'wpdm_addonslist');
     add_submenu_page( 'edit.php?post_type=wpdmpro', __('Settings &lsaquo; Download Manager',"wpdmpro"), __('Settings',"wpdmpro"), $access_level, 'settings', 'FMSettings');
     add_dashboard_page('Welcome', 'Welcome', 'read', 'wpdm-welcome', 'wpdm_welcome');
 }
@@ -210,4 +179,5 @@ function wpdm_welcome_redirect($plugin)
 
 add_filter('run_ngg_resource_manager', 'wpdm_skip_ngg_resource_manager');
 
+include(dirname(__FILE__)."/wpdm-m2cpt.php");
  

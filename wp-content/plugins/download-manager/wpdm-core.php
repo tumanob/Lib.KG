@@ -1,32 +1,51 @@
 <?php
 
 //error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
+ 
 
-function wpdm_unInstall()
+global $stabs, $package, $wpdm_package;
+/**
+ * @usage Initiate Settings Tabs
+ */
+function wpdm_initiate_settings()
 {
-    global $wpdb;
-    global $jal_db_version;
+    global $stabs;
+    $tabs = array();
+    $tabs['basic'] = array('id' => 'basic', 'link' => 'edit.php?post_type=wpdmpro&page=settings', 'title' => 'Basic', 'callback' => 'basic_settings');
 
-    $table_name = "{$wpdb->prefix}ahm_files";
-    if ($wpdb->get_var("show tables like '$table_name'") != $table_name) {
-
-        $sql = "DROP TABLE " . $table_name;
-
-        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-        dbDelta($sql);
-
-        remove_option("fm_db_version");
-
+    if (function_exists('bp_is_active')) {
+        $tabs['buddypress'] = array('id' => 'buddypress', 'link' => 'edit.php?post_type=wpdmpro&page=settings&tab=buddypress', 'title' => 'BuddyPress', 'callback' => 'buddypress_addon_settings');
     }
+
+    if(defined('WPDM_CLOUD_STORAGE')){
+        $tabs['cloud-storage'] = array('id' => 'cloud-storage', 'link' => 'edit.php?post_type=wpdmpro&page=settings&tab=cloud-storage', 'title' => 'Cloud Storage', 'callback' => 'wpdm_cloud_storage_settings');
+    }
+
+    if(!$stabs) $stabs = array();
+
+    $stabs = $tabs + $stabs;
+
+    $stabs = apply_filters("add_wpdm_settings_tab", $stabs);
+
 
 }
 
-global $stabs, $package, $wpdm_package;
-$stabs['basic'] = array('id' => 'basic', 'link' => 'edit.php?post_type=wpdmpro&page=settings', 'title' => 'Basic', 'callback' => 'basic_settings');
+/**
+ * @param $tablink
+ * @param $newtab
+ * @param $func
+ * @deprecated Deprecated from v4.2, use filter hook 'add_wpdm_settings_tab'
+ * @usage Deprecated: From v4.2, use filter hook 'add_wpdm_settings_tab'
+ */
 function add_wdm_settings_tab($tablink, $newtab, $func)
 {
     global $stabs;
     $stabs["{$tablink}"] = array('id' => $tablink, 'link' => 'edit.php?post_type=wpdmpro&page=settings&tab=' . $tablink, 'title' => $newtab, 'callback' => $func);
+}
+
+function wpdm_create_settings_tab($tabid, $tabtitle, $callback)
+{
+    return array('id' => $tabid, 'link' => 'edit.php?post_type=wpdmpro&page=settings&tab=' . $tablink, 'title' => $tabtitle, 'callback' => $callback);
 }
 
 function render_settings_tabs($sel = '')
@@ -42,6 +61,32 @@ function render_settings_tabs($sel = '')
         }
     }
 }
+
+
+function buddypress_addon_settings(){
+    if(isset($_POST['section']) && $_POST['section']=='buddypress' && isset($_POST['task']) && $_POST['task']=='wdm_save_settings' && current_user_can('manage_options')){
+        foreach($_POST as $k => $v){
+            if(strpos($k, '_wpdm_')){
+                update_option($k, $v);
+            }
+        }
+        die('Settings Saved Successfully!');
+    }
+    include(WPDM_BASE_DIR."settings/buddypress.php");
+}
+
+function wpdm_cloud_storage_settings(){
+    if(isset($_POST['section']) && $_POST['section']=='cloud-storage' && isset($_POST['task']) && $_POST['task']=='wdm_save_settings' && current_user_can('manage_options')){
+        foreach($_POST as $k => $v){
+            if(strpos($k, '_wpdm_')){
+                update_option($k, $v);
+            }
+        }
+        die('Settings Saved Successfully!');
+    }
+    include(WPDM_BASE_DIR."settings/cloud-storage.php");
+}
+
 
 
 function wpdm_is_download_limit_exceed($id)
@@ -118,44 +163,15 @@ function DownloadPageContent($embedid = 0)
 function wpdm_download_url($package, $ext = '')
 {
     if ($ext) $ext = '&' . $ext;
-    return site_url("/?wpdmdl={$package['ID']}{$ext}");
+    $ID = is_array($package)?$package['ID']:$package;
+    return site_url("/?wpdmdl={$ID}{$ext}");
 }
 
-
-function AdminOptions()
-{
-
-    if (!file_exists(UPLOAD_DIR) && $_GET[task] != 'CreateDir') {
-
-        echo "    
-        <div id=\"warning\" class=\"error fade\"><p>
-        Automatic dir creation failed! [ <a href='admin.php?page=file-manager&task=CreateDir&re=1'>Try again to create dir automatically</a> ]<br><br>
-        Please create dir <strong>" . UPLOAD_DIR . "</strong> manualy and set permision to <strong>644</strong><br><br>
-        Otherwise you will not be able to upload files.</p></div>";
-    }
-
-    if ($_GET[success] == 1) {
-        echo "
-        <div id=\"message\" class=\"updated fade\"><p>
-        Congratulation! Plugin is ready to use now.
-        </div>
-        ";
-    }
-
-
-    if (!file_exists(UPLOAD_DIR . '.htaccess'))
-        setHtaccess();
-
-    if ($_REQUEST[task] != '' && function_exists($_REQUEST['task']))
-        return call_user_func($_REQUEST['task']);
-    else
-        include('list-files.php');
-}
 
 function wpdm_upload_file()
 {
-    if (!isset($_FILES['Filedata'])) return;
-    if (is_uploaded_file($_FILES['Filedata']['tmp_name']) && is_admin() && $_GET['task'] == 'wpdm_upload_files') {
+    if (!isset($_FILES['Filedata']) || !isset($_GET['task'])) return;
+    if (is_uploaded_file($_FILES['Filedata']['tmp_name']) && is_admin() && $_GET['task'] == 'wpdm_upload_files' && current_user_can("edit_posts")) {
         $tempFile = $_FILES['Filedata']['tmp_name'];
         $targetFile = UPLOAD_DIR . time() . 'wpdm_' . $_FILES['Filedata']['name'];
         move_uploaded_file($tempFile, $targetFile);
@@ -166,8 +182,8 @@ function wpdm_upload_file()
 
 
 
-function CreateDir()
-{
+function CreateDir(){
+
     if (!file_exists(UPLOAD_BASE)) {
         @mkdir(UPLOAD_BASE, 0755);
     }
@@ -198,16 +214,20 @@ function FMSettings()
 
 function basic_settings()
 {
-    if (isset($_POST['task']) && $_POST['task'] == 'wdm_save_settings') {
-
+    
+    if (isset($_POST['task']) && $_POST['task'] == 'wdm_save_settings' && current_user_can('manage_options')) {
+        
+        if ( ! isset( $_POST['wpdmsettingsnonce'] ) || ! wp_verify_nonce( $_POST['wpdmsettingsnonce'], 'wpdm-'.NONCE_KEY ) ) die('Invalid Request!');    
+        
         foreach ($_POST as $optn => $optv) {
+            if(strpos("__".$optn, "wpdm")) //Option must have "wpdm" in its name to avoid any type ambiguity  
             update_option($optn, $optv);
         }
         if (!isset($_POST['__wpdm_login_form'])) delete_option('__wpdm_login_form');
 
 
 
-        die('Settings Saved Successfully');
+        die(__('Settings Saved Successfully','wpdmpro'));
     }
     include('settings/basic.php');
 }
@@ -215,6 +235,8 @@ function basic_settings()
 function wdm_ajax_settings()
 {
     global $stabs;
+    
+    if(current_user_can('manage_options'))
     call_user_func($stabs[$_POST['section']]['callback']);
     die();
 }
@@ -224,6 +246,8 @@ function wpdm_save_package_data($post)
 {
     global $wpdb, $current_user;
     get_currentuserinfo();
+
+
     if (get_post_type() != 'wpdmpro' || !isset($_POST['file'])) return;
 
     $cdata = get_post_custom($post);
@@ -391,23 +415,7 @@ function remote_get($url)
     return $content;
 }
 
-
-/**
- * @usage Generate direct link to download
- * @param $params
- * @param string $content
- * @return string
- */
-function wpdm_direct_link($params, $content = "")
-{
-    extract($params);
-    global $wpdb;
-    $package = $wpdb->get_row("select * from {$wpdb->prefix}ahm_files where id='$id'", ARRAY_A);
-    $url = wpdm_download_url($package);
-    $data_icon = isset($data_icon) ? $data_icon : plugins_url('/download-manager/images/download-now.png');
-    return "<div class='w3eden aligncenter'><br/><a style='text-align:left;padding:8px 15px;' class='btn $class' rel='nofollow' href='$url'><img src='{$data_icon}' style='border:0px;box-shadow:none;max-height:40px;width:auto;margin-right:10px;float:left;' /> <span id='mlbl' style='font-size:13pt;font-weight:bold;'>{$link_label}</span><br/><small id='slbl'>{$link_slabel}</small></a><br/><div style='clear:both;'></div></div>";
-}
-
+ 
 
 function addusercolumn()
 {
@@ -466,10 +474,7 @@ function wpdm_adminjs()
 
                 options = jQuery.extend(options, {
                     close: function () {
-                        /*$.post( ajaxurl, {
-                         pointer: 'global_wpdm_dd_option',
-                         action: 'dismiss-wpdm-dd-pointer'
-                         }); */
+                        
                     }
                 });
 
@@ -493,11 +498,103 @@ function wpdm_adminjs()
 
 
 
+function wpdm_plugin_data($dir){
+    $plugins = get_plugins();
+    foreach($plugins as $plugin => $data){
+        $plugin = explode("/", $plugin);
+        if($plugin[0]==$dir) return $data;
+    }
+}
+
+function wpdm_check_update()
+{
+
+    if(!current_user_can('manage_options')) return;
+
+    $latest = '';//get_option('wpdm_latest');
+    $latest_check = get_option('wpdm_latest_check');
+    $time = time() - intval($latest_check);
+    $plugins = get_plugins();
+
+    $latest_v_url = 'http://www.wpdownloadmanager.com/versions.php';
+
+    if ($latest == '' || $time > 86400) {
+        $latest = remote_get($latest_v_url);
+        update_option('wpdm_latest', $latest);
+        update_option('wpdm_latest_check', time());
+
+    }
+    $latest = maybe_unserialize($latest);
+    array_shift($latest);
+    $page = isset($_REQUEST['page'])?esc_attr($_REQUEST['page']):'';
+    $plugin_info_url = isset($_REQUEST['plugin_url'])?$_REQUEST['plugin_url']:'http://www.wpdownloadmanager.com/purchases/';
+    foreach($latest as $plugin_dir => $latestv){
+        $plugin_data = wpdm_plugin_data($plugin_dir);
+
+        if (version_compare($plugin_data['Version'], $latestv, '<') == true ) {
+            $plugin_name = $plugin_data['Name'];
+            $plugin_info_url = $plugin_data['PluginURI'];
+            $trid = sanitize_title($plugin_name);
+            if($trid!=''){
+                if ($page == 'plugins') {
+                    echo <<<NOTICE
+     <script type="text/javascript">
+      jQuery(function(){
+        jQuery('tr#{$trid}').addClass('update').after('<tr class="plugin-update-tr"><td colspan=3 class="plugin-update colspanchange"><div style="background:#D54E21;border-top:0px;padding:5px 15px;color:#fff">There is a new version of {$plugin_name} available. <b><a href="{$plugin_info_url}#{$latestv}" style="color:#fff;float: right;background: rgba(0,0,0,0.2);padding: 5px 15px;margin-top:-5px;margin-right: -15px" target=_blank>Download v{$latestv}  <i class="fa fa-long-arrow-right"></i></a></b></div></td></tr>');
+      });
+      </script>
+NOTICE;
+                } else {
+                    echo <<<NOTICE
+     <script type="text/javascript">
+      jQuery(function(){
+        jQuery('.wrap > h2').after('<div class="updated error" style="margin:10px 0px;padding:10px;border:2px solid #dd3d36;border-radius:4px;background: #ffffff"><div style="float:left;"><b style="color:#dd3d36;">Important!</b><br/>There is a new version of <u>{$plugin_name}</u> available.</div> <a style="border-radius:2px;float:right;display:inline-table;color:#ffffff;background:#D54E21;padding:10px 15px" href="{$plugin_info_url}#{$latestv}"  target=_blank>Download v{$latestv}  <i class="fa fa-long-arrow-right"></i></a><div style="clear:both"></div></div>');
+         });
+         </script>
+NOTICE;
+                }}
+        }
+    }
+    if(wpdm_is_ajax()) die();
+}
+
+function wpdm_newversion_check(){
+
+    if(!current_user_can('manage_options')) return;
+
+    $tmpvar = explode("?", basename($_SERVER['REQUEST_URI']));
+    $page = array_shift($tmpvar);
+    $page = explode(".", $page);
+    $page = array_shift($page);
+
+    if (get_option('wpdm_update_notice') == 'disabled' || !($page == 'plugins' || get_post_type()=='wpdmpro') ) return;
+
+    $page = $page == 'plugins'?$page:get_post_type();
+
+    ?>
+    <script type="text/javascript">
+        jQuery(function(){
+
+            jQuery.post(ajaxurl, {
+                action:         'wpdm_check_update',
+                page:           '<?php echo $page; ?>'
+            }, function(res){
+                jQuery('#wpfooter').after(res);
+            });
+
+
+        });
+    </script>
+<?php
+}
+
+
+
 function wpdm_ajax_call_exec()
 {
     if (isset($_POST['action']) && $_POST['action'] == 'wpdm_ajax_call') {
-        if (function_exists($_POST['execute']))
-            call_user_func($_POST['execute'], $_POST);
+        if ($_POST['execute']=='wpdm_getlink')
+            wpdm_getlink();
         else
             echo "function not defined!";
         die();

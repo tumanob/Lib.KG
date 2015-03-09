@@ -1,6 +1,7 @@
-<script type="text/javascript" src="<?php echo plugins_url();?>/download-manager/js/jquery.form.js"></script>
 <link rel="stylesheet" href="<?php echo plugins_url('/download-manager/css/chosen.css'); ?>" />
 <script language="JavaScript" src="<?php echo plugins_url('/download-manager/js/chosen.jquery.min.js'); ?>"></script>
+<script language="JavaScript" src="<?php echo plugins_url('/download-manager/bootstrap/js/bootstrap.min.js');?>" ></script>
+<script type="text/javascript" src="<?php echo plugins_url();?>/download-manager/js/jquery.form.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo plugins_url('/download-manager/bootstrap/css/bootstrap.css');?>" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -218,15 +219,36 @@
 
     <div class="container" style="margin-top: 10px">
          <div class="row">
+
              <div class="col-md-12">
                  <div class="well text-center">
                      <img src="<?php echo WPDM_BASE_URL; ?>images/wpdm-welcome.png" />
                  </div>
 
              </div>
+
+             <?php
+             global $wpdb;
+             $tf = 0;
+             if($wpdb->get_var("SHOW TABLES LIKE 'ahm_files'") == 'ahm_files')
+             $tf = $wpdb->get_var("select count(*) from `ahm_files`");
+             if($tf>0){
+                 ?>
+                 <div class="col-md-12">
+
+                     <div class="alert alert-success" style="border-radius: 3px">
+                         <b>Migrate Data</b><br/>
+                         Looks like you were using v2.6 earlier and there are some data already, anyhow you can migrate those data to 2.7 from <a href="<?php echo admin_url('edit.php?post_type=wpdmpro&page=settings&tab=m24x'); ?>"><b>Admin Menu <i class="fa fa-angle-double-right"></i> Downloads <i class="fa fa-angle-double-right"></i> Settings <i class="fa fa-angle-double-right"></i> Migrate Tab</b></a>
+                         <br/>You also can get back to v2.6. To do that, delete current installation of v2.7, <a href="https://downloads.wordpress.org/plugin/download-manager.2.6.96.zip">Download v2.6.96</a> and install.
+                     </div>
+
+
+                 </div>
+             <?php } ?>
+
              <?php if(!function_exists('wpdm_tinymce')){ ?>
              <div class="col-md-12 lead text-center">Lets install following add-ons to make your WordPress Download Manager more awesome<br/></div>
-                 <div class="col-md-4 col-sm-6 col-xs-12 all add-ons free-add-ons tools" style="display: block;">
+                 <div class="col-md-4 col-sm-6 col-xs-12">
                      <div class="panel panel-default">
                          <div style="min-height: 130px;height: 130px;overflow: hidden" class="panel-body">
                              <div class="media">
@@ -248,7 +270,7 @@
                      </div>
                  </div>
 
-                 <div class="col-md-4 col-sm-6 col-xs-12 all add-ons free-add-ons tools" style="display: block;">
+                 <div class="col-md-4 col-sm-6 col-xs-12">
                      <div class="panel panel-default">
                          <div style="min-height: 130px;height: 130px;overflow: hidden" class="panel-body">
                              <div class="media">
@@ -271,7 +293,7 @@
                  </div>
 
 
-                 <div class="col-md-4 col-sm-6 col-xs-12 all add-ons free-add-ons ui-add-ons" style="display: block;">
+                 <div class="col-md-4 col-sm-6 col-xs-12">
                      <div class="panel panel-default">
                          <div style="min-height: 130px;height: 130px;overflow: hidden" class="panel-body">
                              <div class="media">
@@ -296,7 +318,7 @@
 
 
              <?php } ?>
-
+            <div style="clear:both"></div>
              <div class="col-md-12">
                  <div class="well">
                      <div class="media">
@@ -312,7 +334,7 @@
 
              <div class="col-md-12 lead">
                  <h3>What's New?</h3>
-                 What new with WordPress Download Manager Pro v2.7.0:
+                 What new with WordPress Download Manager v2.7:
              </div>
 
              <div class="col-md-4 r">
@@ -324,7 +346,7 @@
              <div class="col-md-4 r">
 
                  <b>Add-On Support</b>
-                 Now you can use free or pro add-ons with WordPress Download Manager v2.7, earlier which were only avalable for wpdm pro.
+                 Now you can use free or pro add-ons with WordPress Download Manager v2.7, earlier which were only available for wpdm pro.
              </div>
 
              <div class="col-md-4 r">
@@ -332,9 +354,21 @@
                  <b>Theme Support</b>
                  As WordPress Download Manager 2.7 using custom post type now, you will not need any extra work to use it with any WordPress Theme.
              </div>
+            
+            <div class="col-md-12"><br style="clear:both"/><hr/>
+                 <h3>v2.7.8</h3>
+                 <p class="lead">What new with WordPress Download Manager v2.7.86:</p>
+                 <ul style="list-style:square !important">
+                     <li>Fixed issue with output buffering option</li>
+                     <li>Fixed issue with broken pdf download ( was only happening in few installations )</li>
+                     <li>Fixed issue with Google Drive file attachment</li>
+                     <li>Fixed issue with Google Drive file download</li>
+                 </ul>
+             </div>
 
              <div class="col-md-12 lead">
-                 <hr/>
+                 <br/>
+                 <hr/><br/>
                  Lets start: Admin Menu <i class="fa fa-angle-double-right"></i> <a href="<?php echo admin_url('edit.php?post_type=wpdmpro'); ?>">Downloads</a> <i class="fa fa-angle-double-right"></i> <a href="<?php echo admin_url('post-new.php?post_type=wpdmpro'); ?>">Add New</a>
              </div>
 

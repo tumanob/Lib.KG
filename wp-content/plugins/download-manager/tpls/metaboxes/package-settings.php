@@ -86,10 +86,15 @@
 } ?>
 
 </div>
+<?php if(!is_plugin_active('wpdm-premium-packages/wpdm-premium-packages.php')){ ?>
+<div class="w3eden"><br/>
+<div  class="alert alert-warning" style="background-image: none !important;">
 
-<em style="margin: 15px 0 5px 0;display: block;font-weight: bold">
-    Planning to sell your digital products? Check <a target="_blank" href="http://www.wpdownloadmanager.com/download/premium-package/">WPDM Premium Package Add-on</a>. Now you can use it even with wpdm v2.7
-</em>
+    Planning to sell your digital products? Check <a style="font-weight: 900" target="_blank" href="http://www.wpdownloadmanager.com/download/premium-package/">WPDM Premium Package Add-on</a>. Now you can use it even with wpdm v2.7
+
+</div>
+</div>
+<?php } ?>
 
 
 
@@ -109,7 +114,7 @@
 
 
 
-        jQuery('#img').live('click', function( event ){
+        jQuery('#img').on('click', function( event ){
 
             event.preventDefault();
 
@@ -123,7 +128,7 @@
             file_frame = wp.media.frames.file_frame = wp.media({
                 title: jQuery( this ).data( 'uploader_title' ),
                 button: {
-                    text: jQuery( this ).data( 'uploader_button_text' ),
+                    text: jQuery( this ).data( 'uploader_button_text' )
                 },
                 multiple: false  // Set to true to allow multiple files to be selected
             });
@@ -145,13 +150,13 @@
         });
 
 
-        jQuery(".cb-enable").live('click',function(){
+        jQuery(".cb-enable").on('click',function(){
             var parent = jQuery(this).parents('.switch');
             jQuery('.cb-disable',parent).removeClass('selected');
             jQuery(this).addClass('selected');
             jQuery('.checkbox',parent).attr('checked', true);
         });
-        jQuery(".cb-disable").live('click',function(){
+        jQuery(".cb-disable").on('click',function(){
             var parent = jQuery(this).parents('.switch');
             jQuery('.cb-enable',parent).removeClass('selected');
             jQuery(this).addClass('selected');
@@ -169,14 +174,14 @@
 
         });
 
-        jQuery('#rmvp').live('click',function(){
+        jQuery('#rmvp').on('click',function(){
             jQuery('#fpvw').val('');
             jQuery('#mpim').slideUp().remove();
             jQuery(this).fadeOut();
             jQuery('#img').html('<img src="<?php echo plugins_url("/download-manager/images/add-image.gif"); ?>\" /> Add Main Preview Image<input type="hidden" name="file[preview]" value="" id="fpvw" />');
             return false;
         });
-        jQuery('.wpdm-label').live('click',function(){
+        jQuery('.wpdm-label').on('click',function(){
             //alert(jQuery(this).attr('class'));
             if(jQuery(this).hasClass('wpdm-checked')) jQuery(this).addClass('wpdm-unchecked').removeClass('wpdm-checked');
             else jQuery(this).addClass('wpdm-checked').removeClass('wpdm-unchecked');

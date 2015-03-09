@@ -3,12 +3,12 @@ Contributors: funnycat
 Donate link: http://www.infowebmaster.fr/dons.php
 Tags: sitemap, generator, page list, site map, html sitemap, sitemap generator, dynamic sitemap, seo
 Requires at least: 3.0
-Tested up to: 4.0.0
-Stable tag: 1.3.0
+Tested up to: 4.1.0
+Stable tag: 1.5.3
 License: GPLv2 or later
 
 
-Add a sitemap on one any of your page using the simple shortcode [wp_sitemap_page]. Improve the SEO and navigation of your website.
+Add a sitemap on any of your page using the simple shortcode [wp_sitemap_page]. Improve the SEO and navigation of your website.
 
 
 == Description ==
@@ -25,6 +25,7 @@ Such a sitemap is useful for many reasons:
 = Current features =
 *   Display all pages, posts and categories
 *   Display the Custom Post Type (such as: "event", "book" …)
+*   Display the taxonomies
 *   Display only one kind of content using the attribute "only", like `[wp_sitemap_page only="page"]`
 *   Easy to use
 *   Possibility to customize the way it will be displayed through the admin panel
@@ -33,7 +34,7 @@ Such a sitemap is useful for many reasons:
 *   Has CSS class to customize it if you want
 *   Available in multi-languages (cf. English, French, Russian, Italian, Spanish, Dutch, Czech, Persian …). You can add your own translation if you want
 
-Want a WordPress developper? Want to add a translation? Feel free to [contact me](http://en.tonyarchambeau.com/contact.html).
+Want a WordPress developer? Want to add a translation? Feel free to [contact me](http://en.tonyarchambeau.com/contact.html).
 
 
 == Installation ==
@@ -76,12 +77,13 @@ This plugin is available through the following languages :
 *   Italian (`it_IT`) by Nima
 *   Spanish (`es_ES`) by Raul
 *   Czech (`cs_CZ`) by [Roman Opet](https://www.high-definition.cz/)
-*   Polish (`pl_PL`) by [Mariusz](http://www.wordpresscup.com/)
+*   Polish (`pl_PL`) by [Mariusz](http://www.trojmiasto.us/)
 *   Deutsch (`de_DE`) by Arno
 *   Swedish (`sv_SE`)
-*   Brazilian Portuguese (`pt_BR`) by Miguel Müller
+*   Portuguese and Brazilian Portuguese (`pt_BR`, `pt_PT`) by Miguel Müller
 *   Finnish (`fi_FI`) by [pokis.fi](http://www.pokis.fi/)
 *   Hungarian (`hu_HU`)
+*   Hebrew (`he_IL`) by Ahrale
 
 If you want to add another language, feel free to [contact me](http://en.tonyarchambeau.com/contact.html) in order to send the file with the correct translation files (.mo and .po). Thanks a lot!
 
@@ -93,6 +95,23 @@ If you want to add another language, feel free to [contact me](http://en.tonyarc
 
 == Changelog ==
 
+= 1.5.3 =
+* Add Hebrew translation
+= 1.5.2 =
+* Fix a compatibility problem with WPML (more details here : http://wpml.org/forums/topic/wp-sitemap-page/ )
+= 1.5.1 =
+* Update the translation for the following language: French, Russian, German, Sweden, Italian, Spanish, Hungarian and Portuguese.
+= 1.5.0 =
+* Add the taxonomy
+* Feature to add a nofollow attribute to the page, post and custom post type links
+* Feature to show only the private pages
+= 1.4.0 =
+* Fix bug about the missing &lt;ul&gt; tags
+* Fix the class attribute name of some &lt;h2&gt; tags
+* Do not display the titles with the attribute display_title="false". It give the opportunity to create a sitemap in any languages of your choice
+* Improve the functionnality to exclude pages and posts
+* Possibility to exclude the content protected by password
+* Add some hooks to help others developers to adapt the sitemap
 = 1.3.0 =
 * Possibility to add a sitemap with any of these elements : category, tag, archive or author
 * Improve the back-office interface

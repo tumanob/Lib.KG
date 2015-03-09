@@ -1,16 +1,30 @@
 <input type="hidden" name="file[files][]" value="<?php $afiles = maybe_unserialize(get_post_meta(get_the_ID(), "__wpdm_files", true)); echo $afiles[0]; ?>" id="wpdmfile" />
-<div class="cfile" id="cfl" style="padding: 10px;margin-bottom: 10px;border:1px solid #eee">
+<div class="cfile" id="cfl" style="padding: 10px;margin-bottom:10px;border:1px solid #ddd;background: #fafafa">
     <?php
+    $filesize = "<em style='color: darkred'>( ".__("attached file is missing/deleted","wpdmpro")." )</em>";
+    $afile = is_array($afiles)&&isset($afiles[0])?$afiles[0]:'';
 
-    $afile = is_array($afiles)?$afiles[0]:'';
     if($afile !=''){
-        if(file_exists(UPLOAD_DIR.'/'.$afile))
-            $filesize = number_format(filesize(UPLOAD_DIR.'/'.$afile)/1025,2);
-        else if(file_exists($afile))
-            $filesize = number_format(filesize($afile)/1025,2);
+
+        if(strpos($afile, "://")){
+            $fparts = parse_url($afile);
+            $filesize = "<span class='w3eden'><span class='text-primary'><i class='fa fa-link'></i> {$fparts['host']}</span></span>";
+        }
+        else {
+            if (file_exists(UPLOAD_DIR . '/' . $afile))
+                $filesize = number_format(filesize(UPLOAD_DIR . '/' . $afile) / 1025, 2) . " KB";
+            else if (file_exists($afile))
+                $filesize = number_format(filesize($afile) / 1025, 2) . " KB";
+        }
+
+        if(strpos($afile, "#")) {
+            $afile = explode("#", $afile);
+            $afile = $afile[1];
+        }
+
         ?>
 
-        <div style="position: relative;margin-bottom:20px"><strong><?php echo  basename($afile); ?></strong><br/><?php echo $filesize; ?> KB <a href='#' id="dcf" title="Delete Current File" style="position: absolute;right:0;top:0;height:32px;"><img src="<?php echo plugins_url('/download-manager/images/error.png'); ?>" /></a></div>
+        <div style="position: relative;"><strong><?php echo  basename($afile); ?></strong><br/><?php echo $filesize; ?> <a href='#' id="dcf" title="Delete Current File" style="position: absolute;right:0;top:0;height:32px;"><img src="<?php echo plugins_url('/download-manager/images/error.png'); ?>" /></a></div>
     <?php } else echo "<span style='font-weight:bold;color:#ddd'>No file uploaded yet!</span>"; ?>
     <div style="clear: both;"></div>
 </div>
@@ -18,16 +32,18 @@
 <div id="ftabs">
 <ul>
     <li><a href="#upload">Upload</a></li>
+    <?php  if(current_user_can('access_server_browser')){ ?>
     <li><a href="#browse">Browse</a></li>
+    <?php } ?>
 </ul>
 
 <div id="upload">
-<div id="plupload-upload-ui" class="hide-if-no-js">
+<div id="plupload-upload-ui" class="hide-if-no-js" style="margin-top: 10px">
         <div id="drag-drop-area">
-            <div class="drag-drop-inside">
-                <p class="drag-drop-info"><?php _e('Drop files here'); ?></p>
-                <p><?php _ex('or', 'Uploader: Drop files here - or - Select Files'); ?></p>
-                <p class="drag-drop-buttons"><input id="plupload-browse-button" type="button" value="<?php esc_attr_e('Select Files'); ?>" class="button" /></p>
+            <div class="drag-drop-inside" style="width: 100% !important;">
+                <p class="drag-drop-info"><?php _e('Drop files here','wpdmpro'); ?></p>
+                <p><?php _ex('or', 'Uploader: Drop files here - or - Select Files','wpdmpro'); ?></p>
+                <p class="drag-drop-buttons"><input id="plupload-browse-button" type="button" value="<?php esc_attr_e('Select Files','wpdmpro'); ?>" class="button" /></p>
             </div>
         </div>
     </div>
@@ -139,7 +155,7 @@
 </div>
 
 <div id="browse">
-    <?php wpdm_file_browser(); ?>
+    <?php  if(current_user_can('access_server_browser')) wpdm_file_browser(); ?>
 </div>
 
 </div>
@@ -187,5 +203,8 @@ jQuery(function(){
     });
 
 });
-
+ 
 </script>
+<?php
+
+do_action("wpdm_attach_file_metabox");

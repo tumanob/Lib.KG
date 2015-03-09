@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo plugins_url('/download-manager/bootstrap/css/bootstrap.css');?>" />
 
+
 <style>
 
     input{
@@ -34,20 +35,13 @@
 
     }
 
-    .w3eden .btn{
-        border-radius: 0.2em !important;
-    }
+
 
     .w3eden .nav-pills a{
         background: #f5f5f5;
     }
 
-    .w3eden .form-control,
-    .w3eden .nav-pills a{
-        border-radius: 0.2em !important;
-        box-shadow: none !important;
-        font-size: 9pt !important;
-    }
+
 
     .wpdm-spin{
         -webkit-animation: spin 2s infinite linear;
@@ -135,18 +129,15 @@
         margin-top: -4px;
         margin-right: -6px;
         border-radius: 3px;
-        border:1px solid rgba(255,255,255,0.8);
-        -webkit-transition: all 400ms ease-in-out;
-        -moz-transition: all 400ms ease-in-out;
-        -o-transition: all 400ms ease-in-out;
-        transition: all 400ms ease-in-out;
+        border:1px solid #18578E;
     }
 
     .panel-heading .btn.btn-primary:hover{
         margin-top: -4px;
         margin-right: -6px;
         border-radius: 3px;
-        border:1px solid rgba(255,255,255,1);
+        border:1px solid #18578E;
+        background-image: linear-gradient(to bottom, #F5F5F5 0px, #E1E1E1 100%);
 
     }
 
@@ -161,6 +152,10 @@
         outline: none !important;
     }
 
+    .w3eden .panel-primary {
+        border-color: #2080D3;
+    }
+
     .w3eden .nav-pills li.active a,
     .btn-primary,
     .w3eden .panel-primary > .panel-heading{
@@ -169,11 +164,28 @@
     .w3eden .panel-default > .panel-heading {
         background-image: linear-gradient(to bottom, #F5F5F5 0px, #E1E1E1 100%);
         background-repeat: repeat-x;
+        border-bottom-color: #cccccc !important;
+    }
+
+    ul#navigation {
+        border-bottom: 1px solid #999999;
+    }
+
+    #tabs a{
+        border-radius: 3px !important;
+    }
+
+    .form-control:focus{
+        -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 3px rgba(102,175,233,0.6) !important;
+        box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 3px rgba(102,175,233,0.6) !important;
+    }
+    .chzn-drop{
+        width: 100% !important;
     }
 
 
 </style>
-<!--<link rel="stylesheet" type="text/css" href="--><?php //echo plugins_url(); ?><!--/download-manager/css/tabs.css" />-->
+
 <script type="text/javascript" src="<?php echo plugins_url();?>/download-manager/js/jquery.form.js"></script>
 <link rel="stylesheet" href="<?php echo plugins_url('/download-manager/css/chosen.css'); ?>" />
 
@@ -192,17 +204,31 @@ border-bottom: 1px solid #999999;
 </style>
 
 <div style="clear: both;"></div>
+<div style="max-width: 800px;margin:-3px 30px 0 30px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-success text-center" style="border-radius: 3px">
+             <a class="text-success" href='https://wordpress.org/support/view/plugin-reviews/download-manager?rate=5#postform' title="Please consider it when you get some free moments" target="_blank">A 5* rating will inspire me a lot. Thanks :)</a>
+         </div>
+        </div>
+    </div>
+</div>   
     <form method="post" id="wdm_settings_form">
- <div style="max-width: 800px;margin:30px" class="panel panel-primary">
+       <?php wp_nonce_field('wpdm-'.NONCE_KEY,'wpdmsettingsnonce'); ?>
+        
+ <div style="max-width: 800px;margin:0 30px" class="panel panel-primary">
      <div class="panel-heading"><button type="submit" class="btn btn-primary pull-right"><span class="pull-left wpdm-loading wpdm-ssb" style="margin: 0.1em 5px 0 0"></span> Save Settings</button><h3 class="h">&nbsp;&nbsp;Download Manager Settings <div class="pull-left wpdm-loading" id="wdms_loading"></div></h3>
 
      </div>
 <div class="panel-body">
 <div class="container-fluid">
+ 
 <div class="row"><div class="col-md-3">
      <ul id="tabs" class="nav nav-pills nav-stacked">
          <?php render_settings_tabs($tab=isset($_GET['tab'])?esc_attr($_GET['tab']):'basic'); ?>
      </ul>
+        
+         
         </div><div class="col-md-9">
      <div class="tab-content">
 <div onclick="jQuery(this).slideUp();" class="alert alert-info" style="display: none" id="message"></div>
@@ -225,6 +251,7 @@ border-bottom: 1px solid #999999;
 </div>
 </div>
 </div>
+        
  </div>
 
     </form>
