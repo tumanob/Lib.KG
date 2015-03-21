@@ -11,14 +11,17 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content <?php if ( has_post_thumbnail() ){ echo "wthumb";} ?>">
+
 	<?php if ( has_post_thumbnail() ) : ?>
-	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-	<?php the_post_thumbnail( 'medium', array( 'class' => 'alignleft bookcover' ) ); ?>
-	</a>
+	<!-- <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> -->
+	<div>
+		<?php the_post_thumbnail( 'medium', array( 'class' => 'alignleft bookcover' ) ); ?>
+	<!-- </a> -->
+	</div>
 <?php endif; ?>
 
-		<?php the_content(); ?>
+		<div><?php the_content(); ?> </div>
 		<?php
 			wp_link_pages( array(
 				'before' => __( '<p class="pagination-p">Pages:</p>', 'ipt_kb' ) . '<ul class="pagination">',
@@ -86,7 +89,7 @@
 			echo $custom_fields;
 			*/
 
-			
+
 		?>
 		<br/>
 		<?php edit_post_link( __( 'Edit', 'ipt_kb' ), '<span class="edit-link"><i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;', '</span>' ); ?>

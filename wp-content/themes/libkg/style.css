@@ -798,6 +798,16 @@ body .comment-reply-title {
 	margin-right: 5px;
 }
 
+/*tumanob*/
+
+.ipt-kb-child .kb-post-list
+{
+	width: 46%;
+  float: left;
+  margin: 5px;
+
+}
+
 .kb-post-list .badge {
 	margin-top: 3px;
 }
@@ -1332,4 +1342,17 @@ margin-top: 6px;
 		width:2em;
 	}
 
+
+
 }
+
+.bookcover
+{
+	margin: 0 30px 60px 0;
+}
+
+/*  
+.wthumb ul{
+	margin-left: 290px;
+}
+*/

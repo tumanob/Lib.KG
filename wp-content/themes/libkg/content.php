@@ -19,13 +19,13 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 	<div class="pull-left kb-thumb-medium hidden-xs">
-		<a rel="bookmark" href="<?php the_permalink(); ?>" class="thumbnail"><?php the_post_thumbnail( 'ipt_kb_medium', array(
-			'class' => 'img-rounded',
+		<a rel="bookmark" href="<?php the_permalink(); ?>" class="thumbnail"><?php the_post_thumbnail( 'ipt_tb_medium', array(
+			'class' => 'img-rounded tmedium',
 		) ); ?></a>
 	</div>
 	<div class="kb-thumb-large visible-xs">
 		<a rel="bookmark" href="<?php the_permalink(); ?>" class="thumbnail"><?php the_post_thumbnail( 'ipt_kb_large', array(
-			'class' => 'img',
+			'class' => 'img tlarge',
 		) ); ?></a>
 	</div>
 	<?php endif; ?>

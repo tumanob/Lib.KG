@@ -156,7 +156,8 @@ function qtranxf_convert_database_options($action){
 	switch($action){
 		case 'b_only':
 			foreach($result as $row) {
-				if(!preg_match('/(<!--:[a-z]{2}-->|\[:[a-z]{2}\])/im',$row->option_value)) continue;
+				if(!qtranxf_isMultilingual($row->option_value)) continue;
+				//if(!preg_match('/(<!--:[a-z]{2}-->|\[:[a-z]{2}\])/im',$row->option_value)) continue;
 				$value = maybe_unserialize($row->option_value);
 				$value_converted=qtranxf_convert_to_b_deep($value);
 				$value_serialized = maybe_serialize($value_converted);
@@ -170,7 +171,8 @@ function qtranxf_convert_database_options($action){
 			break;
 		case 'c_dual':
 			foreach($result as $row) {
-				if(!preg_match('/(<!--:[a-z]{2}-->|\[:[a-z]{2}\])/im',$row->option_value)) continue;
+				if(!qtranxf_isMultilingual($row->option_value)) continue;
+				//if(!preg_match('/(<!--:[a-z]{2}-->|\[:[a-z]{2}\])/im',$row->option_value)) continue;
 				$value = maybe_unserialize($row->option_value);
 				$value_converted=qtranxf_convert_to_b_no_closing_deep($value);
 				$value_serialized = maybe_serialize($value_converted);
@@ -224,7 +226,8 @@ function qtranxf_convert_database_postmeta($action){
 	switch($action){
 		case 'b_only':
 			foreach($result as $row) {
-				if(!preg_match('/(<!--:[a-z]{2}-->|\[:[a-z]{2}\])/im',$row->meta_value)) continue;
+				if(!qtranxf_isMultilingual($row->meta_value)) continue;
+				//if(!preg_match('/(<!--:[a-z]{2}-->|\[:[a-z]{2}\])/im',$row->meta_value)) continue;
 				$value = maybe_unserialize($row->meta_value);
 				$value_converted=qtranxf_convert_to_b_deep($value);
 				$value_serialized = maybe_serialize($value_converted);
@@ -235,7 +238,8 @@ function qtranxf_convert_database_postmeta($action){
 			break;
 		case 'c_dual':
 			foreach($result as $row) {
-				if(!preg_match('/(<!--:[a-z]{2}-->|\[:[a-z]{2}\])/im',$row->meta_value)) continue;
+				if(!qtranxf_isMultilingual($row->meta_value)) continue;
+				//if(!preg_match('/(<!--:[a-z]{2}-->|\[:[a-z]{2}\])/im',$row->meta_value)) continue;
 				$value = maybe_unserialize($row->meta_value);
 				$value_converted=qtranxf_convert_to_b_no_closing_deep($value);
 				$value_serialized = maybe_serialize($value_converted);
@@ -261,6 +265,14 @@ function qtranxf_mark_default($text) {
 		}
 	}
 	return qtranxf_join_b($content);
+}
+
+function qtranxf_term_name_encoded($name) {
+	global $q_config;
+	if(isset($q_config['term_name'][$name])) {
+		$name = qtranxf_join_b($q_config['term_name'][$name]);
+	}
+	return $name;
 }
 
 function qtranxf_get_term_joined($obj,$taxonomy=null) {
@@ -307,8 +319,8 @@ function qtranxf_useAdminTermLibJoin($obj, $taxonomies=null, $args=null) {
 		default: return qtranxf_useTermLib($obj);
 	}
 }
-add_filter('get_term', 'qtranxf_useAdminTermLibJoin',0, 2);
-add_filter('get_terms', 'qtranxf_useAdminTermLibJoin',0, 3);
+add_filter('get_term', 'qtranxf_useAdminTermLibJoin', 5, 2);
+add_filter('get_terms', 'qtranxf_useAdminTermLibJoin', 5, 3);
 
 //does someone use it?
 function qtranxf_useAdminTermLib($obj) {
@@ -517,8 +529,6 @@ function qtranxf_the_editor($editor_div)
 	}
 	return $editor_div;
 }
-//applied in /wp-includes/class-wp-editor.php
-add_filter('the_editor', 'qtranxf_the_editor');
 
 function qtranxf_filter_options_general($value)
 {
@@ -551,6 +561,20 @@ function qtranxf_disable_blog_title_filters($name)
 }
 add_action( 'wp_head', 'qtranxf_disable_blog_title_filters' );
 */
+
+function qtranxf_add_admin_filters(){
+	global $q_config;
+	switch($q_config['editor_mode']){
+		case QTX_EDITOR_MODE_RAW:
+		break;
+		case QTX_EDITOR_MODE_LSB:
+		default:
+			//applied in /wp-includes/class-wp-editor.php
+			add_filter('the_editor', 'qtranxf_the_editor');
+		break;
+	}
+}
+qtranxf_add_admin_filters();
 
 add_filter('manage_language_columns', 'qtranxf_language_columns');
 add_filter('manage_posts_columns', 'qtranxf_languageColumnHeader');

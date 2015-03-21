@@ -70,7 +70,8 @@ function ipt_kb_setup() {
 	add_theme_support( 'post-thumbnails', array( 'post' ) );
 
 	add_image_size( 'ipt_kb_medium', 256, 128, true );
-	add_image_size( 'ipt_kb_large', 9999, 200, true );
+	add_image_size( 'ipt_tb_medium', 100, 300, false );
+	add_image_size( 'ipt_kb_large', 350, 9999, false );
 
 	// Add HTML5
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
