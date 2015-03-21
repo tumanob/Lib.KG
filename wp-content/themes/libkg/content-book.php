@@ -32,7 +32,6 @@
 
 
 
-
 	<footer class="entry-meta text-muted well well-sm">
 		<div class="entry-meta text-muted">
 			<?php ipt_kb_posted_on(); ?>
@@ -91,6 +90,23 @@
 
 
 		?>
+
+		<div>Поделиться </div>
+			<!-- pluso start-->
+			<script type="text/javascript">(function() {
+		  if (window.pluso)if (typeof window.pluso.start == "function") return;
+		  if (window.ifpluso==undefined) { window.ifpluso = 1;
+		    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+		    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+		    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+		    var h=d[g]('body')[0];
+		    h.appendChild(s);
+		  }})();</script>
+		<div class="pluso" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir" data-user="1361344875"></div>
+
+
+		<!-- pluso end-->
+
 		<br/>
 		<?php edit_post_link( __( 'Edit', 'ipt_kb' ), '<span class="edit-link"><i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;', '</span>' ); ?>
 	</footer><!-- .entry-meta -->

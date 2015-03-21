@@ -81,7 +81,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 							$categories = get_categories(array('hide_empty' => true, 'child_of' => $cat_id));
 						// todo  - get list just of upper sub-categories
 						?>
-							child subcat -  <?php echo $cat_id;?>
+						<!--	child subcat -  <?php echo $cat_id;?> -->
 							<div class="list-group">
 								<?php
 								foreach ( $categories as $category ) {
