@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
-"POT-Creation-Date: 2014-11-06 15:49+0600\n"
-"PO-Revision-Date: 2014-11-06 17:17+0600\n"
+"POT-Creation-Date: 2015-03-23 20:25+0600\n"
+"PO-Revision-Date: 2015-03-23 21:20+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ru_RU\n"
@@ -15,6 +15,7 @@ msgstr ""
 "esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
@@ -82,9 +83,9 @@ msgid "Archives"
 msgstr "Архивы"
 
 #: ../archive.php:68 ../category-templates/category-child.php:48
-#, fuzzy, php-format
+#, php-format
 msgid "Page %1$d / %2$d"
-msgstr "Страница"
+msgstr "Страница %1$d / %2$d"
 
 #: ../comments.php:29
 #, php-format
@@ -112,17 +113,17 @@ msgstr "Свежие комментарии &raquo;"
 msgid "Comments are closed."
 msgstr "Обсуждение закрыто."
 
-#: ../content-book.php:24 ../content-page.php:18 ../content-single.php:20
+#: ../content-book.php:43 ../content-page.php:18 ../content-single.php:20
 #: ../template-knowledgebase.php:214
 msgid "<p class=\"pagination-p\">Pages:</p>"
 msgstr ""
 
-#: ../content-book.php:40 ../content-book.php:43 ../content-single.php:29
+#: ../content-book.php:58 ../content-book.php:61 ../content-single.php:29
 #: ../content-single.php:32 ../content.php:49 ../content.php:59
 msgid ", "
 msgstr ", "
 
-#: ../content-book.php:48
+#: ../content-book.php:66
 #, php-format
 msgid ""
 "This entry was tagged <i class=\"glyphicon glyphicon-tags\"></i>&nbsp;&nbsp;"
@@ -130,14 +131,14 @@ msgid ""
 "i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content-book.php:50
+#: ../content-book.php:68
 #, php-format
 msgid ""
 "Bookmark the <i class=\"glyphicon glyphicon-share-alt\"></i>&nbsp;&nbsp;<a "
 "href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content-book.php:56
+#: ../content-book.php:74
 #, php-format
 msgid ""
 "This entry was posted in <i class=\"glyphicon glyphicon-folder-open\"></"
@@ -146,7 +147,7 @@ msgid ""
 "alt\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content-book.php:58
+#: ../content-book.php:76
 #, php-format
 msgid ""
 "This entry was posted in <i class=\"glyphicon glyphicon-folder-open\"></"
@@ -154,14 +155,10 @@ msgid ""
 "alt\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content-book.php:77
-msgid "Education level:"
-msgstr "Уровень:"
-
-#: ../content-book.php:89 ../content-page.php:23 ../content-single.php:60
+#: ../content-book.php:127 ../content-page.php:23 ../content-single.php:60
 #: ../content.php:71 ../image.php:32 ../image.php:64
 #: ../bbpress/user-details.php:54 ../inc/class-ipt-kb-bbp-login-widget.php:124
-#: ../inc/template-tags.php:119 ../inc/template-tags.php:160
+#: ../inc/template-tags.php:121 ../inc/template-tags.php:162
 msgid "Edit"
 msgstr "Редактировать"
 
@@ -198,8 +195,8 @@ msgid ""
 msgstr ""
 
 #: ../content.php:40 ../content.php:43
-msgid "Read more"
-msgstr "Далее"
+msgid "Dowload this"
+msgstr "Скачать файл"
 
 #: ../content.php:53
 #, php-format
@@ -240,43 +237,43 @@ msgstr "Основное меню"
 msgid "Footer Menu"
 msgstr "Большой сайдбар в подвале"
 
-#: ../functions.php:86
+#: ../functions.php:87
 msgid "Knowledge Base Sidebar"
 msgstr "Основной сайдбар"
 
-#: ../functions.php:88
+#: ../functions.php:89
 msgid "Shows up only on category archive pages and single posts."
 msgstr ""
 
-#: ../functions.php:95
+#: ../functions.php:96
 msgid "General Sidebar"
 msgstr "Общий сайдбар"
 
-#: ../functions.php:97
+#: ../functions.php:98
 msgid "Shows up everywhere except the category archive pages and single posts."
 msgstr ""
 
-#: ../functions.php:104
+#: ../functions.php:105
 msgid "bbPress Sidebar"
 msgstr "bbPress Сайдбар"
 
-#: ../functions.php:106
+#: ../functions.php:107
 msgid "Shows up on bbPress forums and topics."
 msgstr ""
 
-#: ../functions.php:113
+#: ../functions.php:114
 msgid "Footer Large"
 msgstr "Большой сайдбар в подвале"
 
-#: ../functions.php:121
+#: ../functions.php:122
 msgid "Footer Small"
 msgstr "Маленкий сайдбар в подвале"
 
-#: ../functions.php:129
+#: ../functions.php:130
 msgid "below main menu"
 msgstr ""
 
-#: ../functions.php:192
+#: ../functions.php:193
 msgid "Oops, some problem to connect. Try again?"
 msgstr ""
 
@@ -284,6 +281,10 @@ msgstr ""
 #, fuzzy
 msgid "Toggle navigation"
 msgstr "Текст ссылки"
+
+#: ../header.php:83
+msgid "Add a book"
+msgstr "Добавить книгу"
 
 #: ../image.php:22
 #, php-format
@@ -349,20 +350,20 @@ msgstr "Искать в > %s&hellip;"
 
 #: ../template-knowledgebase.php:42 ../template-knowledgebase.php:54
 #: ../template-knowledgebase.php:73
-#: ../category-templates/category-parent.php:82
+#: ../category-templates/category-parent.php:90
 #: ../inc/class-ipt-kb-affix-widget.php:126
 #, fuzzy
 msgid "Get support"
 msgstr "Форумы поддержки"
 
 #: ../template-knowledgebase.php:58
-#: ../category-templates/category-parent.php:86
+#: ../category-templates/category-parent.php:94
 #, fuzzy
 msgid "Browse all"
 msgstr "Все авторы"
 
 #: ../template-knowledgebase.php:116
-#: ../category-templates/category-parent.php:113
+#: ../category-templates/category-parent.php:154
 #, php-format
 msgid "Browse %d article"
 msgid_plural "Browse all %d articles"
@@ -549,7 +550,7 @@ msgstr "(нет родительской)"
 #: ../bbpress/form-forum.php:138 ../bbpress/form-reply-move.php:62
 #: ../bbpress/form-reply.php:110 ../bbpress/form-topic-merge.php:71
 #: ../bbpress/form-topic-split.php:83 ../bbpress/form-topic.php:172
-#: ../inc/template-tags.php:698
+#: ../inc/template-tags.php:701
 #, fuzzy
 msgid "Submit"
 msgstr "Подтвердить"
@@ -922,8 +923,8 @@ msgstr ""
 msgid "You must be logged in to create new topics."
 msgstr ""
 
-#: ../bbpress/form-user-edit.php:14 ../inc/template-tags.php:489
-#: ../inc/template-tags.php:490
+#: ../bbpress/form-user-edit.php:14 ../inc/template-tags.php:491
+#: ../inc/template-tags.php:492
 msgid "Name"
 msgstr "Имя"
 
@@ -948,8 +949,7 @@ msgstr "Имя якоря"
 msgid "Contact Info"
 msgstr "Контактная информация"
 
-#: ../bbpress/form-user-edit.php:57 ../inc/template-tags.php:493
-#: ../inc/template-tags.php:494 ../inc/template-tags.php:633
+#: ../bbpress/form-user-edit.php:57 ../inc/template-tags.php:636
 msgid "Website"
 msgstr "Сайт"
 
@@ -977,7 +977,7 @@ msgid "Username"
 msgstr "Имя пользователя"
 
 #: ../bbpress/form-user-edit.php:96 ../bbpress/form-user-register.php:28
-#: ../inc/template-tags.php:491 ../inc/template-tags.php:492
+#: ../inc/template-tags.php:493 ../inc/template-tags.php:494
 msgid "Email"
 msgstr "E-mail"
 
@@ -1314,20 +1314,20 @@ msgid "Support"
 msgstr "Форумы поддержки"
 
 #: ../category-templates/category-child.php:45
-#: ../category-templates/category-parent.php:25
+#: ../category-templates/category-parent.php:26
 #, php-format
 msgid "%d article"
 msgid_plural "%d articles"
-msgstr[0] "%d публикация"
-msgstr[1] "%d публикации"
+msgstr[0] "%d файл"
+msgstr[1] "%d файлов"
 
-#: ../category-templates/category-parent.php:18
-#: ../category-templates/category-parent.php:37
+#: ../category-templates/category-parent.php:19
+#: ../category-templates/category-parent.php:38
 #, fuzzy
 msgid "Get Support"
 msgstr "Форумы поддержки"
 
-#: ../category-templates/category-parent.php:76
+#: ../category-templates/category-parent.php:84
 #, php-format
 msgid "%1$s / %2$s"
 msgstr ""
@@ -1620,7 +1620,7 @@ msgstr "Страница"
 msgid "Cheatin&#8217; uh?"
 msgstr "Играешься, что ли?"
 
-#: ../inc/ipt-kb-like-article.php:22 ../inc/template-tags.php:297
+#: ../inc/ipt-kb-like-article.php:22 ../inc/template-tags.php:299
 msgid "You like it already"
 msgstr "Вы уже сказали спасибо"
 
@@ -1643,53 +1643,43 @@ msgstr "Следующие &raquo;"
 msgid "Post navigation"
 msgstr "Текст ссылки"
 
-#: ../inc/template-tags.php:80
-msgctxt "Previous post link"
-msgid "<span class=\"glyphicon glyphicon-arrow-left\"></span>"
-msgstr ""
-
-#: ../inc/template-tags.php:81
-msgctxt "Next post link"
-msgid "<span class=\"glyphicon glyphicon-arrow-right\"></span>"
-msgstr ""
-
-#: ../inc/template-tags.php:86
+#: ../inc/template-tags.php:88
 msgid ""
 "<span class=\"meta-nav\"><span class=\"glyphicon glyphicon-arrow-left\"></"
 "span></span> Older posts"
 msgstr ""
 
-#: ../inc/template-tags.php:90
+#: ../inc/template-tags.php:92
 msgid ""
 "Newer posts <span class=\"meta-nav\"><span class=\"glyphicon glyphicon-arrow-"
 "right\"></span></span>"
 msgstr ""
 
-#: ../inc/template-tags.php:119
+#: ../inc/template-tags.php:121
 #, fuzzy
 msgid "Pingback:"
 msgstr "Уведомление:"
 
-#: ../inc/template-tags.php:129
+#: ../inc/template-tags.php:131
 #, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr "%s <span class=\"says\">:</span>"
 
-#: ../inc/template-tags.php:132
+#: ../inc/template-tags.php:134
 msgid "Your comment is awaiting moderation."
 msgstr "Ваш комментарий ожидает одобрения."
 
-#: ../inc/template-tags.php:150
+#: ../inc/template-tags.php:152
 msgid "<i class=\"glyphicon ipt-icon-reply\"></i>&nbsp;&nbsp;Reply"
 msgstr "<i class=\"glyphicon ipt-icon-reply\"></i>&nbsp;&nbsp;Написать ответ"
 
-#: ../inc/template-tags.php:157
+#: ../inc/template-tags.php:159
 #, php-format
 msgctxt "1: date"
 msgid "%1$s"
 msgstr ""
 
-#: ../inc/template-tags.php:238
+#: ../inc/template-tags.php:240
 #, php-format
 msgid ""
 "<span class=\"posted-on\"><i class=\"glyphicon glyphicon-calendar\"></i> "
@@ -1698,59 +1688,59 @@ msgstr ""
 "<span class=\"posted-on\"><i class=\"glyphicon glyphicon-calendar\"></i> "
 "Размещено %1$s</span><span class=\"byline\">  %2$s</span>"
 
-#: ../inc/template-tags.php:294
+#: ../inc/template-tags.php:296
 msgid "This article was helpful"
 msgstr "Сказать спасибо"
 
-#: ../inc/template-tags.php:301 ../inc/template-tags.php:311
+#: ../inc/template-tags.php:303 ../inc/template-tags.php:313
 #, php-format
 msgid "%d person found this article useful"
 msgid_plural "%d people found this article useful"
 msgstr[0] "%d сказал спасибо"
 msgstr[1] "%d сказали спасибо"
 
-#: ../inc/template-tags.php:302 ../inc/template-tags.php:307
+#: ../inc/template-tags.php:304 ../inc/template-tags.php:309
 msgid "Please wait"
 msgstr "Пожалуйста, подождите..."
 
-#: ../inc/template-tags.php:325 ../inc/template-tags.php:329
+#: ../inc/template-tags.php:327 ../inc/template-tags.php:331
 msgid "Home"
 msgstr "Главная"
 
-#: ../inc/template-tags.php:445
+#: ../inc/template-tags.php:447
 msgid "Search result"
 msgstr "Результаты по запросу:"
 
-#: ../inc/template-tags.php:449
+#: ../inc/template-tags.php:451
 msgid "Error 404 - Not found"
 msgstr "Ошибка! Страница настроек не найдена."
 
-#: ../inc/template-tags.php:453
+#: ../inc/template-tags.php:455
 #, fuzzy
 msgid "Archive"
 msgstr "Пустой архив"
 
-#: ../inc/template-tags.php:457
+#: ../inc/template-tags.php:459
 #, fuzzy
 msgid "Blog"
 msgstr "Название блога"
 
-#: ../inc/template-tags.php:497
+#: ../inc/template-tags.php:500
 #, php-format
 msgid "Required fields are marked %s"
 msgstr "Обязательные поля помечены %s"
 
-#: ../inc/template-tags.php:500
+#: ../inc/template-tags.php:503
 msgctxt "noun"
 msgid "Comment"
 msgstr "Комментарий"
 
-#: ../inc/template-tags.php:501
+#: ../inc/template-tags.php:504
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Вы должны <a href=\"%s\">войти</a> чтобы оставить комментарий."
 
-#: ../inc/template-tags.php:502
+#: ../inc/template-tags.php:505
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -1759,60 +1749,51 @@ msgstr ""
 "Вы вошли как <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Выйти из "
 "этой учётной записи\">Выйти?</a>"
 
-#: ../inc/template-tags.php:503
+#: ../inc/template-tags.php:506
 msgid "Your email address will not be published."
 msgstr "Ваш e-mail не будет опубликован."
 
-#: ../inc/template-tags.php:504
-#, php-format
-msgid ""
-"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
-"and attributes: %s"
-msgstr ""
-"Можно использовать следующие <abbr title=\"HyperText Markup Language\">HTML</"
-"abbr>-теги и атрибуты: %s"
-
-#: ../inc/template-tags.php:507
+#: ../inc/template-tags.php:510
 msgid "Leave a Reply"
 msgstr "Написать комментарий"
 
-#: ../inc/template-tags.php:508
+#: ../inc/template-tags.php:511
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Оставить комментарий на %s"
 
-#: ../inc/template-tags.php:509
+#: ../inc/template-tags.php:512
 msgid "Cancel reply"
 msgstr "Отменить ответ"
 
-#: ../inc/template-tags.php:510
+#: ../inc/template-tags.php:513
 msgid "Post Comment"
 msgstr "Оставить комментарий"
 
-#: ../inc/template-tags.php:638
+#: ../inc/template-tags.php:641
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../inc/template-tags.php:642
+#: ../inc/template-tags.php:645
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../inc/template-tags.php:646
+#: ../inc/template-tags.php:649
 msgid "Google+"
 msgstr ""
 
-#: ../inc/template-tags.php:663
+#: ../inc/template-tags.php:666
 #, php-format
 msgid "%1$s has written <a href=\"%2$s\">%3$s</a> %4$s"
 msgstr "%1$s написал <a href=\"%2$s\">%3$s</a> %4$s"
 
-#: ../inc/template-tags.php:663
+#: ../inc/template-tags.php:666
 msgid "article"
 msgid_plural "articles"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:696
+#: ../inc/template-tags.php:699
 msgid ""
 "This content is password protected. To view it please enter your password "
 "below:"
@@ -1820,9 +1801,22 @@ msgstr ""
 "Это содержимое защищено паролем. Для его просмотра введите, пожалуйста, "
 "пароль:"
 
-#: ../inc/template-tags.php:698
+#: ../inc/template-tags.php:701
 msgid "Password:"
 msgstr "Пароль:"
+
+#~ msgid "Education level:"
+#~ msgstr "Уровень:"
+
+#~ msgid "Read more"
+#~ msgstr "Далее"
+
+#~ msgid ""
+#~ "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> "
+#~ "tags and attributes: %s"
+#~ msgstr ""
+#~ "Можно использовать следующие <abbr title=\"HyperText Markup Language"
+#~ "\">HTML</abbr>-теги и атрибуты: %s"
 
 #, fuzzy
 #~ msgctxt "1: date, 2: time"

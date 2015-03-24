@@ -1358,3 +1358,48 @@ margin-top: 6px;
 }
 
 */
+
+/*  page navigation styles
+*/
+
+.pagination li {
+  display: block;
+  float: left;
+}
+
+
+.pagination a
+{
+color: #428bca;
+  text-decoration: none;
+  float: left;
+}
+
+
+.pagination>li>a, .pagination>li>span, .pagination>a>span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.category article.post:hover{
+
+	background: #F4FAFF;
+  border-left: 5px solid #B3E0FF;
+  padding-left: 5px;
+}
+
+.category article.post{
+
+  padding-left: 10px;
+}
+
+#main .page-header
+{
+	padding-bottom: 0px;
+}

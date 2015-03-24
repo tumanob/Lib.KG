@@ -80,7 +80,7 @@
 				</div>
 				<div class="col-md-2">
 					<div class="btn btn-success addbutton btn-lg">
-						добавить материал
+					<?php  _e("Add a book",'ipt_kb');  //добавить материал ?>
 					</div>
 				</div>
 			</div>

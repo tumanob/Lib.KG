@@ -21,7 +21,23 @@
 	</div>
 <?php endif; ?>
 
-		<div><?php the_content(); ?> </div>
+		<div>
+			<?php
+
+			// TODO   making fix for languages that display and no content for translation
+
+				//qtranxf_use
+
+			//	$content =
+				the_content();
+
+
+				//echo $content;
+
+			?>
+		</div>
+
+
 		<?php
 			wp_link_pages( array(
 				'before' => __( '<p class="pagination-p">Pages:</p>', 'ipt_kb' ) . '<ul class="pagination">',

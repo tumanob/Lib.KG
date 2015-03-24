@@ -77,8 +77,10 @@ function ipt_kb_content_nav( $nav_id ) {
 		<li class="screen-reader-text"><?php _e( 'Post navigation', 'ipt_kb' ); ?></li>
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '<span class="glyphicon glyphicon-arrow-left"></span>', 'Previous post link', 'ipt_kb' ) . '</span> %title', true ); ?>
-		<?php next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '<span class="glyphicon glyphicon-arrow-right"></span>', 'Next post link', 'ipt_kb' ) . '</span>', true ); ?>
+		<?php
+		// TODO making widget fo similar posts
+		//previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '<span class="glyphicon glyphicon-arrow-left"></span>', 'Previous post link', 'ipt_kb' ) . '</span> %title', true ); ?>
+		<?php //next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '<span class="glyphicon glyphicon-arrow-right"></span>', 'Next post link', 'ipt_kb' ) . '</span>', true ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
