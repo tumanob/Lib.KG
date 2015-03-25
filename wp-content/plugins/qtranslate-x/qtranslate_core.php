@@ -1475,7 +1475,7 @@ if (!function_exists('qtranxf_use_block')){
 function qtranxf_use_block($lang, $blocks, $show_available=false, $show_empty=false) {
 	global $q_config;
 	$content = qtranxf_split_blocks($blocks);
-
+	//print_r($content);
 	// if content is available show the content in the requested language
 	if(!empty($content[$lang])) {
 		return $content[$lang];
@@ -1490,7 +1490,10 @@ function qtranxf_use_block($lang, $blocks, $show_available=false, $show_empty=fa
 	foreach($content as $language => $lang_text) {
 		//$lang_text = trim($lang_text);//do we need to trim? not really ... but better trim in qtranxf_split_blocks then
 		//$content[$language]=$lang_text;
-		if(!empty($lang_text)) $available_languages[] = $language;
+		if(!empty($lang_text)) {
+			$temp_lang_text =  $lang_text;
+			$available_languages[] = $language;
+		}
 	}
 
 	//// if no languages available show full text
@@ -1544,11 +1547,18 @@ function qtranxf_use_block($lang, $blocks, $show_available=false, $show_empty=fa
 	//	//qtranxf_dbg_echo('$post='.$post);
 	//}
 
-	// TODO  - edit here to replace no content text with the one we need!!!!
-	// works for russian not available but if  kyrghys is not available then nothis is goes there.
 
 
-	return "<p>".preg_replace('/%LANG:([^:]*):([^%]*)%/', $language_list, $q_config['not_available'][$lang]).$lang_text." </p>";
+	//return "<p>".preg_replace('/%LANG:([^:]*):([^%]*)%/', $language_list, $q_config['not_available'][$lang]).$lang_text." </p>";
+
+
+	if($lang_text==''){
+		//	TODO   check if this addon works fine on all strings sitewide
+		$lang_text = $temp_lang_text;
+	}
+
+	return "<p>".$lang_text."</p>";
+
 }
 }
 

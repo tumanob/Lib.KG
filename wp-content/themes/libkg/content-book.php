@@ -13,26 +13,22 @@
 
 	<div class="entry-content <?php if ( has_post_thumbnail() ){ echo "wthumb";} ?>">
 
-	<?php if ( has_post_thumbnail() ) : ?>
+
+
+	<?php
+	// TODO add empty thumbnail image just for general purposes/ question is active if we still nee it or if there is no image then!!!!
+
+	if ( has_post_thumbnail() ) : ?>
 	<!-- <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> -->
 	<div>
 		<?php the_post_thumbnail( 'medium', array( 'class' => 'alignleft bookcover' ) ); ?>
 	<!-- </a> -->
 	</div>
 <?php endif; ?>
-
 		<div>
 			<?php
 
-			// TODO   making fix for languages that display and no content for translation
-
-				//qtranxf_use
-
-			//	$content =
 				the_content();
-
-
-				//echo $content;
 
 			?>
 		</div>
