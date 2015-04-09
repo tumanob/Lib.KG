@@ -110,7 +110,7 @@ class Indexer{
 
 		$data = self::_build_document($post);
 
-		$type->addDocument(new \Elastica\Document($post->ID, $data));		
+		$type->addDocument(new \Elastica\Document($post->ID, $data));
 	}
 
 	/**
@@ -152,7 +152,7 @@ class Indexer{
 
   	if(is_array($keys)){
 		$meta_fields = array_intersect(Config::meta_fields(), $keys);
-		
+
 		foreach($meta_fields as $field){
 			$val = get_post_meta($post->ID, $field, true);
 
@@ -265,8 +265,10 @@ class Indexer{
 			'type' => 'multi_field',
 			'fields' => array(
 				$field => $props,
-				'english' => array_merge($props,array(
-					'analyzer' => 'english'
+				'russian' => array_merge($props,array(
+					'analyzer' => 'russian'
+			//	'english' => array_merge($props,array(
+				//	'analyzer' => 'english'
 				))
 			)
 		);
@@ -308,7 +310,7 @@ class Indexer{
 		$settings = array(
 			'url' => Config::option('server_url')
 		);
-		
+
 		if($write){
 			$settings['timeout'] = Config::option('server_timeout_write') ?: 300;
 		}else{

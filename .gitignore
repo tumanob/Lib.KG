@@ -32,3 +32,13 @@ wp-content/uploads/2014/11/10710368_1507951832799383_2826824357539387033_o-1024x
 wp-content/uploads/2014/11/10710368_1507951832799383_2826824357539387033_o-350x248.png
 
 wp-content/uploads/2015/03/logo-100x40.png
+
+*.pdf
+
+*.pdf
+
+*.zip
+
+wp-content/uploads/docs/.htaccess
+
+wp-content/uploads/filebase/.htaccess

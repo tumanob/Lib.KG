@@ -17,7 +17,7 @@ class Searcher{
 	* @param array $facets An object that contains selected facets (typically the query string, ie: $_GET)
 	* @param boolean $sortByDate If false, results will be sorted by score (relevancy)
 	* @see Faceting
-	* 
+	*
 	* @return array The results of the search
 	**/
 	public static function search($search = '', $pageIndex = 0, $size = 10, $facets = array(), $sortByDate = false){
@@ -101,7 +101,7 @@ class Searcher{
 			$val['ids'][] = $result->getId();
 		}
 
-		return Config::apply_filters('searcher_results', $val, $response);		
+		return Config::apply_filters('searcher_results', $val, $response);
 	}
 
 	/**
@@ -219,7 +219,7 @@ class Searcher{
 				}
 			}
 		}
-		
+
 		return Config::apply_filters('searcher_query_post_facet_filter', $args);
 	}
 
@@ -238,7 +238,8 @@ class Searcher{
 						// TODO: fuzzy doesn't work with english analyzer
 						$scored[] = "$field^$score";
 					}else{
-						$scored[] = "$field.english^$score";
+						$scored[] = "$field.russian^$score"; 
+					//	$scored[] = "$field.english^$score"; //russian
 					}
 				}
 			}
@@ -279,7 +280,7 @@ class Searcher{
 
 					continue;
 				}
-				
+
 				$output[] = array( $type => array( $name => isset($translate[$facet]) ? $translate[$facet] : $facet ));
 			}
 		}
