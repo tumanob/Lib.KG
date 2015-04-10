@@ -30,6 +30,9 @@
 
 				the_content();
 
+				$filetext=get_field('files');
+				$scode= "[wpfilebase tag=file id=".get_field('files')." /]";
+				echo do_shortcode($scode);
 			?>
 		</div>
 
