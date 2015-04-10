@@ -31,8 +31,24 @@
 				the_content();
 
 				$filetext=get_field('files');
-				$scode= "[wpfilebase tag=file id=".get_field('files')." /]";
-				echo do_shortcode($scode);
+				if($filetext)
+				{
+					if (is_numeric($filetext)) {
+						$scode= "[wpfilebase tag=file id=".get_field('files')." /]";
+						echo do_shortcode($scode);
+					} else {
+						//	echo "$filetext - НЕ число нужно сделать кнопку";
+						echo '<a href='.$filetext.' class="btn btn-danger" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> &nbsp;'.__( 'download link', 'ipt_kb' ).'</a>';
+
+						//glyphicon glyphicon-link
+					}
+
+				}
+				else
+				{
+					echo "< !--".__( 'no files for download', 'ipt_kb' )."-->";
+				}
+
 			?>
 		</div>
 

@@ -1403,3 +1403,8 @@ color: #428bca;
 {
 	padding-bottom: 0px;
 }
+
+
+/*   download button styles */
+
+.wpfilebase-file-default .icon img { height: 64px;   margin-right: 12px;}
