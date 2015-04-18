@@ -22,8 +22,25 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
+
+
+
+
+
 		<nav class="navbar navbar-default navbar-static-top main-navigation" role="navigation" id="site_navigation">
 			<div class="container">
+
+				<a class="headerlogo" href="<?php echo home_url( '/' ); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/headerlogo.png" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+				</a>
+				<div id="langswitch_logo">
+					<?php if ( is_active_sidebar( 'sidebar-10' ) ) : ?>
+						<div id="sidebar-10" class="primary-sidebar-10 widget-area" role="complementary">
+					<?php dynamic_sidebar( 'sidebar-10' ); ?>
+					</div><!-- #primary-sidebar -->
+				<?php endif; ?>
+				</div>
+
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -62,23 +79,16 @@
 		<div id="sub_header">
 		<?php if ( get_header_image() ) : ?>
 			<div class="row">
-				<div id="logoblock" class="col-md-2">
+			<!--	<div id="logoblock" class="col-md-2">
 					<a class="site-anchor" href="<?php echo home_url( '/' ); ?>">
 						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
 					</a>
-				</div>
+				</div>-->
 				<?php else : ?>
 				<h1 class="site-title"><a class="site-anchor" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php endif; // End header image check. ?>
 
-				<div id="langswitch" class="col-md-8">
-					<?php if ( is_active_sidebar( 'sidebar-10' ) ) : ?>
-						<div id="sidebar-10" class="primary-sidebar-10 widget-area" role="complementary">
-					<?php dynamic_sidebar( 'sidebar-10' ); ?>
-					</div><!-- #primary-sidebar -->
-				<?php endif; ?>
-				</div>
-				<div class="col-md-2">
+				<div class="col-md-2 flow-right" style="float:right;">
 					<div class="btn btn-success addbutton btn-lg">
 					<?php  _e("Add a book",'ipt_kb');  //добавить материал ?>
 					</div>

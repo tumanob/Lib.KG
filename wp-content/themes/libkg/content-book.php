@@ -17,6 +17,7 @@
 
 	<?php
 	// TODO add empty thumbnail image just for general purposes/ question is active if we still nee it or if there is no image then!!!!
+	$filetext=get_field('files');
 
 	if ( has_post_thumbnail() ) : ?>
 	<!-- <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> -->
@@ -25,12 +26,13 @@
 	<!-- </a> -->
 	</div>
 <?php endif; ?>
+
 		<div>
 			<?php
 
 				the_content();
 
-				$filetext=get_field('files');
+
 				if($filetext)
 				{
 					if (is_numeric($filetext)) {
@@ -46,7 +48,12 @@
 				}
 				else
 				{
-					echo "< !--".__( 'no files for download', 'ipt_kb' )."-->";
+				echo '	<div class="alert alert-danger" role="alert">
+						  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+						  <span class="sr-only">Error:</span>
+						  '.__( 'no files found', 'ipt_kb' ).'
+							</div>';
+
 				}
 
 			?>

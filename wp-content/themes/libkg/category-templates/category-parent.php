@@ -81,15 +81,16 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 				</p>
 			</div>
 			<div class="col-md-9 col-sm-10 col-xs-12">
-				<h2 class="knowledgebase-title"><a data-placement="bottom" data-popt="kb-homepage-popover-<?php echo $scat->term_id; ?>" title="<?php echo esc_attr( sprintf( __( '%1$s / %2$s', 'ipt_kb' ), $cat->name, $scat->name ) ); ?>" href="#" class="btn btn-default btn-sm text-muted ipt-kb-popover"><i class="glyphicon ipt-icon-paragraph-justify2"></i></a> <?php echo $scat->name; ?></h2>
+				<h2 class="pcategory-title">
+					<a href="<?php echo $sterm_link; ?>" class="">
+						<?php echo $scat->name; ?>
+					</a>
+
+
+				</h2>
 				<div class="ipt-kb-popover-target" id="kb-homepage-popover-<?php echo $scat->term_id; ?>">
-					<?php echo wpautop( $scat->description ); ?>
+					<?php //echo wpautop( $scat->description ); ?>
 					<p class="text-right">
-						<?php if ( isset( $term_meta['support_forum'] ) && '' != $term_meta['support_forum'] ) : ?>
-						<a class="btn btn-default" href="<?php echo esc_url( $term_meta['support_forum'] ); ?>">
-							<i class="glyphicon ipt-icon-support"></i> <?php _e( 'Get support', 'ipt_kb' ); ?>
-						</a>
-						<?php endif; ?>
 						<a href="<?php echo $sterm_link; ?>" class="btn btn-info">
 							<i class="glyphicon ipt-icon-link"></i> <?php _e( 'Browse all', 'ipt_kb' ); ?>
 						</a>
@@ -117,7 +118,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 					);
 					$categories = get_categories( $args );
 */
-					$categories = get_categories(array('hide_empty' => true, 'child_of' => $scat->term_id));
+					$categories = get_categories(array('hide_empty' => true, 'number' => '10','child_of' => $scat->term_id));
 					// todo  - get list just of upper categories
 					?>
 					<div class="list-group">
@@ -128,12 +129,10 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 					<link><?php get_category_link( $category->cat_ID ); ?>
 						<a rel="bookmark" class="list-group-item kb-list-date kb-post-list" href="<?php echo get_category_link( $category->term_id ); ?>">
 							<span class="badge"><?php echo wp_get_cat_postcount($category->term_id);?></span>
-							<h3><span class="glyphicon ipt-icon-file"></span>  <?php echo $category->name.$scat->term_id; ?></h3>
+							<h3><span class="glyphicon ipt-icon-file"></span>  <?php echo $category->name; ?></h3>
 							<span class="clearfix"></span>
 						</a>
 						<?php
-						//echo $scat->term_id;;
-						//echo '123'.'<a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br/>';
 					}
 					// todo тут нужно сделать 2 шаблона дл ятсниац и категорий чтобы выводило то что нам нужно для каждой категории и темблейт
 					?>
