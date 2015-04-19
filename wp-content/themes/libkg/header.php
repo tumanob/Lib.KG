@@ -77,23 +77,16 @@
 
 
 		<div id="sub_header">
-		<?php if ( get_header_image() ) : ?>
-			<div class="row">
-			<!--	<div id="logoblock" class="col-md-2">
-					<a class="site-anchor" href="<?php echo home_url( '/' ); ?>">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-				</div>-->
-				<?php else : ?>
-				<h1 class="site-title"><a class="site-anchor" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php endif; // End header image check. ?>
 
-				<div class="col-md-2 flow-right" style="float:right;">
-					<div class="btn btn-success addbutton btn-lg">
-					<?php  _e("Add a book",'ipt_kb');  //добавить материал ?>
-					</div>
-				</div>
-			</div>
 		</div>
 
-	<?php ipt_kb_breadcrumb(); ?>
+
+		<?php
+		if ( is_front_page() ) {
+		    // This is the home page
+
+		} else {
+		    // This is not the home page
+				ipt_kb_breadcrumb();
+		}
+		?>
