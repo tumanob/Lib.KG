@@ -21,9 +21,11 @@ jQuery(document).ready(function($) {
 
 		<div class="clearfix"></div>
 		<div class="jumbotron">
-		  <h1>Hello, world!</h1>
-		  <p>sdfsdhfgsjdhf  jdhsgfj hsdgfj hdsgjfhdgjds </p>
-		  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      <img src="<?php echo get_template_directory_uri()."/img/promo.png"; ?>" class="promoimg"/>
+		  <!--<h2 class="promoh2"><?php _e( 'home page promo title', 'ipt_kb' )  ?></h2> -->
+
+		  <p><?php _e( 'home page promo text', 'ipt_kb' )  ?> </p>
+		  <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button"><?php _e( 'home page promo button text', 'ipt_kb' )  ?></a></p>
 		</div>
 		<div class="clearfix"></div>
 		<div class="latestbooks">
@@ -89,6 +91,5 @@ jQuery(document).ready(function($) {
 
 
 		</main><!-- #main -->
-		<div>под контентом </div>
 	</div><!-- #primary -->
 <?php get_footer(); ?>

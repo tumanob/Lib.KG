@@ -1488,3 +1488,24 @@ position: absolute;
 float: left;
 z-index: 1000;
 }
+
+
+
+
+.promoimg
+{
+	float: left;
+}
+
+
+.promoh2
+{
+
+	float: left;
+}
+
+.jumbotron
+{
+	background-color: #fff !important;
+	border: 1px solid #ccc;
+}

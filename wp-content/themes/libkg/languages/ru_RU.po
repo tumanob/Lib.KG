@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
-"POT-Creation-Date: 2015-03-23 20:25+0600\n"
-"PO-Revision-Date: 2015-03-23 21:20+0600\n"
+"POT-Creation-Date: 2015-04-19 21:44+0600\n"
+"PO-Revision-Date: 2015-04-19 22:00+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ru_RU\n"
@@ -113,17 +113,27 @@ msgstr "Свежие комментарии &raquo;"
 msgid "Comments are closed."
 msgstr "Обсуждение закрыто."
 
-#: ../content-book.php:43 ../content-page.php:18 ../content-single.php:20
-#: ../template-knowledgebase.php:214
+#: ../content-book.php:43
+#, fuzzy
+msgid "download link"
+msgstr "Скачать файл"
+
+#: ../content-book.php:54
+#, fuzzy
+msgid "no files found"
+msgstr "Метки не найдены!"
+
+#: ../content-book.php:65 ../content-page.php:18 ../content-single.php:20
+#: ../template-home.php:81 ../template-knowledgebase.php:214
 msgid "<p class=\"pagination-p\">Pages:</p>"
 msgstr ""
 
-#: ../content-book.php:58 ../content-book.php:61 ../content-single.php:29
+#: ../content-book.php:80 ../content-book.php:83 ../content-single.php:29
 #: ../content-single.php:32 ../content.php:49 ../content.php:59
 msgid ", "
 msgstr ", "
 
-#: ../content-book.php:66
+#: ../content-book.php:88
 #, php-format
 msgid ""
 "This entry was tagged <i class=\"glyphicon glyphicon-tags\"></i>&nbsp;&nbsp;"
@@ -131,14 +141,14 @@ msgid ""
 "i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content-book.php:68
+#: ../content-book.php:90
 #, php-format
 msgid ""
 "Bookmark the <i class=\"glyphicon glyphicon-share-alt\"></i>&nbsp;&nbsp;<a "
 "href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content-book.php:74
+#: ../content-book.php:96
 #, php-format
 msgid ""
 "This entry was posted in <i class=\"glyphicon glyphicon-folder-open\"></"
@@ -147,7 +157,7 @@ msgid ""
 "alt\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content-book.php:76
+#: ../content-book.php:98
 #, php-format
 msgid ""
 "This entry was posted in <i class=\"glyphicon glyphicon-folder-open\"></"
@@ -155,8 +165,8 @@ msgid ""
 "alt\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content-book.php:127 ../content-page.php:23 ../content-single.php:60
-#: ../content.php:71 ../image.php:32 ../image.php:64
+#: ../content-book.php:149 ../content-page.php:23 ../content-single.php:60
+#: ../content.php:72 ../image.php:32 ../image.php:64 ../template-home.php:86
 #: ../bbpress/user-details.php:54 ../inc/class-ipt-kb-bbp-login-widget.php:124
 #: ../inc/template-tags.php:121 ../inc/template-tags.php:162
 msgid "Edit"
@@ -194,7 +204,7 @@ msgid ""
 "bookmark\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content.php:40 ../content.php:43
+#: ../content.php:38 ../content.php:41
 msgid "Dowload this"
 msgstr "Скачать файл"
 
@@ -208,15 +218,15 @@ msgstr "Из раздела %s"
 msgid "Tagged %1$s"
 msgstr "С метками %1$s"
 
-#: ../content.php:69
+#: ../content.php:70
 msgid "Leave a comment"
 msgstr "Оставить комментарий"
 
-#: ../content.php:69
+#: ../content.php:70
 msgid "1 Comment"
 msgstr "1 комментарий"
 
-#: ../content.php:69
+#: ../content.php:70
 msgid "% Comments"
 msgstr "% комментариев"
 
@@ -277,14 +287,10 @@ msgstr ""
 msgid "Oops, some problem to connect. Try again?"
 msgstr ""
 
-#: ../header-bbpress.php:30 ../header.php:30
+#: ../header-bbpress.php:30 ../header.php:47
 #, fuzzy
 msgid "Toggle navigation"
 msgstr "Текст ссылки"
-
-#: ../header.php:83
-msgid "Add a book"
-msgstr "Добавить книгу"
 
 #: ../image.php:22
 #, php-format
@@ -348,22 +354,41 @@ msgstr "Искать в на сайте&hellip;"
 msgid "Search Knowledgebase for %s&hellip;"
 msgstr "Искать в > %s&hellip;"
 
+#: ../template-home.php:24
+msgid "home page promo title"
+msgstr "Электронная библиотека материалов под открытой лицензией"
+
+#: ../template-home.php:26
+msgid "home page promo text"
+msgstr ""
+"«Открытая библиотека» – это место где можно найти множество материалов "
+"распространяемых под открытой лицензией, дающей право не только на свободное "
+"использование, но и на изменение и переработку этих материалов. На сайте вы "
+"найдете школьные учебники, редкие книги из библиотечных архивов, "
+"диссертации. Все материалы доступны в электроном виде для скачивания. "
+
+#: ../template-home.php:27
+msgid "home page promo button text"
+msgstr "Перейти в Каталог"
+
+#: ../template-home.php:50
+msgid "Latest books"
+msgstr "Новые книги"
+
 #: ../template-knowledgebase.php:42 ../template-knowledgebase.php:54
-#: ../template-knowledgebase.php:73
-#: ../category-templates/category-parent.php:90
-#: ../inc/class-ipt-kb-affix-widget.php:126
+#: ../template-knowledgebase.php:73 ../inc/class-ipt-kb-affix-widget.php:126
 #, fuzzy
 msgid "Get support"
 msgstr "Форумы поддержки"
 
 #: ../template-knowledgebase.php:58
-#: ../category-templates/category-parent.php:94
+#: ../category-templates/category-parent.php:95
 #, fuzzy
 msgid "Browse all"
 msgstr "Все авторы"
 
 #: ../template-knowledgebase.php:116
-#: ../category-templates/category-parent.php:154
+#: ../category-templates/category-parent.php:153
 #, php-format
 msgid "Browse %d article"
 msgid_plural "Browse all %d articles"
@@ -1327,11 +1352,6 @@ msgstr[1] "%d файлов"
 msgid "Get Support"
 msgstr "Форумы поддержки"
 
-#: ../category-templates/category-parent.php:84
-#, php-format
-msgid "%1$s / %2$s"
-msgstr ""
-
 #: ../category-templates/no-result.php:7
 msgid "No articles published. Check back later?"
 msgstr "Нет материалов. Зайдите попозже."
@@ -1804,6 +1824,9 @@ msgstr ""
 #: ../inc/template-tags.php:701
 msgid "Password:"
 msgstr "Пароль:"
+
+#~ msgid "Add a book"
+#~ msgstr "Добавить книгу"
 
 #~ msgid "Education level:"
 #~ msgstr "Уровень:"
