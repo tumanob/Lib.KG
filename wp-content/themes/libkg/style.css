@@ -837,10 +837,12 @@ body .comment-reply-title {
 #main .kb-subcat-icon .thumbnail {
 	height: 128px;
 	line-height: 128px;
+	padding: 0px;
 }
 #main .kb-subcat-icon .thumbnail .glyphicon {
 	font-size: 64px;
 	line-height: 111px;
+	margin-top: -1px;
 }
 #main .kb-subcat-icon .thumbnail i[class*="ipt-icon"] {
 	line-height: 105px;
@@ -1307,6 +1309,19 @@ margin-top: 6px;
 }
 
 
+.libcat
+{
+	background: #ccc url("img/libcat120.jpg");
+	height: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	background-repeat:no-repeat;
+}
+
 
 .books
 {
@@ -1391,8 +1406,8 @@ color: #428bca;
 
 .category article.post:hover{
 
-	background: #F4FAFF;
-  border-left: 5px solid #B3E0FF;
+	background-color: #EFEBDD;
+  border-left: 5px solid #cbc4a7;
   padding-left: 5px;
 }
 
@@ -1419,6 +1434,23 @@ color: #428bca;
 
 
 /* homepage styles*/
+
+h2 a
+{
+	color: inherit !important;
+}
+
+h2{
+color: #00636a !important;
+font-weight: 600;
+}
+
+/*#content a{
+color: #036daa;
+outline: none;
+}
+*/
+
 
 
 ul#latest_posts{
@@ -1477,6 +1509,7 @@ height:202px;
 {
 	background: #ccc url("img/footerbg.jpg") repeat-x bottom left;
 	color: white;
+	max-height: 275px;
 }
 
 #langswitch_logo
@@ -1490,11 +1523,16 @@ z-index: 1000;
 }
 
 
+body {
+	background-color: #e2dcc5 !important;
+}
 
 
 .promoimg
 {
 	float: left;
+	width:220px;
+	margin-right: 20px;
 }
 
 
@@ -1507,5 +1545,123 @@ z-index: 1000;
 .jumbotron
 {
 	background-color: #fff !important;
-	border: 1px solid #ccc;
+	border: 1px solid #8E6233 !important;
+	padding-left: 30px !important;
+	text-align: justify !important;
+	text-indent: 1.5em !important;
+	font-size: 18px !important;
+	/*width: 70%;*/
+	background-color: #cbc4a7 !important;
+	/*margin-right:10px;*/
+}
+
+.navbar
+{
+	background: rgba(244, 241, 230, 0.44) !important;
+}
+
+a.list-group-item
+{
+  border: 1px solid #8E8C83 !important;
+  background: #cbc4a7 !important;
+	margin: 5px 0px;
+
+}
+
+a.list-group-item:hover
+{
+	border: 1px solid #8E6233 !important;
+}
+
+
+
+
+
+@media screen and (min-width: 768px)
+{
+
+.container .jumbotron {
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
+}
+
+}
+
+
+
+#main .img-rounded
+{
+	/*border: 1px solid #8E8C83;*/
+
+}
+
+#content a.promobanner
+{
+	width:100%;
+	display:block;
+	background-size:100% auto;
+	text-align: center;
+color: white;
+padding: 17px 0px;
+font-size: 2em;
+margin: 0 0 15px 0;
+border: 1px solid #8E6233;
+opacity: 1;
+filter: alpha(opacity=100);
+max-height: 72px;
+}
+
+#content a.promobanner:hover {
+	color:white;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	text-decoration: underline;
+	border: 1px solid #B6B9BB;
+}
+
+
+#schoolbanner {
+	background: #cbc4a7 url("img/schoolbanner.jpg") no-repeat center center;
+}
+
+#dissbanner
+{
+	background: #cbc4a7 url("img/dissbanner.jpg") no-repeat center center;
+}
+
+#libbanner
+{
+	background: #cbc4a7 url("img/libbanner.jpg") no-repeat center center;
+}
+
+#main .kb-subcat-icon .thumbnail .glyphicon {
+
+	border: 1px solid #8E8C83;
+}
+
+
+.page a.thumbnail:hover, .page  a.thumbnail:focus, .page  a.thumbnail.active,
+.category a.thumbnail:hover, .category a.thumbnail:focus, .category a.thumbnail:focus
+{
+	border-color: #B6B9BB;
+}
+
+.greyborder
+{
+	border: 1px solid #8E8C83;
+}
+
+
+
+.taxonomy-description, .widget, .breadcrumb
+{
+	background: rgba(244, 241, 230, 0.44) !important;
+}
+
+
+.badge
+{
+	background-color: #8E6233 !important;
 }

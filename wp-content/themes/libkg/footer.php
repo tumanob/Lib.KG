@@ -36,9 +36,11 @@
 	</div>
 		<div class="site-info">
 			<p class="copyright text-muted">
-				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'all materials under CC license', 'ipt_kb' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-			<span><?php printf( __( 'copyright text on bottom', 'ipt_kb' ), 'WordPress' ); ?> </span>
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+
+				</a>
+				<?php _e( 'CC', 'ipt_kb' ); ?>
+
 			</p>
 			<?php do_action( 'ipt_kb_credits' ); ?>
 		</div><!-- .site-info -->

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
-"POT-Creation-Date: 2015-04-19 20:39+0600\n"
-"PO-Revision-Date: 2015-04-19 20:40+0600\n"
+"POT-Creation-Date: 2015-04-23 18:39+0600\n"
+"PO-Revision-Date: 2015-04-23 18:42+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ky_KY\n"
@@ -127,7 +127,7 @@ msgid "no files found"
 msgstr "Ничего не найдено"
 
 #: ../content-book.php:65 ../content-page.php:18 ../content-single.php:20
-#: ../template-home.php:80 ../template-knowledgebase.php:214
+#: ../template-home.php:97 ../template-knowledgebase.php:214
 msgid "<p class=\"pagination-p\">Pages:</p>"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgid ""
 msgstr ""
 
 #: ../content-book.php:149 ../content-page.php:23 ../content-single.php:60
-#: ../content.php:72 ../image.php:32 ../image.php:64 ../template-home.php:85
+#: ../content.php:72 ../image.php:32 ../image.php:64 ../template-home.php:102
 #: ../bbpress/user-details.php:54 ../inc/class-ipt-kb-bbp-login-widget.php:124
 #: ../inc/template-tags.php:121 ../inc/template-tags.php:162
 #, fuzzy
@@ -235,12 +235,8 @@ msgstr "Бир комментарий"
 msgid "% Comments"
 msgstr "% Комментарий"
 
-#: ../footer.php:39
-msgid "all materials under CC license"
-msgstr ""
-
-#: ../footer.php:41
-msgid "copyright text on bottom"
+#: ../footer.php:42
+msgid "CC"
 msgstr ""
 
 #: ../functions.php:54
@@ -365,7 +361,37 @@ msgstr "Издөө >"
 msgid "Search Knowledgebase for %s&hellip;"
 msgstr "Издөө > %s&hellip;"
 
-#: ../template-home.php:49
+#: ../template-home.php:29
+msgid "home page promo title"
+msgstr ""
+
+#: ../template-home.php:31
+msgid "home page promo text"
+msgstr ""
+"“Ачык китепкана” – бул эркин пайдаланууга гана эмес, ачык лицензия алдында "
+"таратылуучу көптөгөн материалдарды табууга жана ушул материалдарды "
+"өзгөртүүгө жана кайра иштеп чыгууга укук берген жер. Силер сайттан мектеп "
+"окуу куралдарын, китепканалардын архивинен сейрек кездешүүчү китептерди, "
+"диссертацияларды таба аласыңар. Бардык материалдардын электрондук түрүн "
+"жүктөп алууга болот."
+
+#: ../template-home.php:32
+msgid "home page promo button text"
+msgstr ""
+
+#: ../template-home.php:37
+msgid "School"
+msgstr "Мектеп"
+
+#: ../template-home.php:38
+msgid "Dissertation"
+msgstr "Диссертациялар"
+
+#: ../template-home.php:39
+msgid "Library"
+msgstr "Китепкана"
+
+#: ../template-home.php:66
 msgid "Latest books"
 msgstr "Жаңы китептер"
 
@@ -381,7 +407,6 @@ msgid "Browse all"
 msgstr "Бардыгын кароо"
 
 #: ../template-knowledgebase.php:116
-#: ../category-templates/category-parent.php:153
 #, php-format
 msgid "Browse %d article"
 msgid_plural "Browse all %d articles"
@@ -1321,6 +1346,10 @@ msgstr[1] "%d файл"
 #, fuzzy
 msgid "Get Support"
 msgstr "MMK колдо борбору"
+
+#: ../category-templates/category-parent.php:134
+msgid "Browse all articles"
+msgstr "Бардыгын кароо"
 
 #: ../category-templates/no-result.php:7
 msgid "No articles published. Check back later?"

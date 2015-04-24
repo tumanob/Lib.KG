@@ -20,13 +20,28 @@ jQuery(document).ready(function($) {
 	<div id="primary" class="content-area">
 
 		<div class="clearfix"></div>
-		<div class="jumbotron">
-      <img src="<?php echo get_template_directory_uri()."/img/promo.png"; ?>" class="promoimg"/>
-		  <!--<h2 class="promoh2"><?php _e( 'home page promo title', 'ipt_kb' )  ?></h2> -->
 
-		  <p><?php _e( 'home page promo text', 'ipt_kb' )  ?> </p>
-		  <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button"><?php _e( 'home page promo button text', 'ipt_kb' )  ?></a></p>
-		</div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-xs-12 col-sm-7 col-lg-9">
+      	<div class="jumbotron">
+          <img src="<?php echo get_template_directory_uri()."/img/promo.png"; ?>" class="promoimg"/>
+    		  <!--<h2 class="promoh2"><?php _e( 'home page promo title', 'ipt_kb' )  ?></h2> -->
+
+    	  <p><?php _e( 'home page promo text', 'ipt_kb' )  ?> </p>
+    	  <!-- <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button"><?php _e( 'home page promo button text', 'ipt_kb' )  ?></a></p> -->
+    		</div>
+      </div>
+      <div class="promobanners col-md-4 col-xs-12 col-sm-5 col-lg-3">
+
+        <a href="" id="schoolbanner" class="promobanner"><span><?php _e( 'School', 'ipt_kb' ); ?></span></a>
+        <a href="" id="dissbanner" class="promobanner"><span><?php _e( 'Dissertation', 'ipt_kb' ); ?></span></a>
+        <a href="" id="libbanner" class="promobanner"><span><?php _e( 'Library', 'ipt_kb' ); ?></span></a>
+
+      </div>
+    </div>
+  </div>
+
 		<div class="clearfix"></div>
 		<div class="latestbooks">
 		<?php

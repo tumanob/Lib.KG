@@ -85,7 +85,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 							<div class="list-group">
 								<?php
 								foreach ( $categories as $category ) {
-								//	print_r($category);
+							
 									?>
 								<link><?php get_category_link( $category->cat_ID ); ?>
 									<a rel="bookmark" class="list-group-item kb-list-date kb-post-list" href="<?php echo get_category_link( $category->term_id ); ?>">
@@ -94,11 +94,8 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 										<span class="clearfix"></span>
 									</a>
 									<?php
-									//echo $scat->term_id;;
-									//echo '123'.'<a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br/>';
-								}
-								// todo тут нужно сделать 2 шаблона дл ятсниац и категорий чтобы выводило то что нам нужно для каждой категории и темблейт
-								?>
+										}
+									?>
 						</div>
 
 					</div>

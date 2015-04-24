@@ -10,7 +10,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 		<div class="col-sm-4 col-md-3 col-lg-2 kb-pcat-icon hidden-xs">
 			<?php if ( isset( $term_meta['image_url'] ) && '' != $term_meta['image_url'] ) : ?>
 			<p class="text-center">
-				<img class="img-circle" src="<?php echo esc_attr( $term_meta['image_url'] ); ?>" alt="<?php echo esc_attr( $cat->name ); ?>" />
+				<img class="img-rounded greyborder" src="<?php echo esc_attr( $term_meta['image_url'] ); ?>" alt="<?php echo esc_attr( $cat->name ); ?>" />
 			</p>
 			<?php endif; ?>
 			<div class="caption">
@@ -29,7 +29,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 			<div class="kb-pcat-icon visible-xs">
 				<?php if ( isset( $term_meta['image_url'] ) && '' != $term_meta['image_url'] ) : ?>
 				<p class="text-center">
-					<img class="img-circle" src="<?php echo esc_attr( $term_meta['image_url'] ); ?>" alt="<?php echo esc_attr( $cat->name ); ?>" />
+					<img class="img-rounded greyborder" src="<?php echo esc_attr( $term_meta['image_url'] ); ?>" alt="<?php echo esc_attr( $cat->name ); ?>" />
 				</p>
 				<?php endif; ?>
 				<div class="caption">
@@ -110,21 +110,12 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 				</div>
 
 					<?php
-					//$category_ID=$scat->term_id;
-					/*$args = array(
-					  'orderby' => 'name',
-					  'parent' => 0,
-						'child_of'=> $category_ID
-					);
-					$categories = get_categories( $args );
-*/
-					$categories = get_categories(array('hide_empty' => true, 'number' => '10','child_of' => $scat->term_id));
-					// todo  - get list just of upper categories
+
+					$categories = get_categories(array('hide_empty' => true, 'number' => '5','child_of' => $scat->term_id));
 					?>
 					<div class="list-group">
 					<?php
 					foreach ( $categories as $category ) {
-					//	print_r($category);
 						?>
 					<link><?php get_category_link( $category->cat_ID ); ?>
 						<a rel="bookmark" class="list-group-item kb-list-date kb-post-list" href="<?php echo get_category_link( $category->term_id ); ?>">
@@ -134,23 +125,13 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 						</a>
 						<?php
 					}
-					// todo тут нужно сделать 2 шаблона дл ятсниац и категорий чтобы выводило то что нам нужно для каждой категории и темблейт
-					?>
+						?>
 				</div>
-				<!--
-				<div class="list-group">
-					<?php 		if ( $scat_posts->have_posts() ) : ?>
-						<?php 		while ( $scat_posts->have_posts() ) : $scat_posts->the_post(); ?>
-						<?php 			get_template_part( 'category-templates/content', 'popular' ); ?>
-						<?php 		endwhile; ?>
-					<?php 		else : ?>
-						<?php 		get_template_part( 'category-templates/no-result' ); ?>
-					<?php 		endif; ?>
-				</div>
-				-->
+
 
 				<p class="text-right">
-					<a class="btn btn-default" href="<?php echo $sterm_link; ?>"><i class="glyphicon ipt-icon-link"></i> <?php printf( _n( 'Browse %d article', 'Browse all %d articles', $scat_totals, 'ipt_kb' ), $scat_totals ); ?></a>
+					<a class="btn btn-default" href="<?php echo $sterm_link; ?>"><i class="glyphicon ipt-icon-link"></i>
+						<?php  _e( 'Browse all articles', 'ipt_kb' ); ?></a>
 				</p>
 			</div>
 			<div class="clearfix"></div>

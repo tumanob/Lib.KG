@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
-"POT-Creation-Date: 2015-04-19 21:44+0600\n"
-"PO-Revision-Date: 2015-04-19 22:00+0600\n"
+"POT-Creation-Date: 2015-04-23 18:38+0600\n"
+"PO-Revision-Date: 2015-04-23 18:38+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ru_RU\n"
@@ -124,7 +124,7 @@ msgid "no files found"
 msgstr "Метки не найдены!"
 
 #: ../content-book.php:65 ../content-page.php:18 ../content-single.php:20
-#: ../template-home.php:81 ../template-knowledgebase.php:214
+#: ../template-home.php:97 ../template-knowledgebase.php:214
 msgid "<p class=\"pagination-p\">Pages:</p>"
 msgstr ""
 
@@ -166,7 +166,7 @@ msgid ""
 msgstr ""
 
 #: ../content-book.php:149 ../content-page.php:23 ../content-single.php:60
-#: ../content.php:72 ../image.php:32 ../image.php:64 ../template-home.php:86
+#: ../content.php:72 ../image.php:32 ../image.php:64 ../template-home.php:102
 #: ../bbpress/user-details.php:54 ../inc/class-ipt-kb-bbp-login-widget.php:124
 #: ../inc/template-tags.php:121 ../inc/template-tags.php:162
 msgid "Edit"
@@ -230,12 +230,8 @@ msgstr "1 комментарий"
 msgid "% Comments"
 msgstr "% комментариев"
 
-#: ../footer.php:39
-msgid "all materials under CC license"
-msgstr ""
-
-#: ../footer.php:41
-msgid "copyright text on bottom"
+#: ../footer.php:42
+msgid "CC"
 msgstr ""
 
 #: ../functions.php:54
@@ -354,11 +350,11 @@ msgstr "Искать в на сайте&hellip;"
 msgid "Search Knowledgebase for %s&hellip;"
 msgstr "Искать в > %s&hellip;"
 
-#: ../template-home.php:24
+#: ../template-home.php:29
 msgid "home page promo title"
 msgstr "Электронная библиотека материалов под открытой лицензией"
 
-#: ../template-home.php:26
+#: ../template-home.php:31
 msgid "home page promo text"
 msgstr ""
 "«Открытая библиотека» – это место где можно найти множество материалов "
@@ -367,11 +363,23 @@ msgstr ""
 "найдете школьные учебники, редкие книги из библиотечных архивов, "
 "диссертации. Все материалы доступны в электроном виде для скачивания. "
 
-#: ../template-home.php:27
+#: ../template-home.php:32
 msgid "home page promo button text"
 msgstr "Перейти в Каталог"
 
-#: ../template-home.php:50
+#: ../template-home.php:37
+msgid "School"
+msgstr "Школа"
+
+#: ../template-home.php:38
+msgid "Dissertation"
+msgstr "Диссертации"
+
+#: ../template-home.php:39
+msgid "Library"
+msgstr "Библиотека"
+
+#: ../template-home.php:66
 msgid "Latest books"
 msgstr "Новые книги"
 
@@ -388,12 +396,11 @@ msgid "Browse all"
 msgstr "Все авторы"
 
 #: ../template-knowledgebase.php:116
-#: ../category-templates/category-parent.php:153
 #, php-format
 msgid "Browse %d article"
 msgid_plural "Browse all %d articles"
 msgstr[0] "Просмотреть материалы"
-msgstr[1] "Просмотреть все (%d) "
+msgstr[1] "Просмотреть все  %d"
 
 #: ../template-knowledgebase.php:144
 #, fuzzy
@@ -1351,6 +1358,10 @@ msgstr[1] "%d файлов"
 #, fuzzy
 msgid "Get Support"
 msgstr "Форумы поддержки"
+
+#: ../category-templates/category-parent.php:134
+msgid "Browse all articles"
+msgstr "Просмотреть все"
 
 #: ../category-templates/no-result.php:7
 msgid "No articles published. Check back later?"
