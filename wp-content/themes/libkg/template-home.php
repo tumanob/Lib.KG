@@ -33,11 +33,9 @@ jQuery(document).ready(function($) {
     		</div>
       </div>
       <div class="promobanners col-md-4 col-xs-12 col-sm-5 col-lg-3">
-
-        <a href="" id="schoolbanner" class="promobanner"><span><?php _e( 'School', 'ipt_kb' ); ?></span></a>
-        <a href="" id="dissbanner" class="promobanner"><span><?php _e( 'Dissertation', 'ipt_kb' ); ?></span></a>
-        <a href="" id="libbanner" class="promobanner"><span><?php _e( 'Library', 'ipt_kb' ); ?></span></a>
-
+        <a  id="schoolbanner" class="promobanner" href=" <?php echo  get_category_link(7); ?>" ><span><?php _e( 'School', 'ipt_kb' ); ?></span></a>
+        <a id="dissbanner" class="promobanner" href="<?php echo get_category_link(13); ?> "><span><?php _e( 'Dissertation', 'ipt_kb' ); ?></span></a>
+        <a id="libbanner" class="promobanner" href="<?php echo get_category_link(8); ?> "><span><?php _e( 'Library', 'ipt_kb' ); ?></span></a>
       </div>
     </div>
   </div>
@@ -63,7 +61,7 @@ jQuery(document).ready(function($) {
 
 			 	//_e( 'Latest books', 'ipt_kb' );
 
-			echo '<h2><a href="#">'.__( 'Latest books', 'ipt_kb' ).'</a></h2>';
+			echo '<h2><a href="'.get_permalink( 2651 ).'">'.__( 'Latest books', 'ipt_kb' ).'</a></h2>';
 
 		//	echo '<ul id="latest_posts">';
 			 foreach ($postslist as $post) :  setup_postdata($post); ?>
