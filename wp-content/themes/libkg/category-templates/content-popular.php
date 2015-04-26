@@ -4,7 +4,7 @@
  */
 ?>
 
-<a rel="bookmark" class="list-group-item kb-list-date kb-post-list" href="<?php the_permalink(); ?>">
+<a rel="bookmark" class="list-group-item kb-list-date kb-post-list " href="<?php the_permalink(); ?>">
 	<span class="badge"><?php echo get_post_meta( $post->ID, 'ipt_kb_like_article', true );
 	 // todo replace with number of posts instead of likes.
 	?></span>

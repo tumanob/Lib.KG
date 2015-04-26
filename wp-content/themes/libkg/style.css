@@ -1665,3 +1665,11 @@ max-height: 72px;
 {
 	background-color: #8E6233 !important;
 }
+
+.lcontent
+{
+	border-radius: 4px;
+	padding: 8px 15px;
+  margin-bottom: 20px;
+	background: rgba(244, 241, 230, 0.44);
+}

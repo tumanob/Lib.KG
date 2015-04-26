@@ -32,7 +32,7 @@ $main_categories = get_categories( array(
 					<?php get_search_form(); ?>
 
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<div class="panel panel-info">
 								  <div class="panel-heading">
 										<h3 class="panel-title"><?php _e( 'Recently Published Articles', 'ipt_kb' ); ?></h3>
@@ -52,22 +52,7 @@ $main_categories = get_categories( array(
 							</div>
 						</div>
 
-						<div class="col-md-6">
-							<div class="panel panel-success">
-								  <div class="panel-heading">
-										<h3 class="panel-title"><?php _e( 'Knowledge Base', 'ipt_kb' ); ?></h3>
-								  </div>
-								  <div class="panel-body">
-										<div class="list-group">
-											<?php foreach( $main_categories as $cat ) : ?>
-											<a rel="bookmark" class="list-group-item kb-list-date kb-post-list" href="<?php echo esc_url( get_category_link( $cat->term_id ) ); ?>">
-											<span class="badge"><?php echo ipt_kb_total_cat_post_count( $cat->term_id ); ?></span>
-											<?php echo $cat->name; ?>
-											</a>
-											<?php endforeach; ?>
-										</div>
-								  </div>
-							</div>
+						
 						</div>
 					</div>
 

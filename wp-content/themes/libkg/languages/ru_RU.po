@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
 "POT-Creation-Date: 2015-04-23 18:38+0600\n"
-"PO-Revision-Date: 2015-04-23 18:38+0600\n"
+"PO-Revision-Date: 2015-04-26 20:47+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ru_RU\n"
@@ -21,17 +21,17 @@ msgstr ""
 
 #: ../404.php:26
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "404 Ошибка! Запрашиваемая вами страница не найдена."
 
 #: ../404.php:30
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr ""
+msgstr "Попробуйте воспользоваться поиском или одной из ссылок внизу. "
 
 #: ../404.php:38
 msgid "Recently Published Articles"
-msgstr ""
+msgstr "Недавно добавленные материалы"
 
 #: ../404.php:58
 #, fuzzy
@@ -403,12 +403,10 @@ msgstr[0] "Просмотреть материалы"
 msgstr[1] "Просмотреть все  %d"
 
 #: ../template-knowledgebase.php:144
-#, fuzzy
 msgid "Recent articles"
-msgstr "Последние комментарии"
+msgstr "Новые материалы"
 
 #: ../template-knowledgebase.php:181
-#, fuzzy
 msgid "Popular articles"
 msgstr "Самые популярные"
 
@@ -1744,7 +1742,7 @@ msgstr "Результаты по запросу:"
 
 #: ../inc/template-tags.php:451
 msgid "Error 404 - Not found"
-msgstr "Ошибка! Страница настроек не найдена."
+msgstr "Ошибка! Страница не найдена."
 
 #: ../inc/template-tags.php:455
 #, fuzzy
