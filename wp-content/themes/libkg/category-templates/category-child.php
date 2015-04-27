@@ -54,7 +54,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 									<?php if ( isset( $term_meta['icon_class'] ) && '' != $term_meta['icon_class'] ) : ?>
 									<i class="glyphicon <?php echo esc_attr( $term_meta['icon_class'] ); ?>"></i>
 									<?php else : ?>
-									<i class="glyphicon ipt-icon-books"></i>
+									<i class="glyphicon ipt-icon-books">222</i>
 									<?php endif; ?>
 							</a>
 						</p>
@@ -85,7 +85,7 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 							<div class="list-group">
 								<?php
 								foreach ( $categories as $category ) {
-							
+
 									?>
 								<link><?php get_category_link( $category->cat_ID ); ?>
 									<a rel="bookmark" class="list-group-item kb-list-date kb-post-list" href="<?php echo get_category_link( $category->term_id ); ?>">

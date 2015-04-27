@@ -6,9 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header page-header">
-	<h1 class="entry-title"><?php the_title(); ?>  <span style="color:green; font-size:18px;"><?php the_field('file-format'); ?></span> </h1>
-
-
+		<h1 class="entry-title"><?php the_title(); ?>  <span style="color:green; font-size:18px;"><?php the_field('file-format'); ?></span> </h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content <?php if ( has_post_thumbnail() ){ echo "wthumb";} ?>">
@@ -17,6 +15,7 @@
 
 	<?php
 	// TODO add empty thumbnail image just for general purposes/ question is active if we still nee it or if there is no image then!!!!
+
 	$filetext=get_field('files');
 
 	if ( has_post_thumbnail() ) : ?>
@@ -70,11 +69,13 @@
 
 
 
-	<footer class="entry-meta text-muted well well-sm">
-		<div class="entry-meta text-muted">
+	<footer class="entry-meta text-muted well well-sm row">
+		<div class="entry-meta text-muted col-md-4">
 			<?php ipt_kb_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
+
+		<!--
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', 'ipt_kb' ) );
@@ -110,38 +111,22 @@
 			);
 
 
-			/*
-			$edu_level_arr=get_field('edu-level');
-
-			if(sizeof($edu_level_arr)>0)
-			{
-			$custom_fields.=	__( 'Education level:', 'ipt_kb' );
-			}
-
-			foreach ($edu_level_arr as &$value) {
-    	$custom_fields .= ' <a href="/?s='.$value.'">'.$value.'</a>,  ';
-
-			}
-
-			echo $custom_fields;
-			*/
-
 
 		?>
-
-		<div>Поделиться </div>
+	-->
+		<div class="booksharing  col-md-8"><span><?php _e( 'Share', 'ipt_kb' ); ?></span>
 			<!-- pluso start-->
-			<script type="text/javascript">(function() {
-		  if (window.pluso)if (typeof window.pluso.start == "function") return;
-		  if (window.ifpluso==undefined) { window.ifpluso = 1;
-		    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-		    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-		    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-		    var h=d[g]('body')[0];
-		    h.appendChild(s);
-		  }})();</script>
-		<div class="pluso" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir" data-user="1361344875"></div>
-
+				<script type="text/javascript">(function() {
+			  if (window.pluso)if (typeof window.pluso.start == "function") return;
+			  if (window.ifpluso==undefined) { window.ifpluso = 1;
+			    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+			    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+			    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+			    var h=d[g]('body')[0];
+			    h.appendChild(s);
+			  }})();</script>
+				<div class="pluso" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir" data-user="1361344875"></div>
+		</div>
 
 		<!-- pluso end-->
 
