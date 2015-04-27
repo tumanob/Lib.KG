@@ -1706,7 +1706,7 @@ btn-danger
 
 .btn.btn-download{
 background: none;
-padding: 12px;
+/*padding: 12px;*/
 border: 2px solid #A82B2F;
 color: #A82B2F;
 border-radius: 10px;
@@ -1745,3 +1745,37 @@ margin: 0px;
 padding: 0px;
 
 }
+
+.widget.panel-default
+{
+	background: rgba(244, 241, 230, 0.44);
+}
+
+.pagination>.disabled>span, .pagination>.disabled>span:hover,
+.pagination>.disabled>span:focus, .pagination>.disabled>a,
+.pagination>.disabled>a:hover, .pagination>.disabled>a:focus
+{
+
+  border-color: #8E6233!important;
+	background: rgba(244, 241, 230, 0.44);
+}
+
+.pagination>li>a, .pagination>li>span, .pagination>a>span
+{
+	border-color: #8E6233!important;
+	background: rgba(244, 241, 230, 0.44);
+}
+
+
+.pagination>.active>a, .pagination>.active>span,
+.pagination>.active>a:hover, .pagination>.active>span:hover,
+.pagination>.active>a:focus, .pagination>.active>span:focus
+{
+	border-color: #8E6233 !important;
+	background: #8E6233 !important;
+}
+
+
+
+.tweaked-margin-right-10
+{margin-right:10px;}
