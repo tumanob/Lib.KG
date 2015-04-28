@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
-"POT-Creation-Date: 2015-04-23 18:39+0600\n"
-"PO-Revision-Date: 2015-04-23 18:42+0600\n"
+"POT-Creation-Date: 2015-04-28 11:08+0600\n"
+"PO-Revision-Date: 2015-04-28 11:16+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ky_KY\n"
@@ -31,10 +31,6 @@ msgstr ""
 
 #: ../404.php:38
 msgid "Recently Published Articles"
-msgstr ""
-
-#: ../404.php:58
-msgid "Knowledge Base"
 msgstr ""
 
 #: ../archive.php:31
@@ -83,10 +79,10 @@ msgstr ""
 msgid "Archives"
 msgstr "Архивы"
 
-#: ../archive.php:68 ../category-templates/category-child.php:48
-#, fuzzy, php-format
+#: ../archive.php:68 ../category-templates/category-child.php:44
+#, php-format
 msgid "Page %1$d / %2$d"
-msgstr "Страница"
+msgstr "Бет %1$d / %2$d"
 
 #: ../comments.php:29
 #, php-format
@@ -116,65 +112,37 @@ msgstr "Новые комментарии &#8250;"
 msgid "Comments are closed."
 msgstr "Обсуждение закрыто."
 
-#: ../content-book.php:43
+#: ../content-book.php:42
 #, fuzzy
 msgid "download link"
 msgstr "Алып чыгуу"
 
-#: ../content-book.php:54
+#: ../content-book.php:53
 #, fuzzy
 msgid "no files found"
 msgstr "Ничего не найдено"
 
-#: ../content-book.php:65 ../content-page.php:18 ../content-single.php:20
-#: ../template-home.php:97 ../template-knowledgebase.php:214
+#: ../content-book.php:64 ../content-page.php:18 ../content-single.php:20
+#: ../template-home.php:95 ../template-new.php:76 ../template-popular.php:85
 msgid "<p class=\"pagination-p\">Pages:</p>"
 msgstr ""
 
-#: ../content-book.php:80 ../content-book.php:83 ../content-single.php:29
-#: ../content-single.php:32 ../content.php:49 ../content.php:59
-msgid ", "
-msgstr ""
+#: ../content-book.php:77
+msgid "Share"
+msgstr "Бөлүшүү"
 
-#: ../content-book.php:88
-#, php-format
-msgid ""
-"This entry was tagged <i class=\"glyphicon glyphicon-tags\"></i>&nbsp;&nbsp;"
-"%2$s. <br />Bookmark the <i class=\"glyphicon glyphicon-share-alt\"></"
-"i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: ../content-book.php:90
-#, php-format
-msgid ""
-"Bookmark the <i class=\"glyphicon glyphicon-share-alt\"></i>&nbsp;&nbsp;<a "
-"href=\"%3$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: ../content-book.php:96
-#, php-format
-msgid ""
-"This entry was posted in <i class=\"glyphicon glyphicon-folder-open\"></"
-"i>&nbsp;&nbsp;%1$s and tagged <i class=\"glyphicon glyphicon-tags\"></"
-"i>&nbsp;&nbsp;%2$s. <br />Bookmark the <i class=\"glyphicon glyphicon-share-"
-"alt\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: ../content-book.php:98
-#, php-format
-msgid ""
-"This entry was posted in <i class=\"glyphicon glyphicon-folder-open\"></"
-"i>&nbsp;&nbsp;%1$s. <br />Bookmark the <i class=\"glyphicon glyphicon-share-"
-"alt\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: ../content-book.php:149 ../content-page.php:23 ../content-single.php:60
-#: ../content.php:72 ../image.php:32 ../image.php:64 ../template-home.php:102
+#: ../content-book.php:94 ../content-page.php:23 ../content-single.php:60
+#: ../image.php:32 ../image.php:64 ../template-home.php:100
 #: ../bbpress/user-details.php:54 ../inc/class-ipt-kb-bbp-login-widget.php:124
 #: ../inc/template-tags.php:121 ../inc/template-tags.php:162
 #, fuzzy
 msgid "Edit"
 msgstr "редактировать"
+
+#: ../content-single.php:29 ../content-single.php:32 ../content.php:56
+#: ../content.php:66
+msgid ", "
+msgstr ""
 
 #: ../content-single.php:37
 #, php-format
@@ -208,32 +176,19 @@ msgid ""
 "bookmark\"></i>&nbsp;&nbsp;<a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: ../content.php:38 ../content.php:41
+#: ../content.php:40 ../content.php:43
 msgid "Dowload this"
 msgstr "Алып чыгуу"
 
-#: ../content.php:53
+#: ../content.php:60
 #, php-format
 msgid "Posted in %1$s"
-msgstr "Бөлүктөрдөн %s"
+msgstr "%s"
 
-#: ../content.php:63
+#: ../content.php:70
 #, fuzzy, php-format
 msgid "Tagged %1$s"
 msgstr "С метками:"
-
-#: ../content.php:70
-#, fuzzy
-msgid "Leave a comment"
-msgstr "Отправить комментарий"
-
-#: ../content.php:70
-msgid "1 Comment"
-msgstr "Бир комментарий"
-
-#: ../content.php:70
-msgid "% Comments"
-msgstr "% Комментарий"
 
 #: ../footer.php:42
 msgid "CC"
@@ -293,7 +248,7 @@ msgstr ""
 msgid "Oops, some problem to connect. Try again?"
 msgstr ""
 
-#: ../header-bbpress.php:30 ../header.php:47
+#: ../header-bbpress.php:30 ../header.php:65
 #, fuzzy
 msgid "Toggle navigation"
 msgstr "Меню навигации"
@@ -379,45 +334,27 @@ msgstr ""
 msgid "home page promo button text"
 msgstr ""
 
-#: ../template-home.php:37
+#: ../template-home.php:36
 msgid "School"
 msgstr "Мектеп"
 
-#: ../template-home.php:38
+#: ../template-home.php:37
 msgid "Dissertation"
 msgstr "Диссертациялар"
 
-#: ../template-home.php:39
+#: ../template-home.php:38
 msgid "Library"
 msgstr "Китепкана"
 
-#: ../template-home.php:66
+#: ../template-home.php:64
 msgid "Latest books"
 msgstr "Жаңы китептер"
 
-#: ../template-knowledgebase.php:42 ../template-knowledgebase.php:54
-#: ../template-knowledgebase.php:73 ../inc/class-ipt-kb-affix-widget.php:126
-#, fuzzy
-msgid "Get support"
-msgstr "MMK колдо борбору"
-
-#: ../template-knowledgebase.php:58
-#: ../category-templates/category-parent.php:95
-msgid "Browse all"
-msgstr "Бардыгын кароо"
-
-#: ../template-knowledgebase.php:116
-#, php-format
-msgid "Browse %d article"
-msgid_plural "Browse all %d articles"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../template-knowledgebase.php:144
+#: ../template-new.php:41
 msgid "Recent articles"
 msgstr ""
 
-#: ../template-knowledgebase.php:181
+#: ../template-popular.php:52
 msgid "Popular articles"
 msgstr ""
 
@@ -578,7 +515,7 @@ msgstr "Нет комментариев"
 #: ../bbpress/form-forum.php:138 ../bbpress/form-reply-move.php:62
 #: ../bbpress/form-reply.php:110 ../bbpress/form-topic-merge.php:71
 #: ../bbpress/form-topic-split.php:83 ../bbpress/form-topic.php:172
-#: ../inc/template-tags.php:701
+#: ../inc/template-tags.php:697
 #, fuzzy
 msgid "Submit"
 msgstr "Отправить"
@@ -942,8 +879,8 @@ msgstr ""
 msgid "You must be logged in to create new topics."
 msgstr ""
 
-#: ../bbpress/form-user-edit.php:14 ../inc/template-tags.php:491
-#: ../inc/template-tags.php:492
+#: ../bbpress/form-user-edit.php:14 ../inc/template-tags.php:487
+#: ../inc/template-tags.php:488
 #, fuzzy
 msgid "Name"
 msgstr "Имя"
@@ -971,7 +908,7 @@ msgstr "Отурум"
 msgid "Contact Info"
 msgstr ""
 
-#: ../bbpress/form-user-edit.php:57 ../inc/template-tags.php:636
+#: ../bbpress/form-user-edit.php:57 ../inc/template-tags.php:632
 #, fuzzy
 msgid "Website"
 msgstr "Сайт"
@@ -1000,7 +937,7 @@ msgid "Username"
 msgstr ""
 
 #: ../bbpress/form-user-edit.php:96 ../bbpress/form-user-register.php:28
-#: ../inc/template-tags.php:493 ../inc/template-tags.php:494
+#: ../inc/template-tags.php:489 ../inc/template-tags.php:490
 #, fuzzy
 msgid "Email"
 msgstr "E-mail"
@@ -1328,12 +1265,7 @@ msgstr ""
 msgid "Popular Topics"
 msgstr ""
 
-#: ../category-templates/category-child.php:38
-#: ../category-templates/category-child.php:64
-msgid "Support"
-msgstr ""
-
-#: ../category-templates/category-child.php:45
+#: ../category-templates/category-child.php:41
 #: ../category-templates/category-parent.php:26
 #, php-format
 msgid "%d article"
@@ -1346,6 +1278,10 @@ msgstr[1] "%d файл"
 #, fuzzy
 msgid "Get Support"
 msgstr "MMK колдо борбору"
+
+#: ../category-templates/category-parent.php:95
+msgid "Browse all"
+msgstr "Бардыгын кароо"
 
 #: ../category-templates/category-parent.php:134
 msgid "Browse all articles"
@@ -1464,6 +1400,11 @@ msgstr "Виджет №1 на Главной"
 #, fuzzy
 msgid "Search&hellip;"
 msgstr "Ой-пикир  жиберүү"
+
+#: ../inc/class-ipt-kb-affix-widget.php:126
+#, fuzzy
+msgid "Get support"
+msgstr "MMK колдо борбору"
 
 #: ../inc/class-ipt-kb-affix-widget.php:167
 msgid "Click to show/hide table of contents."
@@ -1635,7 +1576,7 @@ msgstr "Страница"
 msgid "Cheatin&#8217; uh?"
 msgstr ""
 
-#: ../inc/ipt-kb-like-article.php:22 ../inc/template-tags.php:299
+#: ../inc/ipt-kb-like-article.php:22 ../inc/template-tags.php:295
 msgid "You like it already"
 msgstr ""
 
@@ -1698,128 +1639,137 @@ msgstr ""
 #, php-format
 msgid ""
 "<span class=\"posted-on\"><i class=\"glyphicon glyphicon-calendar\"></i> "
-"Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+"Posted on %1$s</span>"
 msgstr ""
 "<span class=\"posted-on\"><i class=\"glyphicon glyphicon-calendar\"></i> "
-"Жайгаштырылган %1$s</span><span class=\"byline\"> by %2$s</span>"
+"Жайгаштырылган %1$s</span>"
 
-#: ../inc/template-tags.php:296
+#: ../inc/template-tags.php:292
 msgid "This article was helpful"
 msgstr "Ыраазычылык билдирүү"
 
-#: ../inc/template-tags.php:303 ../inc/template-tags.php:313
+#: ../inc/template-tags.php:299 ../inc/template-tags.php:309
 #, php-format
 msgid "%d person found this article useful"
 msgid_plural "%d people found this article useful"
 msgstr[0] "%d Ыраазычылык билдирди"
 msgstr[1] "%d Ыраазычылык билдиришти"
 
-#: ../inc/template-tags.php:304 ../inc/template-tags.php:309
+#: ../inc/template-tags.php:300 ../inc/template-tags.php:305
 msgid "Please wait"
 msgstr ""
 
-#: ../inc/template-tags.php:327 ../inc/template-tags.php:331
+#: ../inc/template-tags.php:323 ../inc/template-tags.php:327
 msgid "Home"
 msgstr "Башкы бет"
 
-#: ../inc/template-tags.php:447
+#: ../inc/template-tags.php:443
 #, fuzzy
 msgid "Search result"
 msgstr " үчүн изилдѳѳнүн жыйынтыктары"
 
-#: ../inc/template-tags.php:451
+#: ../inc/template-tags.php:447
 msgid "Error 404 - Not found"
 msgstr ""
 
-#: ../inc/template-tags.php:455
+#: ../inc/template-tags.php:451
 #, fuzzy
 msgid "Archive"
 msgstr "Архивы"
 
-#: ../inc/template-tags.php:459
+#: ../inc/template-tags.php:455
 #, fuzzy
 msgid "Blog"
 msgstr "Архивы блога"
 
-#: ../inc/template-tags.php:500
+#: ../inc/template-tags.php:496
 #, php-format
 msgid "Required fields are marked %s"
 msgstr "Милдеттүү талаа %s"
 
-#: ../inc/template-tags.php:503
-#, fuzzy
+#: ../inc/template-tags.php:499
 msgctxt "noun"
 msgid "Comment"
 msgstr "Комментарий"
 
-#: ../inc/template-tags.php:504
+#: ../inc/template-tags.php:500
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: ../inc/template-tags.php:505
+#: ../inc/template-tags.php:501
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
 "this account\">Log out?</a>"
 msgstr ""
 
-#: ../inc/template-tags.php:506
+#: ../inc/template-tags.php:502
 msgid "Your email address will not be published."
 msgstr "Сиздин email көрсөтүлбөйт."
 
-#: ../inc/template-tags.php:510
+#: ../inc/template-tags.php:506
 msgid "Leave a Reply"
 msgstr "Комментарий калтыруу"
 
-#: ../inc/template-tags.php:511
+#: ../inc/template-tags.php:507
 #, fuzzy, php-format
 msgid "Leave a Reply to %s"
 msgstr "Оставить комментарий на %s"
 
-#: ../inc/template-tags.php:512
+#: ../inc/template-tags.php:508
 #, fuzzy
 msgid "Cancel reply"
 msgstr "Оставить комментарий"
 
-#: ../inc/template-tags.php:513
+#: ../inc/template-tags.php:509
 msgid "Post Comment"
 msgstr "Комментарийди жөнөтүү"
 
-#: ../inc/template-tags.php:641
+#: ../inc/template-tags.php:637
 #, fuzzy
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../inc/template-tags.php:645
+#: ../inc/template-tags.php:641
 #, fuzzy
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../inc/template-tags.php:649
+#: ../inc/template-tags.php:645
 msgid "Google+"
 msgstr ""
 
-#: ../inc/template-tags.php:666
+#: ../inc/template-tags.php:662
 #, php-format
 msgid "%1$s has written <a href=\"%2$s\">%3$s</a> %4$s"
 msgstr ""
 
-#: ../inc/template-tags.php:666
+#: ../inc/template-tags.php:662
 msgid "article"
 msgid_plural "articles"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:699
+#: ../inc/template-tags.php:695
 msgid ""
 "This content is password protected. To view it please enter your password "
 "below:"
 msgstr ""
 
-#: ../inc/template-tags.php:701
+#: ../inc/template-tags.php:697
 msgid "Password:"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Leave a comment"
+#~ msgstr "Отправить комментарий"
+
+#~ msgid "1 Comment"
+#~ msgstr "Бир комментарий"
+
+#~ msgid "% Comments"
+#~ msgstr "% Комментарий"
 
 #~ msgid "Add a book"
 #~ msgstr "Китеп кошумчалоо"

@@ -1757,7 +1757,7 @@ padding: 0px;
 {
 
   border-color: #8E6233!important;
-	background: rgba(244, 241, 230, 0.44);
+	background: rgba(244, 241, 230, 0.44) !important;
 }
 
 .pagination>li>a, .pagination>li>span, .pagination>a>span
