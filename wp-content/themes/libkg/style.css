@@ -1509,7 +1509,7 @@ height:202px;
 {
 	background: #ccc url("img/footerbg.jpg") repeat-x bottom left;
 	color: white;
-	max-height: 275px;
+/*	max-height: 275px; */
 }
 
 #langswitch_logo
