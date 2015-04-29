@@ -387,7 +387,9 @@ if($update)
 		add_meta_box('wpfb_file_info_paths', __('File Info Tags (ID3 Tags)', WPFB), array('WPFB_AdminGuiFiles','FileInfoPathsBox'), 'wpfb_file_form', 'normal', 'core');
 		
 		/* texts for lang files */
+		
 		__('File Downloads',WPFB);
+		__('Download File',WPFB);
 		
 	?>
 		<div id="dashboard-widgets-wrap">

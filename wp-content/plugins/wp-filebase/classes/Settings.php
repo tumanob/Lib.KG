@@ -50,7 +50,7 @@ static function Schema()
 	
 	'fext_blacklist'		=> array('default' => 'db,tmp', 'title' => __('Extension Blacklist', WPFB), 'desc' => __('Files with an extension in this list are skipped while synchronisation. (seperate with comma)', WPFB), 'type' => 'text', 'class' => 'code', 'size' => 100),
 
-	'attach_pos'			=> array('default' => 1, 'title' => __('Attachment Position', WPFB), 'desc' => __('', WPFB), 'type' => 'select', 'options' => array(__('Before the Content',WPFB),__('After the Content',WPFB))),
+	'attach_pos'			=> array('default' => 1, 'title' => __('Attachment Position', WPFB), 'desc' => __('desc', WPFB), 'type' => 'select', 'options' => array(__('Before the Content',WPFB),__('After the Content',WPFB))),
 	
 	'attach_loop' 			=> array('default' => false,'title' => __('Attachments in post lists', WPFB), 'type' => 'checkbox', 'desc' => __('Attach files to posts in archives, index and search result.', WPFB)),
 	
@@ -182,7 +182,7 @@ Open Office|ooffice|http://www.openoffice.org/download/index.html
 .NET Framework 3.5|.net35|http://www.microsoft.com/downloads/details.aspx?FamilyID=333325fd-ae52-4e35-b531-508d977d32a6",
 	'title' => __('Requirements', WPFB), 'type' => 'textarea', 'desc' => $multiple_entries_desc . ' ' . __('You can optionally add |<i>URL</i> to each line to link to the required software/file.', WPFB), 'nowrap' => true),
 	
-	'default_direct_linking'	=> array('default' => 1, 'title' => __('Default File Direct Linking'), 'type' => 'select', 'desc' => __('', WPFB), 'options' => array(1 => __('Allow direct linking', WPFB), 0 => __('Redirect to post', WPFB) )),	 
+	'default_direct_linking'	=> array('default' => 1, 'title' => __('Default File Direct Linking'), 'type' => 'select', 'desc' => __('desc', WPFB), 'options' => array(1 => __('Allow direct linking', WPFB), 0 => __('Redirect to post', WPFB) )),	 
 		 
 	'custom_fields'			=> array('default' => "Custom 1|cf1\nCustom 2|cf2", 'title' => __('Custom Fields'), 'type' => 'textarea', 'desc' => 
 	__('With custom fields you can add even more file properties.',WPFB).' '.  sprintf(__('Append another %s to set the default value.',WPFB),'|<i>Default Value</i>'.' '.$multiple_entries_desc)),

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
 "POT-Creation-Date: 2015-04-28 11:08+0600\n"
-"PO-Revision-Date: 2015-04-28 11:16+0600\n"
+"PO-Revision-Date: 2015-04-28 14:49+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ky_KY\n"
@@ -21,17 +21,19 @@ msgstr ""
 
 #: ../404.php:26
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "404 Ошибка!"
 
 #: ../404.php:30
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Ошибка 404! Бул бөлүмгө кирүү үчүн сайтка логин жана сырсөзүңүздү жазып "
+"кошулуңуз. Логин жана сырсөзгө ээ болуу үчүн каттоодон өтүңүз!"
 
 #: ../404.php:38
 msgid "Recently Published Articles"
-msgstr ""
+msgstr "Жаны материалдар"
 
 #: ../archive.php:31
 #, fuzzy, php-format
@@ -1670,7 +1672,7 @@ msgstr " үчүн изилдѳѳнүн жыйынтыктары"
 
 #: ../inc/template-tags.php:447
 msgid "Error 404 - Not found"
-msgstr ""
+msgstr "Ошибка 404 "
 
 #: ../inc/template-tags.php:451
 #, fuzzy

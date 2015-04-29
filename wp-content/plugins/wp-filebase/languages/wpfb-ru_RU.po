@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Filebase 0.1.3.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-filebase\n"
-"POT-Creation-Date: 2015-04-10 14:58+0600\n"
-"PO-Revision-Date: 2015-04-12 14:05+0600\n"
+"POT-Creation-Date: 2015-04-28 14:32+0600\n"
+"PO-Revision-Date: 2015-04-28 14:33+0600\n"
 "Last-Translator: \n"
 "Language-Team: Fabian Schlieper <fabian@fabi.me>\n"
 "Language: ru_RU\n"
@@ -1573,6 +1573,10 @@ msgstr ""
 msgid "Attachment Position"
 msgstr "Присоединенные файлы"
 
+#: ../classes/Settings.php:53 ../classes/Settings.php:185
+msgid "desc"
+msgstr ""
+
 #: ../classes/Settings.php:53
 msgid "Before the Content"
 msgstr ""
@@ -2585,6 +2589,10 @@ msgstr ""
 #: ../lib/wpfb_form_file.php:390
 msgid "File Downloads"
 msgstr "Загрузок"
+
+#: ../lib/wpfb_form_file.php:391
+msgid "Download File"
+msgstr "Скачать"
 
 #~ msgid "Uncategorized Files"
 #~ msgstr "Файлы без категории"
