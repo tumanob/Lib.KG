@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
 "POT-Creation-Date: 2015-04-28 11:08+0600\n"
-"PO-Revision-Date: 2015-04-28 14:49+0600\n"
+"PO-Revision-Date: 2015-05-18 14:12+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ky_KY\n"
@@ -302,6 +302,7 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Мы не смогли найти то, что Вы искали. Попробуйте воспользоваться поиском."
 
 #: ../search.php:16
 #, fuzzy, php-format

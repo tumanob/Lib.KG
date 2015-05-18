@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
 "POT-Creation-Date: 2015-04-28 11:11+0600\n"
-"PO-Revision-Date: 2015-04-28 11:18+0600\n"
+"PO-Revision-Date: 2015-05-18 14:11+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ru_RU\n"
@@ -268,9 +268,8 @@ msgid "Pages:"
 msgstr "Страницы:"
 
 #: ../no-results.php:13
-#, fuzzy
 msgid "Nothing Found"
-msgstr "Ссылка не найдена."
+msgstr "Ничего не найдено."
 
 #: ../no-results.php:19
 #, php-format
@@ -289,6 +288,7 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Мы не смогли найти то, что Вы искали. Попробуйте воспользоваться поиском."
 
 #: ../search.php:16
 #, php-format
