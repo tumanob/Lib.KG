@@ -24,9 +24,9 @@ $sub_categories = get_categories( array(
 		<?php get_search_form(); ?>
 		<main id="main" class="site-main <?php echo ( $cat->parent == '0' ? 'ipt-kb-parent' : 'ipt-kb-child' ); ?>" role="main">
 			<?php if ( $cat->parent == '0' && ! empty( $sub_categories ) ) : ?>
-			<?php get_template_part( 'category-templates/category', 'parent' ); // This is a parent category ?>
+			<?php  get_template_part( 'category-templates/category', 'parent' ); // This is a parent category ?>
 			<?php else : ?>
-			<?php get_template_part( 'category-templates/category', 'child' ); // This is a parent category ?>
+			<?php  get_template_part( 'category-templates/category', 'child' ); // This is a child category 2?>
 			<?php endif; ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->

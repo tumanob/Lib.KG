@@ -17,8 +17,8 @@ if ( $cat->parent != '0' ) {
 } else {
 	$pterm_meta = $term_meta;
 }
-$pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
-?>
+$pcat_totals = ipt_kb_total_cat_post_count( $cat_id ); ?>
+
 		<?php if ( have_posts() ) : ?>
 
 			<header class="kb-parent-category-header">
