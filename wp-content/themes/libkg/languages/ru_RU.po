@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
-"POT-Creation-Date: 2015-04-28 11:11+0600\n"
-"PO-Revision-Date: 2015-05-18 14:11+0600\n"
+"POT-Creation-Date: 2015-06-01 14:38+0600\n"
+"PO-Revision-Date: 2015-06-01 14:39+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ru_RU\n"
@@ -185,7 +185,14 @@ msgstr "%s"
 msgid "Tagged %1$s"
 msgstr "С метками %1$s"
 
-#: ../footer.php:42
+#: ../footer.php:39
+msgid "partner text"
+msgstr ""
+"Сайт создан при поддержке программы «Свобода информации» Фонда «Сорос-"
+"Кыргызстан». Мнения, выраженные на сайте, не обязательно отражают точку "
+"зрения Фонда «Сорос-Кыргызстан»."
+
+#: ../footer.php:45
 msgid "CC"
 msgstr ""
 

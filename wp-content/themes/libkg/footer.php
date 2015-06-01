@@ -33,17 +33,23 @@
 				<?php dynamic_sidebar( 'sidebar-3' ); ?>
 			</div>
 		</div>
-	</div>
-		<div class="site-info">
-			<p class="copyright text-muted">
-				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+		<div class="site-info-partner row">
+			<div class="col-md-8 partner">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/soros.png" style="  border: 1px solid #ccc;
+  border-radius: 10px; margin-right: 10px;" class="pull-left"/>
+				<?php _e( 'partner text', 'ipt_kb' ); ?>
+			</div>
 
+			<div class="copyright text-muted col-md-4">
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
 				</a>
 				<?php _e( 'CC', 'ipt_kb' ); ?>
+			</div>
 
-			</p>
 			<?php do_action( 'ipt_kb_credits' ); ?>
 		</div><!-- .site-info -->
+	</div>
+
 		<?php wp_footer(); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

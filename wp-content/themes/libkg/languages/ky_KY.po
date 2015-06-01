@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lib.kg\n"
-"POT-Creation-Date: 2015-04-28 11:08+0600\n"
-"PO-Revision-Date: 2015-05-18 14:12+0600\n"
+"POT-Creation-Date: 2015-06-01 14:39+0600\n"
+"PO-Revision-Date: 2015-06-01 14:39+0600\n"
 "Last-Translator: \n"
 "Language-Team:  <tumanob@gmail.com>\n"
 "Language: ky_KY\n"
@@ -192,7 +192,14 @@ msgstr "%s"
 msgid "Tagged %1$s"
 msgstr "С метками:"
 
-#: ../footer.php:42
+#: ../footer.php:39
+msgid "partner text"
+msgstr ""
+"Cайт «Сорос-Кыргызстан» Фондунун «Маалымат эркиндиги» программасы тарабынан "
+"каржыланган. «Сорос-Кыргызстан» Фондунун ой-пикири сайттагы ойлорго дал "
+"келбеши мүмкүн."
+
+#: ../footer.php:45
 msgid "CC"
 msgstr ""
 
