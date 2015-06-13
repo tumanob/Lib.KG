@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-04-23 15:23:08+0000\n"
+"PO-Revision-Date: 2015-05-31 11:58:44+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -7617,14 +7617,6 @@ msgstr "Структура постоянных ссылок обновлена.
 msgid "Permalink structure updated."
 msgstr "Структура постоянных ссылок изменена."
 
-#: wp-admin/options-permalink.php:207
-msgid "Day and name"
-msgstr "День и название"
-
-#: wp-admin/options-permalink.php:211
-msgid "Month and name"
-msgstr "Месяц и название"
-
 #: wp-admin/options-permalink.php:215
 msgid "Numeric"
 msgstr "Цифры"
@@ -8457,6 +8449,14 @@ msgstr "Пожалуйста, укажите следующую информац
 #: wp-admin/widgets.php:235
 msgid "Widget %s"
 msgstr "Виджет &laquo;%s&raquo;"
+
+#: wp-admin/options-permalink.php:211
+msgid "Month and name"
+msgstr "Месяц и название"
+
+#: wp-admin/options-permalink.php:207
+msgid "Day and name"
+msgstr "День и название"
 
 #: wp-admin/upload.php:227
 msgid "Reattached %d attachment."

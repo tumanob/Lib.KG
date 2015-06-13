@@ -510,7 +510,7 @@ function qtranxf_front_header_css_default()
 	global $q_config;
 	$flag_location=qtranxf_flag_location();
 	$css = '';
-	foreach($q_config['enabled_languages'] as $lang) 
+	foreach($q_config['enabled_languages'] as $lang)
 	{
 		$css .= '.qtranxs_flag_'.$lang.' {background-image: url('.$flag_location.$q_config['flag'][$lang].'); background-repeat: no-repeat;}'.PHP_EOL;
 	}
@@ -709,10 +709,10 @@ function qtranxf_strftime($format, $date, $default = '', $before = '', $after = 
 	$day = intval(ltrim(strftime("%d",$date),'0'));
 	$search = array();
 	$replace = array();
-	
+
 	// date S
 	$search[] = '/(([^%])%q|^%q)/';
-	if($day==1||$day==21||$day==31) { 
+	if($day==1||$day==21||$day==31) {
 		$replace[] = '$2st';
 	} elseif($day==2||$day==22) {
 		$replace[] = '$2nd';
@@ -721,7 +721,7 @@ function qtranxf_strftime($format, $date, $default = '', $before = '', $after = 
 	} else {
 		$replace[] = '$2th';
 	}
-	
+
 	$search[] = '/(([^%])%E|^%E)/'; $replace[] = '${2}'.$day; // date j
 	$search[] = '/(([^%])%f|^%f)/'; $replace[] = '${2}'.date('w',$date); // date w
 	$search[] = '/(([^%])%F|^%F)/'; $replace[] = '${2}'.date('z',$date); // date z
@@ -825,7 +825,7 @@ function qtranxf_useTermLib($obj) {
 		if(isset($q_config['term_name'][$obj->name][$q_config['language']])) {
 			//qtranxf_dbg_echo('qtranxf_useTermLib: object: ',$obj,true);
 			$obj->name = $q_config['term_name'][$obj->name][$q_config['language']];
-		} 
+		}
 	} elseif(isset($q_config['term_name'][$obj][$q_config['language']])) {
 		//qtranxf_dbg_echo('qtranxf_useTermLib: string: ',$obj,true);
 		$obj = $q_config['term_name'][$obj][$q_config['language']];
@@ -880,7 +880,7 @@ function qtranxf_language_neutral_path($path) {
 	return false;
 }
 /**
- * @since 
+ * @since
  */
 function qtranxf_url_del_language(&$urlinfo) {
 	global $q_config;
@@ -1447,7 +1447,7 @@ function qtranxf_use_block($lang, $blocks, $show_available=false, $show_empty=fa
 		// check if content is available in default language, if not return first language found. (prevent empty result)
 		$language = $q_config['default_language'];
 		if(!isset($available_languages[$language])){
-			
+
 		}
 		if($lang!=$q_config['default_language']){
 			$language = $q_config['default_language'];
@@ -1507,11 +1507,14 @@ function qtranxf_use_block($lang, $blocks, $show_available=false, $show_empty=fa
 			$msg = __('For the sake of viewer convenience, the content is shown below in the alternative language.', 'qtranslate');
 			$msg .= ' '.__('You may click the link to switch the active language.', 'qtranslate');
 		}
-		$altlanguagecontent = ' '.$msg.'</p>'.$alt_content;
+		$msg=''; // TUM disable any aditional text on page for alternative language
+		$altlanguagecontent =  ' '.$msg.'</p>'.$alt_content;
 	}else{
 		//by default, do not show alternative content
 		$altlanguagecontent = '</p>';
 	}
+
+	$q_config['not_available'][$lang] =''; // TUM disable any aditional text on page for alternative language
 
 	return '<p>'.preg_replace('/%LANG:([^:]*):([^%]*)%/', $language_list, $q_config['not_available'][$lang]).$altlanguagecontent;
 }
