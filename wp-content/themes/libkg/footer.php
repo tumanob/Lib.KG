@@ -1,4 +1,4 @@
-<?php
+  <?php
 /**
  * The template for displaying the footer.
  *
@@ -45,6 +45,15 @@
 				</a>
 				<?php _e( 'CC', 'ipt_kb' ); ?>
 			</div>
+		</br></br></br>
+		  	<div class="col-md-8 partner" style="  margin-top: 24px;">
+		  				<img src="<?php echo get_template_directory_uri(); ?>/img/lib1.png" style="  border: 1px solid #ccc; border-radius: 10px; margin-right: 10px;" class="pull-left"/>
+		  				<img src="<?php echo get_template_directory_uri(); ?>/img/lib2.png" style="  border: 1px solid #ccc;  border-radius: 10px; margin-right: 10px;" class="pull-left"/>
+						<div>
+							Проект реализуется Ассоциацией публичных библиотек Кыргызской Республики, Национальной библиотекой им. Алыкула Осмонова при поддержке Фонда "Сорос-Кыргызстан.
+						</div>
+
+		  	</div>
 
 			<?php do_action( 'ipt_kb_credits' ); ?>
 		</div><!-- .site-info -->

@@ -6,7 +6,7 @@ namespace elasticsearch;
 *
 * @license http://opensource.org/licenses/MIT
 * @author Paris Holley <mail@parisholley.com>
-* @version 2.0.0
+* @version 4.0.1
 **/
 class Faceting{
 	/**
@@ -60,7 +60,7 @@ class Faceting{
 
 		$numeric = Config::option('numeric');
 
-		foreach(Config::fields() as $field){
+		foreach(array_merge(Config::fields(),Config::meta_fields()) as $field){
 			if(isset($numeric[$field])){
 				$options[$field] = self::range($field);
 			}

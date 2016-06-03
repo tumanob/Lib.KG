@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
 		<div class="clearfix"></div>
 		<div class="latestbooks">
 		<?php
-		$args = array(  'numberposts'  => 6,
+		$args = array(  'numberposts'  => 24,
 	                'orderby'      => 'date',
 	                'order'        => 'DESC',
 	                'post_type'    => 'post',

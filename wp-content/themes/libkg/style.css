@@ -1351,6 +1351,20 @@ margin-top: 6px;
 	background-repeat:no-repeat;
 }
 
+.manas
+{
+	background: #ccc url("img/manas120.jpg");
+	height: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	background-repeat:no-repeat;
+}
+
+
 
 @media (max-width: 767px)
 {
