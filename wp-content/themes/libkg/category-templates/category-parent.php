@@ -111,7 +111,8 @@ $pcat_totals = ipt_kb_total_cat_post_count( $cat_id );
 
 					<?php
 
-					$categories = get_categories(array('hide_empty' => true, 'number' => '5','child_of' => $scat->term_id));
+					$categories = get_categories(array('hide_empty' => true, 'number' => '10','child_of' => $scat->term_id, 'parent'   => $scat->term_id));
+
 					?>
 					<div class="list-group">
 					<?php
